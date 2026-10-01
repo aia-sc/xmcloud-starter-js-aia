@@ -20,6 +20,16 @@
       "buildCommand": "npm run build",
       "runCommand": "npm run start"
     },
+    "prospera": {
+      "path": "./industry-verticals/prospera",
+      "nodeVersion": "24.14.1",
+      "packageManager": "npm",
+      "jssDeploymentSecret": "8215839F8F0E40378307E0576547E26F",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "npm run build",
+      "runCommand": "npm run start"
+    },
     "angularstarter": {
       "path": "./examples/basic-spa",
       "nodeVersion": "22.22.0",
