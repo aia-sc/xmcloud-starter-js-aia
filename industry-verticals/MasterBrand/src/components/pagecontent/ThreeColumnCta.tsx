@@ -267,3 +267,49 @@ export const WithIconsCompact = (props: ThreeColumnCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — 3 equal image cards with bottom gradient overlay; hide SubText */
+export const MasterBrand = (props: ThreeColumnCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  const Card = ({
+    image,
+    text,
+    link,
+  }: {
+    image: ImageField;
+    text: Field<string>;
+    link: LinkField;
+  }) => (
+    <div className="mb-overlay-card">
+      <div className="mb-overlay-card__media">
+        <NextImage field={image} width={600} height={500} />
+      </div>
+      <div className="mb-overlay-card__gradient" aria-hidden="true" />
+      <div className="mb-overlay-card__content">
+        <h2 className="mb-overlay-card__title">
+          <Text field={text} />
+        </h2>
+        {(isPageEditing || link?.value?.href) && (
+          <Link field={link} className="mb-link-underline mb-link-underline--white" />
+        )}
+      </div>
+    </div>
+  );
+
+  return (
+    <div
+      className={`component component-spaced three-column-cta mb-three-col-wrap ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
+      <div className="mb-three-col">
+        <Card image={props.fields.Image1} text={props.fields.Text1} link={props.fields.Link1} />
+        <Card image={props.fields.Image2} text={props.fields.Text2} link={props.fields.Link2} />
+        <Card image={props.fields.Image3} text={props.fields.Text3} link={props.fields.Link3} />
+      </div>
+    </div>
+  );
+};

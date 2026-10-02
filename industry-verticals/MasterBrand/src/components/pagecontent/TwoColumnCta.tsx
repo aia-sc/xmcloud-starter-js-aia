@@ -109,3 +109,45 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — left overlay image+Title1/Link1; right muted panel Title2/Text2/Link2 */
+export const MasterBrand = (props: TwoColumnCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component two-column-cta mb-two-col ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="mb-two-col__overlay">
+        <div className="mb-overlay-card">
+          <div className="mb-overlay-card__media">
+            <NextImage field={props.fields.Image1} width={900} height={700} />
+          </div>
+          <div className="mb-overlay-card__gradient" aria-hidden="true" />
+          <div className="mb-overlay-card__content">
+            <h2 className="mb-overlay-card__title">
+              <Text field={props.fields.Title1} />
+            </h2>
+            {(isPageEditing || props.fields?.Link1?.value?.href) && (
+              <Link field={props.fields.Link1} className="mb-link-underline mb-link-underline--white" />
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="mb-two-col__panel">
+        <h2 className="mb-two-col__title">
+          <Text field={props.fields.Title2} />
+        </h2>
+        {(isPageEditing || props.fields?.Text2?.value) && (
+          <p className="mb-two-col__text">
+            <Text field={props.fields.Text2} />
+          </p>
+        )}
+        {(isPageEditing || props.fields?.Link2?.value?.href) && (
+          <Link field={props.fields.Link2} className="mb-link-underline" />
+        )}
+      </div>
+    </div>
+  );
+};

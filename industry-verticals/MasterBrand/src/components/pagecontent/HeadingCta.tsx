@@ -151,3 +151,36 @@ export const Centered = (props: HeadingCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — centered heading with hairline rules; hide empty fields */
+export const MasterBrand = (props: HeadingCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component heading-cta mb-heading ${sxaStyles}`} id={id ? id : undefined}>
+      {(isPageEditing || props.fields?.Eyebrow?.value) && (
+        <h6 className="mb-heading__eyebrow">
+          <Text field={props.fields?.Eyebrow} />
+        </h6>
+      )}
+      <div className="mb-heading__row">
+        <span className="mb-heading__rule" aria-hidden="true" />
+        <h2 className="mb-heading__title">
+          <Text field={props.fields?.Heading} />
+        </h2>
+        <span className="mb-heading__rule" aria-hidden="true" />
+      </div>
+      {(isPageEditing || props.fields?.Text?.value) && (
+        <p className="mb-heading__text">
+          <Text field={props.fields?.Text} />
+        </p>
+      )}
+      {(isPageEditing || props.fields?.Link?.value?.href) && (
+        <Link field={props.fields.Link} className="mb-link-underline mt-3" />
+      )}
+    </div>
+  );
+};

@@ -1,0 +1,303 @@
+# MasterBrand Content Map
+# Built from screenshot + live site content (extractor blocked by site navigation)
+# Field names match Financial PLAY! component templates
+
+client:
+  name: "MasterBrand"
+  sourceUrl: "https://www.masterbrandcabinets.com/"
+  createdAt: "2026-10-02T14:25:00Z"
+  contentSourceNote: "DOM extractor failed (navigation); content from screenshot + public site copy"
+
+sections:
+  - position: 1
+    componentName: "Eyebrow"
+    manifestName: "Eyebrow"
+    kind: "context-only"
+    datasourceItemName: ""
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "medium"
+    contentSource: "screenshot"
+
+  - position: 2
+    componentName: "Header"
+    manifestName: "Header"
+    kind: "context-only"
+    datasourceItemName: ""
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 3
+    componentName: "Hero"
+    manifestName: "Hero"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Hero"
+    apiAddable: true
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data"
+    templateId: "{90d315e8-aa42-4b23-a7eb-4491396453f8}"
+    renderingId: "{b7cdf75e-716a-4c59-b9b1-cd970ae0a4ae}"
+    fields:
+      Title: "Expert Design Tips and Trends"
+      Text: "<p></p>"
+      Link:
+        text: "Explore the Design Blog"
+        href: "https://www.masterbrandcabinets.com/blog"
+        target: "_blank"
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "HERO_PLACEHOLDER"
+        alt: "Luxury kitchen with sage green cabinetry and crystal chandeliers"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 4
+    componentName: "FourColumnCta"
+    manifestName: "FourColumnCta"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Featured Grid"
+    apiAddable: true
+    parentFolderId: "{49b76de6-db99-486b-933a-300024893c2b}"
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data/Promos/Four Column CTA"
+    templateId: "{1b694ef9-154d-429a-9c3f-d7774cd4a852}"
+    renderingId: "{35075000-760e-4ff3-bd1c-f2eeba251dcb}"
+    fields:
+      Title1: "Cabinet Basics Made Simple"
+      Text1: "From cabinet types and door styles to storage solutions and design options, learn the essentials to confidently plan your dream kitchen or bath."
+      Link1:
+        text: "Learn the Basics"
+        href: "https://www.masterbrandcabinets.com/get-started"
+        target: ""
+      Title2: "Meet Our Family of Brands"
+      Text2: ""
+      Link2:
+        text: "Explore Our Cabinet Brands"
+        href: "https://www.masterbrandcabinets.com/our-cabinet-brands"
+        target: ""
+      Title3: "Find Cabinet Design Experts in Your Area"
+      Text3: ""
+      Link3:
+        text: "Find a Pro"
+        href: "https://www.masterbrandcabinets.com/dealer-locator"
+        target: ""
+      Title4: "Get Organized"
+      Text4: ""
+      Link4:
+        text: "See Organization Products"
+        href: "https://www.masterbrandcabinets.com/get-started"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image1"
+        src: "GRID1_PLACEHOLDER"
+        alt: "Light wood cabinet drawer storage"
+      - field: "Image2"
+        src: "GRID2_PLACEHOLDER"
+        alt: "Couple embracing in kitchen"
+      - field: "Image3"
+        src: "GRID3_PLACEHOLDER"
+        alt: "Designer examining cabinet samples"
+      - field: "Image4"
+        src: "GRID4_PLACEHOLDER"
+        alt: "Grey organized pantry cabinets"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 5
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Planning Guide"
+    apiAddable: true
+    parentFolderId: "{640234c5-615f-4b07-816d-1fda9a2db584}"
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data/Promos/Promo CTA"
+    templateId: "{c0943942-ae0f-4205-86fa-84884cce4a53}"
+    renderingId: "{1a375fac-6cc1-4a5a-a159-9bc6dbc66b80}"
+    fields:
+      Eyebrow: ""
+      Title: "Free Planning Guide"
+      Subtitle: ""
+      Text: "<p>Enjoy additional tips and tools, design ideas, and inspiration to help you transform your living space!</p>"
+      Link:
+        text: "Download Your Free Planning Guide"
+        href: "https://www.masterbrandcabinets.com/"
+        target: ""
+      Link2:
+        text: ""
+        href: ""
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "PLANNING_PLACEHOLDER"
+        alt: "Kitchen planning guide materials on table"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 6
+    componentName: "HeadingCta"
+    manifestName: "HeadingCta"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Why Heading"
+    apiAddable: true
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data"
+    templateId: "{fa136527-6302-471d-83ab-e66fc72bda99}"
+    renderingId: "{89e1d547-7cd6-4ef0-9a27-1e99410797dd}"
+    fields:
+      Eyebrow: ""
+      Heading: "Why MasterBrand?"
+      Text: ""
+      Link:
+        text: ""
+        href: ""
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 7
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Why Cards"
+    apiAddable: true
+    parentFolderId: "{0a89c37d-218d-4f58-ab16-af7859546847}"
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data/Promos/Three Column CTA"
+    templateId: "{148d07ba-f923-4fb2-8907-0bd440d5db44}"
+    renderingId: "{ad385021-ce2b-4fc1-89aa-207d408034a8}"
+    fields:
+      Text1: "A Cabinet Brand for Every Home"
+      SubText1: ""
+      Link1:
+        text: "View All Brands"
+        href: "https://www.masterbrandcabinets.com/our-cabinet-brands"
+        target: ""
+      Text2: "Backed by Cabinet Experts"
+      SubText2: ""
+      Link2:
+        text: "Learn About MasterBrand"
+        href: "https://www.masterbrandcabinets.com/why-masterbrand"
+        target: ""
+      Text3: "Design Trends You'll Love"
+      SubText3: ""
+      Link3:
+        text: "Explore 2026 Trends"
+        href: "https://www.masterbrandcabinets.com/inspiration-gallery"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image1"
+        src: "WHY1_PLACEHOLDER"
+        alt: "Parent and child in kitchen"
+      - field: "Image2"
+        src: "WHY2_PLACEHOLDER"
+        alt: "Bright classic kitchen"
+      - field: "Image3"
+        src: "WHY3_PLACEHOLDER"
+        alt: "Blue and grey paint sample jars"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 8
+    componentName: "CtaBanner"
+    manifestName: "CtaBanner"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Reviews"
+    apiAddable: true
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data"
+    templateId: "{4900d7e5-61b0-483a-a9d6-69419d4d5982}"
+    renderingId: "{488b8ac0-0ef9-4f6f-8711-78ba182b2c4c}"
+    fields:
+      Eyebrow: "★★★★★"
+      Title: "MasterBrand Cabinet Reviews"
+      Text: "<p>Discover what customers are saying about MasterBrand products. Check out these verified cabinet product reviews collected across our family of brands.</p>"
+      Link:
+        text: "Read Reviews"
+        href: "https://www.masterbrandcabinets.com/why-masterbrand"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "REVIEWS_PLACEHOLDER"
+        alt: "Person holding phone with star ratings overlay"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 9
+    componentName: "TwoColumnCta"
+    manifestName: "TwoColumnCta"
+    kind: "simple"
+    datasourceItemName: "MasterBrand - Style and Dealer"
+    apiAddable: true
+    parentFolderId: "{8a6ad42f-16f8-41eb-99f9-1cd3d6cb3cff}"
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data/Promos/Two Column CTA"
+    templateId: "{1812bf3e-6bdd-466d-99b2-0d7cebb020fc}"
+    renderingId: "{3a9a9d22-c092-4b54-9511-eb202ceabe8d}"
+    fields:
+      Title1: "Define Your Personal Style"
+      Text1: ""
+      Link1:
+        text: "Visit Inspiration Gallery"
+        href: "https://www.masterbrandcabinets.com/inspiration-gallery"
+        target: ""
+      Title2: "Become A Dealer"
+      Text2: "When you become a part of the MasterBrand dealer network, you gain access to an industry-leading family of brands that provides you and your customers with unbeatable choices in kitchen and bath furnishings."
+      Link2:
+        text: "Become a MasterBrand Cabinets Dealer"
+        href: "https://www.masterbrandcabinets.com/"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image1"
+        src: "STYLE_PLACEHOLDER"
+        alt: "Modern bright white kitchen"
+      - field: "Image2"
+        src: ""
+        alt: ""
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 10
+    componentName: "ImageGallery"
+    manifestName: "ImageGallery"
+    kind: "list"
+    datasourceItemName: "MasterBrand - Brand Wall"
+    apiAddable: true
+    parentFolderPath: "/sitecore/content/Financial/masterbrand/Data"
+    templateId: ""
+    renderingId: "{881ce560-277e-47b6-85be-a223348d69ca}"
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "medium"
+    contentSource: "screenshot"
+    notes: "Image Gallery uses branch template + list resolver; brand logos from live site footer. Populate after folder resolution. Logo URLs in theme meta.json logoCandidates."
+
+  - position: 11
+    componentName: "Footer"
+    manifestName: "Footer"
+    kind: "context-only"
+    datasourceItemName: ""
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "medium"
+    contentSource: "screenshot"
+
+summary:
+  totalSections: 11
+  simple: 7
+  list: 1
+  contextOnly: 3
+  imagesExpected: 12
+  contentSource: "screenshot"
+
+datasourceItems: []

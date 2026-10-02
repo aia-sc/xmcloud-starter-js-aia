@@ -1,0 +1,45 @@
+{
+  "colors": {
+    "bodyBackground": "rgb(255, 255, 255)",
+    "bodyColor": "rgb(33, 37, 41)",
+    "headerBackground": "rgb(79, 117, 139)",
+    "headerColor": "rgb(33, 37, 41)",
+    "footerBackground": "rgb(234, 234, 234)",
+    "footerColor": "rgb(33, 37, 41)",
+    "primaryButtonBackground": "rgb(79, 117, 139)",
+    "primaryButtonColor": "rgb(255, 255, 255)",
+    "primaryButtonBorderRadius": "0px",
+    "linkColor": "rgb(255, 255, 255)"
+  },
+  "typography": {
+    "bodyFontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "bodyFontSize": "16px",
+    "bodyFontWeight": "400",
+    "bodyLineHeight": "24px",
+    "h1FontFamily": "Esteban",
+    "h1FontSize": "56px",
+    "h1FontWeight": "300",
+    "h1LetterSpacing": "normal",
+    "h1TextTransform": "none",
+    "h2FontFamily": "Esteban",
+    "h2FontSize": "32px",
+    "h2FontWeight": "500",
+    "h3FontFamily": "Montserrat",
+    "h3FontSize": "28px",
+    "h3FontWeight": "700",
+    "pFontSize": "16px",
+    "pLineHeight": "24px"
+  },
+  "shape": {
+    "cardBorderRadius": "3px",
+    "cardBoxShadow": "none",
+    "cardBorder": "0px none rgb(33, 37, 41)"
+  },
+  "spacing": {
+    "containerMaxWidth": "90%"
+  },
+  "cssVariables": {
+    "--primary": "#007bff",
+    "--secondary": "#6c757d"
+  }
+}

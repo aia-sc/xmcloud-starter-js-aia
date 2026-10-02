@@ -1,0 +1,87 @@
+{
+  "title": "Kitchen Cabinets & Bathroom Cabinetry | MasterBrand",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": "Masterbrand Cabinets, LLC.",
+  "ogDescription": "As the MasterBrand Family of Brands, we offer a wide selection of kitchen and bathroom cabinets ranging from standard to custom, satisfying every budget and lifestyle.",
+  "ogImage": null,
+  "ogSiteName": null,
+  "favicon": "https://www.masterbrandcabinets.com/file/media/masterbrand/brand/favicon.jpg",
+  "googleFontsLinks": [
+    "https://fonts.gstatic.com/",
+    "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,300&display=swap",
+    "https://fonts.googleapis.com/css2?family=Esteban&display=swap"
+  ],
+  "fontFaces": [
+    {
+      "family": "Museo Sans W01_300",
+      "src": "url(\"../Fonts/1d3191cd-ae8c-45e2-bb04-11e96d8fa974.woff2\") format(\"woff2\"), url(\"../Fonts/1d3191cd-ae8c-45e2-bb04-11e96d8fa974.woff2\") format(\"woff\")",
+      "weight": ""
+    },
+    {
+      "family": "MuseoSansW01-300Italic",
+      "src": "url(\"../Fonts/a0f222f7-39b4-41c9-a5c0-0b9b7e6b8f89.woff2\") format(\"woff2\"), url(\"../Fonts/a0f222f7-39b4-41c9-a5c0-0b9b7e6b8f89.woff2\") format(\"woff\")",
+      "weight": ""
+    },
+    {
+      "family": "Museo Sans W01_900",
+      "src": "url(\"../Fonts/009ca58d-46af-4651-a359-f0ae2301085b.woff2\") format(\"woff2\"), url(\"../Fonts/009ca58d-46af-4651-a359-f0ae2301085b.woff2\") format(\"woff\")",
+      "weight": ""
+    },
+    {
+      "family": "MuseoSansW01-900Italic",
+      "src": "url(\"../Fonts/83ec39ba-ad2e-46a6-a1b1-f93f1457f7d4.woff2\") format(\"woff2\"), url(\"../Fonts/83ec39ba-ad2e-46a6-a1b1-f93f1457f7d4.woff2\") format(\"woff\")",
+      "weight": ""
+    },
+    {
+      "family": "Esteban",
+      "src": "url(\"../Fonts/Esteban-Regular.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Montserrat-Light",
+      "src": "url(\"../Fonts/Montserrat-Light.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Montserrat-Medium",
+      "src": "url(\"../Fonts/Montserrat-Medium.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Montserrat-Regular",
+      "src": "url(\"../Fonts/Montserrat-Regular.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    }
+  ],
+  "logoCandidates": [
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Theme/MB_Fav.png?h=20&w=24",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Theme/MB_Career.png?h=20&w=24",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Theme/MB_Env.png?h=20&w=24",
+    "https://www.masterbrandcabinets.com/file/media/masterbrand/theme/newlogo.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/1951_white_68.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/WoodmarkCabinetry_70.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Aristokraft.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/bertch-white-logo.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Decora.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Diamond/Brand/diamondwhite.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Dura_Logo_Horz-300.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Fieldstone.png",
+    "https://www.masterbrandcabinets.com/file/media/Homecrest/Brand/homecrestwhite.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Kemper.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/KitchenCraft.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Mantra.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Mid%20Continent/Brand/midcon_160px_white.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/omega_white_logo_footer.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Schrock.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/shenandoah-logo.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/StarMark.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/Thomasville.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/timberlake_white_transparent_70.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/UltraCraft.PNG",
+    "https://www.masterbrandcabinets.com/file/media/Urban%20Effects/Brand/urbaneffects_160px_white.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/waypoint_white_transparent_70.png",
+    "https://www.masterbrandcabinets.com/file/media/Masterbrand/Footer/Brand%20Logos/MBC-Listed-NYSE_emblem_rgb_BLACK.png"
+  ],
+  "heroBgImage": null
+}

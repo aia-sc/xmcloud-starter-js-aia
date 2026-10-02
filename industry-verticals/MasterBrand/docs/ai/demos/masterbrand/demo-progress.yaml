@@ -1,0 +1,96 @@
+# Demo Progress Tracker — MasterBrand
+# Created automatically at the start of a demo build.
+# Updated after each MCP call or phase completion.
+# Used by "resume demo" to skip completed work.
+
+client:
+  name: "MasterBrand"
+  sourceUrl: "https://www.masterbrandcabinets.com/"
+  contentPath: "/sitecore/content/Financial/masterbrand"
+  codePath: "./industry-verticals/MasterBrand"
+  startedAt: "2026-10-02T13:51:00Z"
+  lastUpdatedAt: "2026-10-02T14:20:00Z"
+
+phases:
+  phase0_inputs:
+    status: "complete"
+    screenshot: true
+    url: "https://www.masterbrandcabinets.com/"
+    contentHubAuth: "verified"
+    contentHubHost: "https://aia-verticals.sitecoresandbox.cloud/"
+    notes: "Screenshot provided by user; Content Hub credentials validated via /api/authenticate"
+
+  phase0_5_manifest:
+    status: "complete"
+    validationMode: "quick"
+    result: "adapted"
+    adaptation: "financial-play-library"
+    pixelPerfect: true
+    blockers:
+      - "Manifest project block points to fmc-custom-demo/main/main-website; project.yaml is Financial/masterbrand"
+      - "All 18+ uiim React files missing (src/components/uiim/** does not exist)"
+      - "Sitecore has Financial PLAY! components (HeroBanner, Features, CTA Banner, etc.), not uiim template library"
+      - "No /sitecore/templates/Project/Financial/Folders (uiim folder templates missing)"
+      - "Data folder has only OOB SXA folders (Promos, Texts, Images) — no uiim datasource folders"
+    siteVerified:
+      path: "/sitecore/content/Financial/masterbrand"
+      itemId: "{2d2367ab-af4d-4d6d-a600-26b2b4cf2494}"
+      homeId: "{4cbb1ac4-484e-4804-a389-62ef4e8c96a3}"
+      dataId: "{a30977d1-b3ae-4c45-810b-b1604e66d6de}"
+      renderingsRoot: "/sitecore/layout/Renderings/Project/Financial"
+      templatesRoot: "/sitecore/templates/Project/Financial"
+
+  phase1_theme:
+    status: "complete"
+    themeFile: "docs/ai/themes/masterbrand.theme.yaml"
+    userApproved: false
+
+  phase2_analysis:
+    status: "complete"
+    buildPlanFile: "docs/ai/demos/masterbrand/build-plan.yaml"
+    totalSections: 11
+    userApproved: false
+    awaitingCheckpoint: true
+
+  phase2_5_content:
+    status: "pending"
+    contentMapFile: ""
+    extractorUsed: false
+
+  phase3_content:
+    status: "pending"
+    completedSections: 0
+    totalSections: 0
+
+  phase4_theme:
+    status: "pending"
+    themeDelivery: ""
+    cssWritten: false
+    fontsAdded: false
+
+  phase5_custom:
+    status: "pending"
+    customComponentsNeeded: 0
+    customComponentsBuilt: 0
+
+  phase5_5_variants:
+    status: "complete"
+    variantsNeeded: 11
+    variantsCreated: 11
+    variantSpecsFile: ""
+    skippedReason: ""
+    pixelPerfect: true
+    userDecision: "pixel-perfect all sections"
+    sitecoreVariantDefinitions: 9
+    notes: "React MasterBrand exports on all 11 components. Sitecore Variant Definitions created for Hero, Four Column CTA, Promo CTA, Heading CTA, Three Column CTA, CTA Banner, Two Column CTA, Header, Footer. Eyebrow and Image Gallery have no Headless Variants containers in this site."
+
+  phase6_assembly:
+    status: "pending"
+    componentsAdded: 0
+    datasourcesWired: 0
+    totalComponents: 0
+
+  phase7_summary:
+    status: "pending"
+
+sections: []

@@ -53,3 +53,32 @@ export const WithLogoImage = (props: HeaderProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — solid primary bar, logo left, white nav via header-right */
+export const MasterBrand = (props: HeaderProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const { page } = useSitecore();
+
+  return (
+    <div className={`component header mb-header ${sxaStyles}`} id={id ? id : undefined}>
+      <div className={`container container-${props.params?.ContainerWidth?.toLowerCase() || 'fluid'}-fluid`}>
+        <div className="row align-items-center">
+          <div className="col-auto">
+            <a href="/" className="mb-header__logo">
+              <NextImage field={props.fields.LogoImage} width={200} height={50} />
+            </a>
+          </div>
+          <div className="col mb-header__nav">
+            <AppPlaceholder
+              name="header-right"
+              rendering={props.rendering}
+              page={page}
+              componentMap={props.componentMap}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

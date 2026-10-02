@@ -140,3 +140,33 @@ export const Default = (props: EyebrowProps): JSX.Element => {
     </>
   );
 };
+
+/* MasterBrand variant — dark utility bar with white placeholder links */
+export const MasterBrand = (props: EyebrowProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+
+  return (
+    <div
+      className={`component eyebrow mb-eyebrow ${props.params.styles?.trimEnd() ?? ''}`}
+      id={id || undefined}
+    >
+      <div className={`container container-${props.params?.ContainerWidth?.toLowerCase() || 'fluid'}-fluid`}>
+        <div className="mb-eyebrow__inner">
+          <AppPlaceholder
+            name="eyebrow-left"
+            rendering={props.rendering}
+            page={page}
+            componentMap={props.componentMap}
+          />
+          <AppPlaceholder
+            name="eyebrow-right"
+            rendering={props.rendering}
+            page={page}
+            componentMap={props.componentMap}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};

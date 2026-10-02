@@ -1,0 +1,124 @@
+# Client Brand Theme — MasterBrand
+# Extracted from: https://www.masterbrandcabinets.com/
+# Primary: Playwright scraper + screenshot analysis
+
+client:
+  name: "MasterBrand"
+  sourceUrl: "https://www.masterbrandcabinets.com/"
+  extractedAt: "2026-10-02T14:05:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#4F758B"
+  primaryForeground: "#ffffff"
+  secondary: "#2C3E4A"
+  secondaryForeground: "#ffffff"
+  accent: "#4F758B"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#212529"
+  muted: "#F5F4F1"
+  mutedForeground: "#5A6570"
+  headerBackground: "#4F758B"
+  headerForeground: "#ffffff"
+  footerBackground: "#EAEAEA"
+  footerForeground: "#212529"
+  border: "#D5D8DC"
+  ring: "#4F758B"
+  extra:
+    - { name: "utilityBar", value: "#2C2C2C" }
+    - { name: "brandWall", value: "#3A3A3A" }
+    - { name: "linkUnderline", value: "#4F758B" }
+
+typography:
+  headingFamily: "'Esteban', Georgia, serif"
+  headingWeight: "400"
+  bodyFamily: "'Montserrat', system-ui, sans-serif"
+  bodyWeight: "400"
+  monoFamily: "ui-monospace, monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&display=swap"
+  scale:
+    hero: "3.5rem"
+    h1: "2.25rem"
+    h2: "2rem"
+    h3: "1.75rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "relaxed"
+
+spacing:
+  density: "comfortable"
+  sectionGap: "4rem"
+  containerMaxWidth: "1200px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0.25rem"
+  buttonRadius: "9999px"
+  cardRadius: "0"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "premium lifestyle"
+  colorMode: "light"
+  contrast: "medium"
+  imagery: "photography"
+  heroStyle: "full-bleed-image"
+  cardStyle: "image-overlay"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#4F758B"
+      secondary: "#2C3E4A"
+      accent: "#4F758B"
+  fontFamily:
+    heading: ["Esteban", "Georgia", "serif"]
+    body: ["Montserrat", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0.25rem"
+    button: "9999px"
+    card: "0"
+
+cssVariables: |
+  :root {
+    --brand-primary: #4F758B;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #2C3E4A;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #4F758B;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #212529;
+    --brand-muted: #F5F4F1;
+    --brand-muted-fg: #5A6570;
+    --brand-header-bg: #4F758B;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #EAEAEA;
+    --brand-footer-fg: #212529;
+    --brand-border: #D5D8DC;
+    --brand-ring: #4F758B;
+    --brand-heading-font: 'Esteban', Georgia, serif;
+    --brand-body-font: 'Montserrat', system-ui, sans-serif;
+    --brand-radius: 0.25rem;
+    --brand-button-radius: 9999px;
+    --brand-card-radius: 0;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full + screenshot"
+  notes:
+    - "Primary slate-blue #4F758B from header/button computed styles (rgb 79,117,139)."
+    - "Headings use Esteban (serif); body/nav use Montserrat (sans). Both on Google Fonts."
+    - "Proprietary Museo Sans present on live site — substituted with Montserrat for demo."
+    - "Hero CTAs are pill ghost buttons (white border, transparent fill)."
+    - "Cards mostly use image overlays with white text; some cards have white text panels below."
+    - "Brand wall is dark charcoal (#3A3A3A) with white logos."
+    - "Utility bar is near-black (#2C2C2C); main nav is solid primary blue."
+    - "Muted section backgrounds are warm off-white (#F5F4F1), not cool gray."

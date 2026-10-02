@@ -169,3 +169,89 @@ export const WithSocials = (props: FooterProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — light gray footer with brand fonts/colors */
+export const MasterBrand = (props: FooterProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component footer mb-footer ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="container">
+        <div className="content">
+          <div className="logo">
+            <NextImage
+              field={props.fields?.Image1}
+              width={160}
+              height={80}
+              className="img-fluid"
+            />
+          </div>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-4 row-gap-4 gx-4">
+            <div className="col">
+              <div className="title">
+                <Text field={props.fields?.Title1} />
+              </div>
+              <div className="links">
+                <RichText field={props.fields?.Text1} />
+              </div>
+            </div>
+            <div className="col">
+              <div className="title">
+                <Text field={props.fields?.Title2} />
+              </div>
+              <div className="links">
+                <RichText field={props.fields?.Text2} />
+              </div>
+            </div>
+            <div className="col">
+              <div className="title">
+                <Text field={props.fields?.Title3} />
+              </div>
+              <div className="links">
+                <RichText field={props.fields?.Text3} />
+              </div>
+            </div>
+            <div className="col">
+              <div className="title">
+                <Text field={props.fields?.Title4} />
+              </div>
+              <div className="links">
+                <RichText field={props.fields?.Text4} />
+              </div>
+              {(props.fields?.SocialLink1?.value?.href ||
+                props.fields?.SocialLink2?.value?.href ||
+                props.fields?.SocialLink3?.value?.href) && (
+                <div className="links links-socials mt-3">
+                  {props.fields?.SocialLink1?.value?.href && (
+                    <Link field={props.fields.SocialLink1}>
+                      <NextImage field={props.fields?.SocialIcon1} width={16} height={16} />
+                    </Link>
+                  )}
+                  {props.fields?.SocialLink2?.value?.href && (
+                    <Link field={props.fields.SocialLink2}>
+                      <NextImage field={props.fields?.SocialIcon2} width={16} height={16} />
+                    </Link>
+                  )}
+                  {props.fields?.SocialLink3?.value?.href && (
+                    <Link field={props.fields.SocialLink3}>
+                      <NextImage field={props.fields?.SocialIcon3} width={16} height={16} />
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="footnote">
+          <Text field={props.fields?.Copyright} />
+          <div className="privacy-links">
+            <Link field={props.fields?.Link1} />
+            <Link field={props.fields?.Link2} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

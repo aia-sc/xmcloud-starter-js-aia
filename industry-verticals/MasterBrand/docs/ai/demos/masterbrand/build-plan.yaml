@@ -1,0 +1,288 @@
+# MasterBrand Homepage Build Plan
+# Adapted for Financial PLAY! component library (not uiim)
+# Pixel-perfect variants planned for Phase 5.5
+
+client:
+  name: "MasterBrand"
+  sourceUrl: "https://www.masterbrandcabinets.com/"
+  contentPath: "/sitecore/content/Financial/masterbrand"
+  codePath: "./industry-verticals/MasterBrand"
+  analyzedAt: "2026-10-02T14:10:00Z"
+  componentLibrary: "financial-play"
+  pixelPerfect: true
+
+theme:
+  file: "docs/ai/themes/masterbrand.theme.yaml"
+  primary: "#4F758B"
+  headingFont: "Esteban"
+  bodyFont: "Montserrat"
+
+sections:
+  - position: 1
+    name: "Utility Bar"
+    description: "Dark charcoal top bar with My Favorites, Careers, Exclusive Emails, search"
+    matchType: "template"
+    componentName: "Eyebrow"
+    manifestName: "Eyebrow"
+    kind: "context-only"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Dark utility bar, right-aligned icon+text links, no search widget chrome"
+      parentComponent: "Eyebrow"
+    apiAddable: false
+    matchConfidence: "medium"
+    sectionBackground: "dark"
+    notes: "Lives in partial design — style via variant; content via placeholder children"
+
+  - position: 2
+    name: "Main Navigation"
+    description: "Slate-blue bar with MasterBrand logo left and white nav links right"
+    matchType: "template"
+    componentName: "Header"
+    manifestName: "Header"
+    kind: "context-only"
+    variant: "MasterBrand"
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Solid #4F758B bar, white logo, Montserrat nav links, no hamburger on desktop"
+      parentComponent: "Header"
+    apiAddable: false
+    matchConfidence: "high"
+    sectionBackground: "primary"
+    notes: "Partial design — re-skin WithLogoImage into MasterBrand variant"
+
+  - position: 3
+    name: "Hero"
+    description: "Full-bleed kitchen photo with centered white serif headline and pill ghost CTA"
+    matchType: "template"
+    componentName: "Hero"
+    manifestName: "Hero"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Full-bleed background image, centered overlay text bottom-third, white Esteban headline, pill outline CTA"
+      parentComponent: "Hero"
+    apiAddable: true
+    renderingId: "{b7cdf75e-716a-4c59-b9b1-cd970ae0a4ae}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Hero"
+    matchConfidence: "high"
+    sectionBackground: "default"
+    content:
+      Title: "Expert Design Tips and Trends"
+      Link: { text: "Explore the Design Blog", href: "https://www.masterbrandcabinets.com/blog" }
+      Image: "hero kitchen lifestyle"
+
+  - position: 4
+    name: "Featured Content Grid"
+    description: "Asymmetric 4-card masonry: basics (text below), brands (tall overlay), find pro, get organized"
+    matchType: "template"
+    componentName: "FourColumnCta"
+    manifestName: "FourColumnCta"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "CSS grid masonry — col1 text-under-image, col2 tall full-bleed overlay spanning 2 rows, col3+4 stacked image overlays"
+      parentComponent: "FourColumnCta"
+    apiAddable: true
+    renderingId: "{35075000-760e-4ff3-bd1c-f2eeba251dcb}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Four Column CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "default"
+    content:
+      cards:
+        - { Title: "Cabinet Basics Made Simple", Text: "From cabinet types and door styles to storage solutions and design options, learn the essentials to confidently plan your dream kitchen or bath.", Link: "Learn the Basics", href: "/get-started" }
+        - { Title: "Meet Our Family of Brands", Text: "", Link: "Explore Our Cabinet Brands", href: "/our-cabinet-brands" }
+        - { Title: "Find Cabinet Design Experts in Your Area", Text: "", Link: "Find a Pro", href: "/dealer-locator" }
+        - { Title: "Get Organized", Text: "", Link: "See Organization Products", href: "/get-started" }
+
+  - position: 5
+    name: "Free Planning Guide"
+    description: "Horizontal split: planning guide photo left, muted beige panel with title + download link right"
+    matchType: "template"
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Image left / muted text right, Esteban title, underlined primary text link (no filled button), no dotted accents"
+      parentComponent: "PromoCta"
+    apiAddable: true
+    renderingId: "{1a375fac-6cc1-4a5a-a159-9bc6dbc66b80}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Promo CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "muted"
+    content:
+      Title: "Free Planning Guide"
+      Text: "Enjoy additional tips and tools, design ideas, and inspiration to help you transform your living space!"
+      Link: { text: "Download Your Free Planning Guide", href: "https://www.masterbrandcabinets.com/" }
+
+  - position: 6
+    name: "Why MasterBrand Heading"
+    description: "Centered 'Why MasterBrand?' with horizontal rules on both sides"
+    matchType: "template"
+    componentName: "HeadingCta"
+    manifestName: "HeadingCta"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Centered Esteban heading with hairline rules flanking the title; no CTA button"
+      parentComponent: "HeadingCta"
+    apiAddable: true
+    renderingId: "{89e1d547-7cd6-4ef0-9a27-1e99410797dd}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Heading CTA"
+    matchConfidence: "high"
+    sectionBackground: "default"
+    content:
+      Heading: "Why MasterBrand?"
+
+  - position: 7
+    name: "Why MasterBrand Cards"
+    description: "Three equal image cards with white text overlays and underline links"
+    matchType: "template"
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Full-bleed image cards, gradient overlay bottom, white Esteban titles, white underline links — no body text below"
+      parentComponent: "ThreeColumnCta"
+    apiAddable: true
+    renderingId: "{ad385021-ce2b-4fc1-89aa-207d408034a8}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Three Column CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "default"
+    content:
+      cards:
+        - { Text: "A Cabinet Brand for Every Home", Link: "View All Brands", href: "/our-cabinet-brands" }
+        - { Text: "Backed by Cabinet Experts", Link: "Learn About MasterBrand", href: "/why-masterbrand" }
+        - { Text: "Design Trends You'll Love", Link: "Explore 2026 Trends", href: "/inspiration-gallery" }
+
+  - position: 8
+    name: "Cabinet Reviews"
+    description: "Split: muted text panel with stars + reviews copy left; phone/stars lifestyle photo right"
+    matchType: "template"
+    componentName: "CtaBanner"
+    manifestName: "CtaBanner"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "50/50 split, muted left panel with star row + Esteban title + underline link; full-bleed image right; no dotted accents"
+      parentComponent: "CtaBanner"
+    apiAddable: true
+    renderingId: "{488b8ac0-0ef9-4f6f-8711-78ba182b2c4c}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/CTA Banner"
+    matchConfidence: "high"
+    sectionBackground: "muted"
+    content:
+      Title: "MasterBrand Cabinet Reviews"
+      Text: "Discover what customers are saying about MasterBrand products. Check out these verified cabinet product reviews collected across our family of brands."
+      Link: { text: "Read Reviews", href: "/why-masterbrand" }
+
+  - position: 9
+    name: "Style Gallery + Become a Dealer"
+    description: "Left: kitchen image with overlay CTA. Right: muted text panel Become A Dealer"
+    matchType: "template"
+    componentName: "TwoColumnCta"
+    manifestName: "TwoColumnCta"
+    kind: "simple"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Left column full-bleed image+overlay text; right column muted panel text-only (no image), underline links"
+      parentComponent: "TwoColumnCta"
+    apiAddable: true
+    renderingId: "{3a9a9d22-c092-4b54-9511-eb202ceabe8d}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Two Column CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "default"
+    content:
+      left:
+        Title: "Define Your Personal Style"
+        Link: { text: "Visit Inspiration Gallery", href: "/inspiration-gallery" }
+      right:
+        Title: "Become A Dealer"
+        Text: "When you become a part of the MasterBrand dealer network, you gain access to an industry-leading family of brands that provides you and your customers with unbeatable choices in kitchen and bath furnishings."
+        Link: { text: "Become a MasterBrand Cabinets Dealer", href: "https://www.masterbrandcabinets.com/" }
+
+  - position: 10
+    name: "Our Family of Brands"
+    description: "Dark charcoal full-width logo wall with white brand logos"
+    matchType: "template"
+    componentName: "ImageGallery"
+    manifestName: "ImageGallery"
+    kind: "list"
+    variant: "MasterBrand"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Dark #3A3A3A background, centered heading with rules, responsive white logo grid, no dotted accents"
+      parentComponent: "ImageGallery"
+    apiAddable: true
+    renderingId: "{881ce560-277e-47b6-85be-a223348d69ca}"
+    datasourceTemplate: "/sitecore/templates/Branches/Project/Verticals/Image Gallery"
+    matchConfidence: "medium"
+    sectionBackground: "dark"
+    content:
+      Title: "Our Family of Brands"
+      notes: "Child image items for each brand logo (white PNGs from live site)"
+
+  - position: 11
+    name: "Footer"
+    description: "Light gray multi-column footer with socials, link columns, NYSE mark"
+    matchType: "template"
+    componentName: "Footer"
+    manifestName: "Footer"
+    kind: "context-only"
+    variant: "MasterBrand"
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "MasterBrand"
+      description: "Light gray footer, multi-column link lists matching live IA, social icons, MBC NYSE badge"
+      parentComponent: "Footer"
+    apiAddable: false
+    matchConfidence: "medium"
+    sectionBackground: "muted"
+    notes: "Partial design — restyle existing Footer"
+
+buildOrder:
+  phase1_sitecore:
+    - { position: 3, componentName: "Hero", action: "create-datasource + add" }
+    - { position: 4, componentName: "FourColumnCta", action: "create-datasource + add" }
+    - { position: 5, componentName: "PromoCta", action: "create-datasource + add" }
+    - { position: 6, componentName: "HeadingCta", action: "create-datasource + add" }
+    - { position: 7, componentName: "ThreeColumnCta", action: "create-datasource + add" }
+    - { position: 8, componentName: "CtaBanner", action: "create-datasource + add" }
+    - { position: 9, componentName: "TwoColumnCta", action: "create-datasource + add" }
+    - { position: 10, componentName: "ImageGallery", action: "create-datasource + children + add" }
+  phase_manual:
+    - { position: 1, componentName: "Eyebrow", action: "variant + content in partial" }
+    - { position: 2, componentName: "Header", action: "variant + logo in partial" }
+    - { position: 11, componentName: "Footer", action: "variant + content in partial" }
+
+summary:
+  totalSections: 11
+  apiAddable: 8
+  contextOnly: 3
+  customComponents: 0
+  customVariantsNeeded: 11
+  approach: "Reuse Financial PLAY! components; pixel-perfect via MasterBrand named variants on each"

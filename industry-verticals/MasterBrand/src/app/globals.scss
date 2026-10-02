@@ -1,3 +1,28 @@
+/* CLIENT THEME — MasterBrand (unlayered :root beats imported layers) */
+:root {
+  --brand-primary: #4F758B;
+  --brand-primary-foreground: #ffffff;
+  --brand-secondary: #2C3E4A;
+  --brand-secondary-foreground: #ffffff;
+  --brand-accent: #4F758B;
+  --brand-accent-foreground: #ffffff;
+  --brand-bg: #ffffff;
+  --brand-fg: #212529;
+  --brand-muted: #F5F4F1;
+  --brand-muted-fg: #5A6570;
+  --brand-header-bg: #4F758B;
+  --brand-header-fg: #ffffff;
+  --brand-footer-bg: #EAEAEA;
+  --brand-footer-fg: #212529;
+  --brand-border: #D5D8DC;
+  --brand-ring: #4F758B;
+  --brand-heading-font: 'Esteban', Georgia, serif;
+  --brand-body-font: 'Montserrat', system-ui, sans-serif;
+  --brand-radius: 0.25rem;
+  --brand-button-radius: 9999px;
+  --brand-card-radius: 0;
+}
+
 @import "tailwindcss";
 @import '../assets/basic/fonts';
 @import 'bootstrap/scss/bootstrap';

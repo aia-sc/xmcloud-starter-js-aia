@@ -56,3 +56,28 @@ export const Default = (props: AppPromoProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — full-bleed cover image, centered white Esteban title, pill ghost CTA */
+export const MasterBrand = (props: AppPromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component hero mb-hero ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="mb-hero__media">
+        <NextImage field={props.fields.Image} className="" width={1920} height={1080} />
+      </div>
+      <div className="mb-hero__overlay" aria-hidden="true" />
+      <div className="mb-hero__content">
+        <h1 className="mb-hero__title">
+          <Text field={props.fields.Title} />
+        </h1>
+        {(isPageEditing || props.fields?.Link?.value?.href) && (
+          <Link field={props.fields.Link} className="mb-btn-ghost" />
+        )}
+      </div>
+    </div>
+  );
+};

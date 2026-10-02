@@ -40,3 +40,24 @@ export const Default = (props: ImageGalleryProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — dark brand wall logo grid; no dotted accents */
+export const MasterBrand = (props: ImageGalleryProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const images = props.fields?.items;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const title = props.params?.Title || props.params?.title;
+
+  return (
+    <div className={`component image-gallery mb-brand-wall ${sxaStyles}`} id={id ? id : undefined}>
+      {title && <h2 className="mb-brand-wall__title">{title}</h2>}
+      <div className="mb-brand-wall__grid">
+        {images?.map((image) => (
+          <div className="mb-brand-wall__logo" key={image.url || image.name}>
+            <NextImage field={image.fields.Image} width={200} height={80} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
