@@ -14,5 +14,5 @@ sdk: "@sitecore-content-sdk/nextjs"
 # Sitecore item root paths
 # Override these only if your project uses a non-standard structure.
 # If omitted, the agent derives them from siteCollection and siteName using defaults.
-renderingsRoot: "/sitecore/layout/Renderings/Project/Financial"
-projectTemplatesRoot: "/sitecore/templates/Project/Financial"
+renderingsRoot: "/sitecore/layout/Renderings/Project/MasterBrand"
+projectTemplatesRoot: "/sitecore/templates/Project/MasterBrand"
