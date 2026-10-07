@@ -1,6 +1,9 @@
 ﻿# may contain OAuth secrets, do not commit
 .sitecore/user.json
 
+# Local AI/Sitecore credentials — never commit
+**/docs/ai/config/credentials.local.yaml
+
 # NuGet cache for Sitecore CLI
 .sitecore/package-cache/
 

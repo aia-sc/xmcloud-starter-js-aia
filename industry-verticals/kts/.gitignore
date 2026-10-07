@@ -15,6 +15,9 @@
 .env.*.local
 .env
 
+# Local AI/Sitecore credentials — never commit
+docs/ai/config/credentials.local.yaml
+
 # Log files
 *.log*
 
