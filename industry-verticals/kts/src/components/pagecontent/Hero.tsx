@@ -56,3 +56,22 @@ export const Default = (props: AppPromoProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — red headline band with column lines + stacked portrait */
+export const KTS = (props: AppPromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component hero kts-hero ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="kts-hero__band">
+        <h1 className="kts-hero__title">
+          <Text field={props.fields.Title} />
+        </h1>
+      </div>
+      <div className="kts-hero__media">
+        <NextImage field={props.fields.Image} width={1920} height={1080} />
+      </div>
+    </div>
+  );
+};

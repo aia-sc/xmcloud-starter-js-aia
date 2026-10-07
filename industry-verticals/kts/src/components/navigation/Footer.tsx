@@ -169,3 +169,44 @@ export const WithSocials = (props: FooterProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — solid red footer matching brand */
+export const KTS = (props: FooterProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component footer kts-footer ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="container">
+        <div className="footnote" style={{ marginTop: 0 }}>
+          <Text field={props.fields?.Copyright} />
+          <div className="links links-socials">
+            {props.fields?.SocialLink1?.value?.href && (
+              <Link field={props.fields.SocialLink1}>
+                <NextImage field={props.fields?.SocialIcon1} width={16} height={16} />
+              </Link>
+            )}
+            {props.fields?.SocialLink2?.value?.href && (
+              <Link field={props.fields.SocialLink2}>
+                <NextImage field={props.fields?.SocialIcon2} width={16} height={16} />
+              </Link>
+            )}
+            {props.fields?.SocialLink3?.value?.href && (
+              <Link field={props.fields.SocialLink3}>
+                <NextImage field={props.fields?.SocialIcon3} width={16} height={16} />
+              </Link>
+            )}
+          </div>
+        </div>
+        <hr />
+        <div className="footnote">
+          <div className="privacy-links">
+            <Link field={props.fields?.Link1} />
+            <Link field={props.fields?.Link2} />
+            <RichText field={props.fields?.Text1} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

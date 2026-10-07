@@ -140,3 +140,29 @@ export const LargeImage = (props: CtaBannerProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — solid red oversized marquee typography */
+export const KTS = (props: CtaBannerProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const title = props.fields?.Title?.value || '';
+  const textValue =
+    typeof props.fields?.Text?.value === 'string' ? props.fields.Text.value.replace(/<[^>]+>/g, ' ') : '';
+  const phrase = [title, textValue].filter(Boolean).join(' · ').replace(/\s+/g, ' ').trim();
+  const loop = `${phrase} · ${phrase}`;
+
+  return (
+    <div
+      className={`component cta-banner kts-marquee ${sxaStyles}`}
+      id={id ? id : undefined}
+      aria-label={phrase || 'Marquee'}
+    >
+      <div className="kts-marquee__track">
+        <span className="kts-marquee__item">{loop}</span>
+        <span className="kts-marquee__item" aria-hidden="true">
+          {loop}
+        </span>
+      </div>
+    </div>
+  );
+};

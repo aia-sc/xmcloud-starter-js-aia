@@ -1,0 +1,123 @@
+# Client Brand Theme — KTS Law (Kilpatrick Townsend & Stockton)
+# Primary: screenshot + Playwright scraper of https://ktslaw.com/
+
+client:
+  name: "KTS Law"
+  sourceUrl: "https://ktslaw.com/"
+  extractedAt: "2026-10-07T21:15:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#BA0C2F"
+  primaryForeground: "#ffffff"
+  secondary: "#4A152B"
+  secondaryForeground: "#ffffff"
+  accent: "#F4364C"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#101820"
+  muted: "#F2F2F2"
+  mutedForeground: "#5A5A5A"
+  headerBackground: "#ffffff"
+  headerForeground: "#101820"
+  footerBackground: "#BA0C2F"
+  footerForeground: "#ffffff"
+  border: "#E0E0E0"
+  ring: "#BA0C2F"
+  extra:
+    - { name: "burgundy", value: "#4A152B" }
+    - { name: "heroRed", value: "#F4364C" }
+    - { name: "brandRed", value: "#BA0C2F" }
+    - { name: "officeLink", value: "#0066CC" }
+
+typography:
+  headingFamily: "'Outfit', 'Helvetica Neue', Arial, sans-serif"
+  headingWeight: "300"
+  bodyFamily: "'Outfit', 'Helvetica Neue', Arial, sans-serif"
+  bodyWeight: "400"
+  monoFamily: "ui-monospace, monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+  scale:
+    hero: "4.5rem"
+    h1: "2.75rem"
+    h2: "2rem"
+    h3: "1.25rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "tight"
+
+spacing:
+  density: "comfortable"
+  sectionGap: "4rem"
+  containerMaxWidth: "1280px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "30px"
+  cardRadius: "0"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "none"
+
+tone:
+  overall: "corporate law — bold, precise, modern"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "split-image-text"
+  cardStyle: "flat-image-top"
+  navStyle: "minimal"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#BA0C2F"
+      secondary: "#4A152B"
+      accent: "#F4364C"
+  fontFamily:
+    heading: ["Outfit", "Helvetica Neue", "Arial", "sans-serif"]
+    body: ["Outfit", "Helvetica Neue", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+    button: "30px"
+    card: "0"
+
+cssVariables: |
+  :root {
+    --brand-primary: #BA0C2F;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #4A152B;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #F4364C;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #101820;
+    --brand-muted: #F2F2F2;
+    --brand-muted-fg: #5A5A5A;
+    --brand-header-bg: #ffffff;
+    --brand-header-fg: #101820;
+    --brand-footer-bg: #BA0C2F;
+    --brand-footer-fg: #ffffff;
+    --brand-border: #E0E0E0;
+    --brand-ring: #BA0C2F;
+    --brand-heading-font: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+    --brand-body-font: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+    --brand-radius: 0;
+    --brand-button-radius: 30px;
+    --brand-card-radius: 0;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full + screenshot"
+  notes:
+    - "Primary/footer red from scraper: #BA0C2F (rgb 186,12,47)."
+    - "Hero banner red is brighter: #F4364C (rgb 244,54,76) — mapped to --brand-accent."
+    - "Deep burgundy ~#4A152B for the three hero pillar panels (from screenshot)."
+    - "Site uses proprietary Diagramm font — substituted with Google Font Outfit (similar geometric sans)."
+    - "See all Insights button uses ~30px radius; cards/images stay square."
+    - "White minimal header; solid red footer."
+    - "4-column grid is a layout reference for pixel-perfect variants."

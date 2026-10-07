@@ -151,3 +151,22 @@ export const Centered = (props: HeadingCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — left headline / right solid red CTA */
+export const KTS = (props: HeadingCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component heading-cta kts-heading ${sxaStyles}`} id={id ? id : undefined}>
+      <h2 className="kts-heading__title">
+        <Text field={props.fields?.Heading} />
+      </h2>
+      {(isPageEditing || props.fields?.Link?.value?.href) && (
+        <Link field={props.fields.Link} className="kts-heading__cta" />
+      )}
+    </div>
+  );
+};

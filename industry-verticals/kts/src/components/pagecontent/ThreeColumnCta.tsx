@@ -267,3 +267,91 @@ export const WithIconsCompact = (props: ThreeColumnCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — burgundy pillars with number watermarks + outlined CTAs */
+export const KTS = (props: ThreeColumnCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  const Pillar = ({
+    text,
+    subText,
+    link,
+  }: {
+    text: Field<string>;
+    subText: Field<string>;
+    link: LinkField;
+  }) => (
+    <div className="kts-pillars__col">
+      {(isPageEditing || subText?.value) && (
+        <span className="kts-pillars__number" aria-hidden="true">
+          <Text field={subText} />
+        </span>
+      )}
+      <h2 className="kts-pillars__text">
+        <Text field={text} />
+      </h2>
+      {(isPageEditing || link?.value?.href) && (
+        <Link field={link} className="kts-pillars__link" />
+      )}
+    </div>
+  );
+
+  return (
+    <div
+      className={`component three-column-cta kts-pillars-wrap ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
+      <div className="kts-pillars">
+        <Pillar text={props.fields.Text1} subText={props.fields.SubText1} link={props.fields.Link1} />
+        <Pillar text={props.fields.Text2} subText={props.fields.SubText2} link={props.fields.Link2} />
+        <Pillar text={props.fields.Text3} subText={props.fields.SubText3} link={props.fields.Link3} />
+      </div>
+    </div>
+  );
+};
+
+/* KTSInsights variant — image-top alert cards with red text links */
+export const KTSInsights = (props: ThreeColumnCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  const Card = ({
+    image,
+    text,
+    link,
+  }: {
+    image: ImageField;
+    text: Field<string>;
+    link: LinkField;
+  }) => (
+    <article className="kts-insights__card">
+      <div className="kts-insights__media">
+        <NextImage field={image} width={640} height={400} />
+      </div>
+      <h3 className="kts-insights__title">
+        <Text field={text} />
+      </h3>
+      {(isPageEditing || link?.value?.href) && (
+        <Link field={link} className="kts-insights__link" />
+      )}
+    </article>
+  );
+
+  return (
+    <div
+      className={`component three-column-cta kts-insights-wrap ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
+      <div className="kts-insights">
+        <Card image={props.fields.Image1} text={props.fields.Text1} link={props.fields.Link1} />
+        <Card image={props.fields.Image2} text={props.fields.Text2} link={props.fields.Link2} />
+        <Card image={props.fields.Image3} text={props.fields.Text3} link={props.fields.Link3} />
+      </div>
+    </div>
+  );
+};

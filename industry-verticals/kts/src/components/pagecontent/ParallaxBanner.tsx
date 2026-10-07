@@ -93,3 +93,25 @@ export const Default = (props: ParallaxBannerProps) => {
     </div>
   );
 };
+
+/* KTS variant — muted grey tech visual, image-only */
+export const KTS = (props: ParallaxBannerProps) => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const imageField = props.fields.ForegroundImage?.value?.src
+    ? props.fields.ForegroundImage
+    : props.fields.BackgroundImage;
+
+  return (
+    <div
+      className={`component parallax-banner kts-parallax ${isPageEditing ? 'edit-mode' : ''} ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
+      <div className="kts-parallax__media">
+        <Image field={imageField} />
+      </div>
+    </div>
+  );
+};

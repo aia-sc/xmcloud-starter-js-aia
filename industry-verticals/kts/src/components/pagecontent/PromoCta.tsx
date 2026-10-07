@@ -190,3 +190,49 @@ export const WithBackgroundImage = (props: PromoCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* KTS variant — full-bleed red attorney search strip */
+export const KTS = (props: PromoCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component promo-cta kts-search ${sxaStyles}`} id={id ? id : undefined}>
+      <h2 className="kts-search__title">
+        <Text field={props.fields.Title} />
+      </h2>
+      {(isPageEditing || props.fields?.Link?.value?.href) && (
+        <Link field={props.fields.Link} className="kts-search__cta" />
+      )}
+    </div>
+  );
+};
+
+/* KTSOffices variant — offices grid + practice areas via RichText */
+export const KTSOffices = (props: PromoCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div className={`component promo-cta kts-offices ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="kts-offices__inner">
+        {(isPageEditing || props.fields?.Eyebrow?.value) && (
+          <p className="kts-offices__eyebrow">
+            <Text field={props.fields.Eyebrow} />
+          </p>
+        )}
+        <h2 className="kts-offices__title">
+          <Text field={props.fields.Title} />
+        </h2>
+        <RichText field={props.fields.Text} className="kts-offices__body" />
+        {(isPageEditing || props.fields?.Link?.value?.href) && (
+          <Link field={props.fields.Link} className="kts-offices__link" />
+        )}
+      </div>
+    </div>
+  );
+};
