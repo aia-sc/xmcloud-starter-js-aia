@@ -22,6 +22,10 @@ export const Default = (props: HeadingCtaProps): JSX.Element => {
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
 
+  if (!isPageEditing && !props.fields?.Heading?.value && !props.fields?.Text?.value) {
+    return <></>;
+  }
+
   return (
     <div className={`component heading-cta ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
@@ -55,6 +59,10 @@ export const Compact = (props: HeadingCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!isPageEditing && !props.fields?.Heading?.value && !props.fields?.Text?.value) {
+    return <></>;
+  }
 
   return (
     <div className={`component heading-cta compact ${sxaStyles}`} id={id ? id : undefined}>
@@ -129,6 +137,10 @@ export const Centered = (props: HeadingCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!isPageEditing && !props.fields?.Heading?.value && !props.fields?.Text?.value) {
+    return <></>;
+  }
 
   return (
     <div className={`component heading-cta ${sxaStyles}`} id={id ? id : undefined}>

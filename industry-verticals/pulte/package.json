@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "@sitecore-content-sdk/analytics-core": "^2.1.2",
-    "@sitecore-content-sdk/core": "^2.1.4",
     "@sitecore-content-sdk/content": "^2.3.0",
+    "@sitecore-content-sdk/core": "^2.1.4",
     "@sitecore-content-sdk/events": "^2.1.2",
     "@sitecore-content-sdk/nextjs": "^2.4.0",
     "@sitecore-content-sdk/personalize": "2.1.0",
@@ -53,7 +53,7 @@
     "react-share": "^5.1.0",
     "sass": "^1.52.3",
     "sass-alias": "^1.0.5",
-    "swiper": "^11.1.4"
+    "swiper": "^14.3.0"
   },
   "devDependencies": {
     "@sitecore-content-sdk/cli": "^2.3.0",
@@ -63,7 +63,7 @@
     "@types/react-dom": "^19.2.3",
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
-    "eslint-config-next": "16.2.2",
+    "eslint-config-next": "^14.2.35",
     "npm-run-all2": "^8.0.4",
     "tailwindcss": "^4",
     "typescript": "~5.8.3"
