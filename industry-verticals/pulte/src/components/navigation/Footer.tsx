@@ -10,7 +10,9 @@ import {
   RichTextField,
   RichText,
   NextImage,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import { resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Image1: ImageField;
@@ -39,6 +41,12 @@ export type FooterProps = {
   fields: Fields;
 };
 
+const FooterLogo = ({ field }: { field: ImageField }) => {
+  const { page } = useSitecore();
+  const logo = resolvePulteImage(page.siteName, field, 'logoWhite', 'Pulte Homes', 200, 120);
+  return <NextImage field={logo} width={200} height={120} className="img-fluid" />;
+};
+
 export const Default = (props: FooterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
@@ -48,12 +56,7 @@ export const Default = (props: FooterProps): JSX.Element => {
       <div className="container">
         <div className="content">
           <div className="logo">
-            <NextImage
-              field={props.fields?.Image1}
-              width={200}
-              height={200}
-              className="img-fluid"
-            />
+            <FooterLogo field={props.fields?.Image1} />
           </div>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-xl-4 row-gap-5 gx-5">
             <div className="col">
@@ -115,12 +118,7 @@ export const WithSocials = (props: FooterProps): JSX.Element => {
       <div className="container">
         <div className="content">
           <div className="logo">
-            <NextImage
-              field={props.fields?.Image1}
-              width={200}
-              height={200}
-              className="img-fluid"
-            />
+            <FooterLogo field={props.fields?.Image1} />
           </div>
           <div className="row row-cols-1 row-cols-md-3 row-gap-5 gx-5">
             <div className="col">

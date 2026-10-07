@@ -13,6 +13,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import useVisibility from 'src/hooks/useVisibility';
+import { resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Title1: Field<string>;
@@ -35,6 +36,22 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image1 = resolvePulteImage(
+    page.siteName,
+    props.fields.Image1,
+    'quality',
+    props.fields.Title1?.value || 'Quality',
+    800,
+    600
+  );
+  const image2 = resolvePulteImage(
+    page.siteName,
+    props.fields.Image2,
+    'personalization',
+    props.fields.Title2?.value || 'Personalize',
+    800,
+    600
+  );
 
   const Column = ({
     image,
@@ -89,7 +106,7 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
       <div className="container">
         <div className="row">
           <Column
-            image={props.fields.Image1}
+            image={image1}
             title={props.fields.Title1}
             text={props.fields.Text1}
             link={props.fields.Link1}
@@ -97,7 +114,7 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
             delay={0}
           />
           <Column
-            image={props.fields.Image2}
+            image={image2}
             title={props.fields.Title2}
             text={props.fields.Text2}
             link={props.fields.Link2}

@@ -1,6 +1,8 @@
 const SITE_THEME_CLASS_MAP: Record<string, string> = {
   Financial: 'site-financial',
   Services: 'site-services',
+  pulte: 'site-pulte',
+  Pulte: 'site-pulte',
 };
 
 const DEFAULT_SITE_THEME_CLASS = 'site-financial';

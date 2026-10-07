@@ -1,0 +1,36 @@
+/* CLIENT THEME — KTS Law (unlayered :root beats imported layers) */
+:root {
+  --brand-primary: #ba0c2f;
+  --brand-primary-foreground: #ffffff;
+  --brand-secondary: #4a152b;
+  --brand-secondary-foreground: #ffffff;
+  --brand-accent: #f4364c;
+  --brand-accent-foreground: #ffffff;
+  --brand-bg: #ffffff;
+  --brand-fg: #101820;
+  --brand-muted: #f2f2f2;
+  --brand-muted-fg: #5a5a5a;
+  --brand-header-bg: #ffffff;
+  --brand-header-fg: #101820;
+  --brand-footer-bg: #ba0c2f;
+  --brand-footer-fg: #ffffff;
+  --brand-border: #e0e0e0;
+  --brand-ring: #ba0c2f;
+  --brand-heading-font: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+  --brand-body-font: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+  --brand-radius: 0;
+  --brand-button-radius: 30px;
+  --brand-card-radius: 0;
+}
+
+@import "tailwindcss";
+@import '../assets/basic/fonts';
+@import 'bootstrap/scss/bootstrap';
+@import '../assets/sass/main';
+@import '../assets/basic/main';
+
+body {
+  font-family: var(--brand-body-font);
+  color: var(--brand-fg);
+  background: var(--brand-bg);
+}

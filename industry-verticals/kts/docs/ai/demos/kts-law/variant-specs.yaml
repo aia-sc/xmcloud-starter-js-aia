@@ -1,0 +1,87 @@
+# KTS Law pixel-perfect variant specs
+# Derived from screenshot-desktop.png + screenshot-hero.png + ktslaw.com
+
+variantSpecs:
+  - position: 1
+    componentName: Header
+    variantName: KTS
+    baseVariant: WithLogoImage
+    visualDifferences:
+      layout: "white bar, logo left, nav+search right"
+      background: "white with subtle bottom border"
+      typography: "Outfit 15px dark nav links"
+
+  - position: 2
+    componentName: Hero
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "stacked — red band with title above full-bleed portrait"
+      background: "accent red #F4364C with subtle vertical column lines"
+      typography: "large white Outfit headline lower-left of band"
+      distinctive: "no split promo; CTA hidden"
+
+  - position: 3
+    componentName: ThreeColumnCta
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "3 equal burgundy pillars, no images"
+      background: "secondary #4A152B"
+      distinctive: "01/02/03 watermarks + outlined white pill CTAs"
+
+  - position: 4
+    componentName: PromoCta
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "full-bleed red strip, title left, search CTA right"
+      background: "primary #BA0C2F"
+
+  - position: 5
+    componentName: HeadingCta
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "left large heading, right solid red pill CTA"
+      background: "white"
+
+  - position: 6
+    componentName: ThreeColumnCta
+    variantName: KTSInsights
+    baseVariant: Default
+    visualDifferences:
+      layout: "3 image-top alert cards"
+      distinctive: "red Read more text links; square images"
+
+  - position: 7
+    componentName: CtaBanner
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "full-bleed red marquee with oversized scrolling type"
+      distinctive: "CSS marquee animation; respects prefers-reduced-motion"
+
+  - position: 8
+    componentName: ParallaxBanner
+    variantName: KTS
+    baseVariant: Default
+    visualDifferences:
+      layout: "image-only tech visual on muted grey"
+      distinctive: "hide title/text/CTA layers"
+
+  - position: 9
+    componentName: PromoCta
+    variantName: KTSOffices
+    baseVariant: Default
+    visualDifferences:
+      layout: "eyebrow + title + RichText 4-col office grid"
+      background: "muted #F2F2F2"
+
+  - position: 10
+    componentName: Footer
+    variantName: KTS
+    baseVariant: WithSocials
+    visualDifferences:
+      layout: "compact copyright + legal links + socials"
+      background: "primary red"

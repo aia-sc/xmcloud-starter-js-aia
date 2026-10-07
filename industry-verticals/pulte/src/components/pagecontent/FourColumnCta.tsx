@@ -11,6 +11,7 @@ import {
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import useVisibility from 'src/hooks/useVisibility';
+import { isPulteSite, PulteMediaKey, resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Title1: Field<string>;
@@ -41,6 +42,10 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const pulte = isPulteSite(page.siteName);
+
+  const t1 = (props.fields.Title1?.value || '').toLowerCase();
+  const isCares = pulte && (t1.includes('veteran') || t1.includes('honor'));
 
   const Column = ({
     image,
@@ -65,7 +70,7 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
       >
         <Link field={link}>
           <div className="content-wrapper">
-            <NextImage field={image} width={300} height={300} />
+            <NextImage field={image} width={480} height={320} />
             <div className="text-wrapper">
               <h2>
                 <Text field={title} />
@@ -73,6 +78,12 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
               <p>
                 <Text field={text} />
               </p>
+              {pulte &&
+                (isCares ? (
+                  <span className="pulte-text-link">Learn More</span>
+                ) : (
+                  <span className="pulte-learn-more">Learn More</span>
+                ))}
             </div>
           </div>
         </Link>
@@ -80,35 +91,54 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
     );
   };
 
+  const imageKeysForTitles = (): [PulteMediaKey, PulteMediaKey, PulteMediaKey, PulteMediaKey] => {
+    if (isCares) {
+      return ['caresVeterans', 'caresCommunity', 'caresSustainability', 'caresFoundation'];
+    }
+    return ['floorPlans', 'personalization', 'ease', 'quality'];
+  };
+
+  const [k1, k2, k3, k4] = imageKeysForTitles();
+  const image = (key: PulteMediaKey, field: ImageField, alt: string) =>
+    resolvePulteImage(page.siteName, field, key, alt, 640, 420);
+
   return (
     <div
-      className={`component component-spaced four-column-cta ${sxaStyles}`}
+      className={`component component-spaced four-column-cta ${
+        isCares ? 'four-column-cta--cares' : ''
+      } ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
+        {isCares && (
+          <div className="heading-content-wrapper mx-auto text-center mb-4 mb-lg-5">
+            <h2 className="display-4 fw-bold">Pulte Cares</h2>
+            <p>As a true and caring neighbor, our company invests in our communities.</p>
+          </div>
+        )}
         <div className="row">
           <Column
-            image={props.fields.Image1}
+            image={image(k1, props.fields.Image1, props.fields.Title1?.value || 'Pulte feature')}
             title={props.fields.Title1}
             text={props.fields.Text1}
             link={props.fields.Link1}
           />
           <Column
-            image={props.fields.Image2}
+            image={image(k2, props.fields.Image2, props.fields.Title2?.value || 'Pulte feature')}
             title={props.fields.Title2}
             text={props.fields.Text2}
             link={props.fields.Link2}
             delay={500}
           />
           <Column
-            image={props.fields.Image3}
+            image={image(k3, props.fields.Image3, props.fields.Title3?.value || 'Pulte feature')}
             title={props.fields.Title3}
             text={props.fields.Text3}
             link={props.fields.Link3}
             delay={1000}
           />
           <Column
-            image={props.fields.Image4}
+            image={image(k4, props.fields.Image4, props.fields.Title4?.value || 'Pulte feature')}
             title={props.fields.Title4}
             text={props.fields.Text4}
             link={props.fields.Link4}

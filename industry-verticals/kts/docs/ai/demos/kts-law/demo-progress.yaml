@@ -1,0 +1,126 @@
+# Demo Progress Tracker — KTS Law
+# Updated: 2026-10-07
+
+client:
+  name: "KTS Law"
+  sourceUrl: "https://ktslaw.com/"
+  contentPath: "/sitecore/content/legal/kts-law"
+  codePath: "./industry-verticals/kts"
+  startedAt: "2026-10-07T21:00:00Z"
+  lastUpdatedAt: "2026-10-07T22:45:00Z"
+
+phases:
+  phase0_inputs:
+    status: "complete"
+    screenshot: true
+    url: "https://ktslaw.com/"
+    contentHubAuth: "ok"
+
+  phase0_5_manifest:
+    status: "complete"
+    validationMode: "quick"
+    result: "pass-with-warnings"
+    notes: "Financial PLAY! library (same approach as MasterBrand)."
+
+  phase1_theme:
+    status: "complete"
+    themeFile: "docs/ai/themes/kts-law.theme.yaml"
+    userApproved: true
+
+  phase2_analysis:
+    status: "complete"
+    buildPlanFile: "docs/ai/demos/kts-law/build-plan.yaml"
+    totalSections: 10
+    userApproved: true
+    notes: "Pixel-perfect KTS variants approved."
+
+  phase2_5_content:
+    status: "complete"
+    contentMapFile: "docs/ai/demos/kts-law/content-map.yaml"
+    extractorUsed: true
+
+  phase3_content:
+    status: "complete"
+    completedSections: 8
+    totalSections: 8
+    notes: "Home/Data + Promos datasources updated with KTS copy and CH images."
+
+  phase4_theme:
+    status: "complete"
+    themeDelivery: "globals.scss :root + layout.tsx Outfit + variants/_kts.scss"
+    cssWritten: true
+    fontsAdded: true
+
+  phase5_custom:
+    status: "skipped"
+    customComponentsNeeded: 0
+    customComponentsBuilt: 0
+
+  phase5_5_variants:
+    status: "complete"
+    variantsNeeded: 10
+    variantsCreated: 10
+    variantSpecsFile: "docs/ai/demos/kts-law/variant-specs.yaml"
+    userRequestedPixelPerfect: true
+    notes: >
+      React exports KTS/KTSInsights/KTSOffices. Sitecore Variant Definitions created
+      under Hero, Three Column CTA (×2), Promo CTA (×2), Heading CTA, CTA Banner,
+      Parallax Banner, Header, Footer.
+
+  phase6_assembly:
+    status: "complete"
+    componentsAdded: 8
+    datasourcesWired: 8
+    totalComponents: 8
+    notes: >
+      Core 8 sections wired. Leftover PLAY! components still on page — remove + reorder
+      manually. Variants must be set in Pages (API cannot set Headless Variants).
+
+  phase7_summary:
+    status: "complete"
+    files:
+      - docs/ai/demos/kts-law/demo-summary.md
+      - docs/ai/demos/kts-law/variant-checklist.md
+      - docs/ai/demos/kts-law/manual-tasks.md
+
+sections:
+  - name: Hero
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Pillars
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Attorney Search
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Insights Heading
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Insights Cards
+    status: wired
+    variant: KTSInsights
+    needsManualVariant: true
+  - name: Marquee
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Tech Visual
+    status: wired
+    variant: KTS
+    needsManualVariant: true
+  - name: Offices
+    status: wired
+    variant: KTSOffices
+    needsManualVariant: true
+  - name: Header
+    status: partial
+    variant: KTS
+    needsManualVariant: true
+  - name: Footer
+    status: partial
+    variant: KTS
+    needsManualVariant: true

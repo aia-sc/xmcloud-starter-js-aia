@@ -11,6 +11,7 @@ import {
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import useVisibility from 'src/hooks/useVisibility';
+import { PulteMediaKey, resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Text1: Field<string>;
@@ -32,20 +33,24 @@ export type ThreeColumnCtaProps = {
   fields: Fields;
 };
 
+const PROCESS_IMAGES: PulteMediaKey[] = ['floorPlans', 'personalization', 'ease'];
+
 export const Default = (props: ThreeColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = (key: PulteMediaKey, field: ImageField, alt: string) =>
+    resolvePulteImage(page.siteName, field, key, alt, 640, 480);
 
   const Column = ({
-    image,
+    imageField,
     text,
     subText,
     link,
     delay,
   }: {
-    image: ImageField;
+    imageField: ImageField;
     text: Field<string>;
     subText: Field<string>;
     link: LinkField;
@@ -64,7 +69,7 @@ export const Default = (props: ThreeColumnCtaProps): JSX.Element => {
         ref={domRef}
       >
         <div className="content-wrapper">
-          <NextImage field={image} width={400} height={400} />
+          <NextImage field={imageField} width={400} height={400} />
           <h2>
             <Text field={text} />
           </h2>
@@ -87,20 +92,32 @@ export const Default = (props: ThreeColumnCtaProps): JSX.Element => {
       <div className="container">
         <div className="row">
           <Column
-            image={props.fields.Image1}
+            imageField={image(
+              PROCESS_IMAGES[0],
+              props.fields.Image1,
+              props.fields.Text1?.value || 'Pulte'
+            )}
             text={props.fields.Text1}
             subText={props.fields.SubText1}
             link={props.fields.Link1}
           />
           <Column
-            image={props.fields.Image2}
+            imageField={image(
+              PROCESS_IMAGES[1],
+              props.fields.Image2,
+              props.fields.Text2?.value || 'Pulte'
+            )}
             text={props.fields.Text2}
             subText={props.fields.SubText2}
             link={props.fields.Link2}
             delay={500}
           />
           <Column
-            image={props.fields.Image3}
+            imageField={image(
+              PROCESS_IMAGES[2],
+              props.fields.Image3,
+              props.fields.Text3?.value || 'Pulte'
+            )}
             text={props.fields.Text3}
             subText={props.fields.SubText3}
             link={props.fields.Link3}

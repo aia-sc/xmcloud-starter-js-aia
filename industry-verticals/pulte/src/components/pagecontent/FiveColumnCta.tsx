@@ -11,6 +11,7 @@ import {
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import useVisibility from 'src/hooks/useVisibility';
+import { PulteMediaKey, resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Text1: Field<string>;
@@ -35,19 +36,29 @@ export type FiveColumnCtaProps = {
   fields: Fields;
 };
 
+const MARKET_IMAGES: PulteMediaKey[] = [
+  'floorPlans',
+  'personalization',
+  'ease',
+  'quality',
+  'hero',
+];
+
 export const Default = (props: FiveColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = (key: PulteMediaKey, field: ImageField, alt: string) =>
+    resolvePulteImage(page.siteName, field, key, alt, 400, 300);
 
   const Column = ({
-    image,
+    imageField,
     text,
     link,
     delay,
   }: {
-    image: ImageField;
+    imageField: ImageField;
     text: Field<string>;
     link: LinkField;
     delay?: number;
@@ -60,7 +71,7 @@ export const Default = (props: FiveColumnCtaProps): JSX.Element => {
       >
         <Link field={link}>
           <div className="image-container">
-            <NextImage field={image} className="d-block w-100 h-100" width={200} height={200} />
+            <NextImage field={imageField} className="d-block w-100 h-100" width={200} height={200} />
           </div>
         </Link>
         <div className="text-container">
@@ -77,30 +88,34 @@ export const Default = (props: FiveColumnCtaProps): JSX.Element => {
     >
       <div className="container">
         <div className="row row-cols-2 row-cols-sm-3 row-cols-lg-5 row-gap-3 gx-5 justify-content-center">
-          <Column image={props.fields.Image1} text={props.fields.Text1} link={props.fields.Link1} />
           <Column
-            image={props.fields.Image2}
+            imageField={image(MARKET_IMAGES[0], props.fields.Image1, props.fields.Text1?.value || '')}
+            text={props.fields.Text1}
+            link={props.fields.Link1}
+          />
+          <Column
+            imageField={image(MARKET_IMAGES[1], props.fields.Image2, props.fields.Text2?.value || '')}
             text={props.fields.Text2}
             link={props.fields.Link2}
-            delay={500}
+            delay={200}
           />
           <Column
-            image={props.fields.Image3}
+            imageField={image(MARKET_IMAGES[2], props.fields.Image3, props.fields.Text3?.value || '')}
             text={props.fields.Text3}
             link={props.fields.Link3}
-            delay={1000}
+            delay={400}
           />
           <Column
-            image={props.fields.Image4}
+            imageField={image(MARKET_IMAGES[3], props.fields.Image4, props.fields.Text4?.value || '')}
             text={props.fields.Text4}
             link={props.fields.Link4}
-            delay={1500}
+            delay={600}
           />
           <Column
-            image={props.fields.Image5}
+            imageField={image(MARKET_IMAGES[4], props.fields.Image5, props.fields.Text5?.value || '')}
             text={props.fields.Text5}
             link={props.fields.Link5}
-            delay={2000}
+            delay={800}
           />
         </div>
       </div>
