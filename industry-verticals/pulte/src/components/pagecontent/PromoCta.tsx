@@ -16,6 +16,17 @@ import {
 import useVisibility from 'src/hooks/useVisibility';
 import { ComponentProps } from 'lib/component-props';
 import { DottedAccent } from 'components/non-sitecore/DottedAccent';
+import { isPulteSite, PulteMediaKey, resolvePulteImage } from 'lib/pulte-media';
+
+const promoImageKey = (title?: string, eyebrow?: string): PulteMediaKey => {
+  const haystack = `${title || ''} ${eyebrow || ''}`.toLowerCase();
+  if (haystack.includes('veteran') || haystack.includes('honor')) return 'caresVeterans';
+  if (haystack.includes('community')) return 'caresCommunity';
+  if (haystack.includes('sustain')) return 'caresSustainability';
+  if (haystack.includes('foundation') || haystack.includes('charit')) return 'caresFoundation';
+  if (haystack.includes('mortgage') || haystack.includes('easy')) return 'ease';
+  return 'hero';
+};
 
 interface Fields {
   Eyebrow: Field<string>;
@@ -38,6 +49,15 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = resolvePulteImage(
+    page.siteName,
+    props.fields.Image,
+    promoImageKey(props.fields.Title?.value, props.fields.Eyebrow?.value),
+    props.fields.Title?.value || 'Pulte Homes',
+    900,
+    900
+  );
+  const hideDots = isPulteSite(page.siteName);
 
   return (
     <div className={`component promo-cta ${sxaStyles}`} id={id ? id : undefined} ref={domRef}>
@@ -71,16 +91,16 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
           </div>
           <div className="col-md-10 mx-auto col-lg-7 mx-lg-0">
             <div className="image-wrapper">
-              <DottedAccent className="dotted-accent-top" />
+              {!hideDots && <DottedAccent className="dotted-accent-top" />}
               <NextImage
-                field={props.fields.Image}
+                field={image}
                 className={`d-block mx-lg-auto img-fluid ${
                   !isPageEditing ? `fade-section ${isVisible ? 'is-visible' : ''}` : ''
                 }`}
                 width={900}
                 height={900}
               />
-              <DottedAccent className="dotted-accent-bottom" />
+              {!hideDots && <DottedAccent className="dotted-accent-bottom" />}
             </div>
           </div>
         </div>
@@ -95,6 +115,15 @@ export const WithPlaceholderColumn = (props: PromoCtaProps): JSX.Element => {
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = resolvePulteImage(
+    page.siteName,
+    props.fields.Image,
+    promoImageKey(props.fields.Title?.value, props.fields.Eyebrow?.value),
+    props.fields.Title?.value || 'Pulte Homes',
+    900,
+    900
+  );
+  const hideDots = isPulteSite(page.siteName);
 
   return (
     <div
@@ -138,16 +167,16 @@ export const WithPlaceholderColumn = (props: PromoCtaProps): JSX.Element => {
               </div>
 
               <div className="image-wrapper d-none d-md-block col-md-8">
-                <DottedAccent className="dotted-accent-top" />
+                {!hideDots && <DottedAccent className="dotted-accent-top" />}
                 <NextImage
-                  field={props.fields.Image}
+                  field={image}
                   className={`d-block mx-lg-auto img-fluid ${
                     !isPageEditing ? `fade-section ${isVisible ? 'is-visible' : ''}` : ''
                   }`}
                   width={900}
                   height={900}
                 />
-                <DottedAccent className="dotted-accent-bottom" />
+                {!hideDots && <DottedAccent className="dotted-accent-bottom" />}
               </div>
             </div>
           </div>
@@ -162,13 +191,21 @@ export const WithBackgroundImage = (props: PromoCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = resolvePulteImage(
+    page.siteName,
+    props.fields.Image,
+    promoImageKey(props.fields.Title?.value, props.fields.Eyebrow?.value),
+    props.fields.Title?.value || 'Pulte Homes',
+    1600,
+    900
+  );
 
   return (
     <div
-      className={`component promo-cta with-background-image ${sxaStyles}]`}
+      className={`component promo-cta with-background-image ${sxaStyles}`}
       id={id ? id : undefined}
       style={{
-        backgroundImage: `url("${props.fields.Image.value?.src}")`,
+        backgroundImage: `url("${image.value?.src}")`,
       }}
     >
       <div className="container">

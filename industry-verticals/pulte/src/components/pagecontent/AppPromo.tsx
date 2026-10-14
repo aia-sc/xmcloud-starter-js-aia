@@ -10,6 +10,7 @@ import {
   useSitecore,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
+import { resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Title: Field<string>;
@@ -27,6 +28,14 @@ export const Default = (props: AppPromoProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const image = resolvePulteImage(
+    page.siteName,
+    props.fields.Image,
+    'hero',
+    props.fields.Title?.value || 'Find your new home',
+    900,
+    700
+  );
 
   return (
     <div className={`component app-promo ${sxaStyles}`} id={id ? id : undefined}>
@@ -42,14 +51,14 @@ export const Default = (props: AppPromoProps): JSX.Element => {
           </div>
           <div className="col-md-10 mx-auto col-lg-6 image-wrapper">
             <NextImage
-              field={props.fields.Image}
+              field={image}
               className={`${isPageEditing ? 'd-block' : 'd-none'} mx-lg-auto img-fluid`}
               width={700}
               height={700}
             />
             <img
-              src={props.fields.Image.value?.src}
-              alt={props.fields.Image.value?.alt as string}
+              src={image.value?.src}
+              alt={(image.value?.alt as string) || 'Pulte Homes'}
               loading="lazy"
               className={`${isPageEditing ? 'd-none' : 'd-block'} mx-lg-auto img-fluid`}
               style={{ transformOrigin: 'bottom' }}

@@ -1,0 +1,308 @@
+# KTS Law Content Map
+# Built from DOM extractor + screenshot alignment to Financial PLAY! fields
+
+client:
+  name: "KTS Law"
+  sourceUrl: "https://ktslaw.com/"
+  createdAt: "2026-10-07T21:35:00Z"
+  contentSourceNote: "DOM extractor succeeded (en); content mapped to Financial PLAY! fields"
+
+sections:
+  - position: 1
+    componentName: "Header"
+    manifestName: "Header"
+    kind: "context-only"
+    datasourceItemName: ""
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 2
+    componentName: "Hero"
+    manifestName: "Hero"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Hero"
+    apiAddable: true
+    parentFolderId: "{40839f94-2d68-43cb-b98a-63dffbd6e80d}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data"
+    templateId: "{90d315e8-aa42-4b23-a7eb-4491396453f8}"
+    renderingId: "{b7cdf75e-716a-4c59-b9b1-cd970ae0a4ae}"
+    fields:
+      Title: "Connected to Next."
+      Text: "<p></p>"
+      Link:
+        text: ""
+        href: "#"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "https://ktslaw.com/images/homepage/hero/hp-hero-img.jpg"
+        alt: "Kilpatrick attorney portrait"
+        localFile: "hero.jpg"
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 3
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Hero Pillars"
+    apiAddable: true
+    parentFolderId: "{287e6750-ca0e-4ce5-b49b-cce1a8ac24d2}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data/Promos/Three Column CTA"
+    templateId: "{148d07ba-f923-4fb2-8907-0bd440d5db44}"
+    renderingId: "{ad385021-ce2b-4fc1-89aa-207d408034a8}"
+    fields:
+      Text1: "Sharp minds for cutting-edge matters"
+      SubText1: "01"
+      Link1:
+        text: "See our people"
+        href: "https://ktslaw.com/people"
+        target: ""
+      Text2: "Counsel to the industries that are building the future"
+      SubText2: "02"
+      Link2:
+        text: "See our industries"
+        href: "https://ktslaw.com/industries"
+        target: ""
+      Text3: "Broad & deep capability to drive your progress"
+      SubText3: "03"
+      Link3:
+        text: "See our services"
+        href: "https://ktslaw.com/services"
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 4
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Attorney Search"
+    apiAddable: true
+    parentFolderId: "{e56a8f9c-b273-4e0d-aa7d-4592372f7787}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data/Promos/Promo CTA"
+    templateId: "{c0943942-ae0f-4205-86fa-84884cce4a53}"
+    renderingId: "{1a375fac-6cc1-4a5a-a159-9bc6dbc66b80}"
+    fields:
+      Title: "Search for an attorney"
+      Eyebrow: ""
+      Subtitle: ""
+      Text: "<p></p>"
+      Link:
+        text: "Search"
+        href: "https://ktslaw.com/people"
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 5
+    componentName: "HeadingCta"
+    manifestName: "HeadingCta"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Insights Heading"
+    apiAddable: true
+    parentFolderId: "{40839f94-2d68-43cb-b98a-63dffbd6e80d}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data"
+    templateId: "{fa136527-6302-471d-83ab-e66fc72bda99}"
+    renderingId: "{89e1d547-7cd6-4ef0-9a27-1e99410797dd}"
+    fields:
+      Eyebrow: ""
+      Heading: "Our ideas on the ideas that are changing the world."
+      Text: ""
+      Link:
+        text: "See all Insights"
+        href: "https://ktslaw.com/Insights"
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 6
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Insights Cards"
+    apiAddable: true
+    parentFolderId: "{287e6750-ca0e-4ce5-b49b-cce1a8ac24d2}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data/Promos/Three Column CTA"
+    templateId: "{148d07ba-f923-4fb2-8907-0bd440d5db44}"
+    renderingId: "{ad385021-ce2b-4fc1-89aa-207d408034a8}"
+    fields:
+      Text1: "ALERT: Executive Order Seeks to Preempt Certain State AI Laws and Establish a National AI Framework — Initial Takeaways"
+      SubText1: "Alert"
+      Link1:
+        text: "Read more"
+        href: "https://ktslaw.com/insights/alert/2025/12/executive-order-seeks-to-preempt-certain-state-ai-laws-and-establish-a-national-ai-framework-initial-takeaways"
+        target: ""
+      Text2: "ALERT: California's Extended Producer Responsibility Law Reporting Deadline of November 15, 2025"
+      SubText2: "Alert"
+      Link2:
+        text: "Read more"
+        href: "https://ktslaw.com/insights/alert/2025/11/californias-extended-producer-responsibility-law-reporting-deadline-of-november-15-2025"
+        target: ""
+      Text3: "ALERT: SEC Will No Longer Referee Companies' Exclusion of Shareholder Proposals"
+      SubText3: "Alert"
+      Link3:
+        text: "Read more"
+        href: "https://ktslaw.com/insights/alert/2025/11/sec-will-no-longer-referee-companies-exclusion-of-shareholder-proposals"
+        target: ""
+    children: []
+    imageFields:
+      - field: "Image1"
+        src: "https://ktslaw.com/-/media/feature/insights-photos/white-house_web.jpg"
+        alt: "White House"
+        localFile: "insight-1.jpg"
+      - field: "Image2"
+        src: "https://ktslaw.com/-/media/feature/insights-photos/california-capitol-flag_web.jpg"
+        alt: "California Capitol"
+        localFile: "insight-2.jpg"
+      - field: "Image3"
+        src: "https://ktslaw.com/-/media/feature/insights-photos/boardroom-glass_web.jpg"
+        alt: "Boardroom"
+        localFile: "insight-3.jpg"
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 7
+    componentName: "CtaBanner"
+    manifestName: "CtaBanner"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Marquee"
+    apiAddable: true
+    parentFolderId: "{40839f94-2d68-43cb-b98a-63dffbd6e80d}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data"
+    templateId: "{4900d7e5-61b0-483a-a9d6-69419d4d5982}"
+    renderingId: "{488b8ac0-0ef9-4f6f-8711-78ba182b2c4c}"
+    fields:
+      Eyebrow: ""
+      Title: "Cutting-edge industries"
+      Text: "<p>Ground-breaking businesses · Pioneering ideas</p>"
+      Link:
+        text: ""
+        href: "#"
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 8
+    componentName: "ParallaxBanner"
+    manifestName: "ParallaxBanner"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Tech Visual"
+    apiAddable: true
+    parentFolderId: "{40839f94-2d68-43cb-b98a-63dffbd6e80d}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data"
+    templateId: "{28b7f396-dc4a-4116-8c93-3b7909cbeb0e}"
+    renderingId: "{200920ad-9645-4cb2-b72a-c7d8278e709f}"
+    fields:
+      Title: ""
+      Text: ""
+      Link:
+        text: ""
+        href: "#"
+        target: ""
+    children: []
+    imageFields:
+      - field: "BackgroundImage"
+        src: "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay@2x.jpg"
+        alt: "Precision technology camera lens"
+        localFile: "endcap.jpg"
+      - field: "ForegroundImage"
+        src: "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay@2x.jpg"
+        alt: "Precision technology camera lens"
+        localFile: "endcap.jpg"
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 9
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    datasourceItemName: "KTS Law - Offices"
+    apiAddable: true
+    parentFolderId: "{e56a8f9c-b273-4e0d-aa7d-4592372f7787}"
+    parentFolderPath: "/sitecore/content/legal/kts-law/Data/Promos/Promo CTA"
+    templateId: "{c0943942-ae0f-4205-86fa-84884cce4a53}"
+    renderingId: "{1a375fac-6cc1-4a5a-a159-9bc6dbc66b80}"
+    fields:
+      Title: "Relationships are local, and so are we"
+      Eyebrow: "OFFICES"
+      Subtitle: "PRIMARY PRACTICE AREAS"
+      Text: |
+        <div class="kts-offices-grid">
+          <ul>
+            <li><a href="https://ktslaw.com/Locations/Anchorage">Anchorage</a></li>
+            <li><a href="https://ktslaw.com/Locations/Atlanta">Atlanta</a></li>
+            <li><a href="https://ktslaw.com/Locations/Beijing">Beijing</a></li>
+            <li><a href="https://ktslaw.com/Locations/Charlotte">Charlotte</a></li>
+            <li><a href="https://ktslaw.com/Locations/Chicago">Chicago</a></li>
+            <li><a href="https://ktslaw.com/Locations/Dallas">Dallas</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://ktslaw.com/Locations/Denver">Denver</a></li>
+            <li><a href="https://ktslaw.com/Locations/Houston">Houston</a></li>
+            <li><a href="https://ktslaw.com/Locations/Los-Angeles">Los Angeles</a></li>
+            <li><a href="https://ktslaw.com/Locations/New-York">New York</a></li>
+            <li><a href="https://ktslaw.com/Locations/Phoenix">Phoenix</a></li>
+            <li><a href="https://ktslaw.com/Locations/Raleigh">Raleigh</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://ktslaw.com/Locations/San-Diego">San Diego</a></li>
+            <li><a href="https://ktslaw.com/Locations/San-Francisco">San Francisco</a></li>
+            <li><a href="https://ktslaw.com/Locations/Seattle">Seattle</a></li>
+            <li><a href="https://ktslaw.com/Locations/Shanghai">Shanghai</a></li>
+            <li><a href="https://ktslaw.com/Locations/Silicon-Valley">Silicon Valley</a></li>
+            <li><a href="https://ktslaw.com/Locations/Stockholm">Stockholm</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://ktslaw.com/Locations/Tokyo">Tokyo</a></li>
+            <li><a href="https://ktslaw.com/Locations/Walnut-Creek">Walnut Creek</a></li>
+            <li><a href="https://ktslaw.com/Locations/Washington-DC">Washington DC</a></li>
+            <li><a href="https://ktslaw.com/Locations/Winston-Salem">Winston-Salem</a></li>
+          </ul>
+        </div>
+        <p class="kts-practices"><strong>PRIMARY PRACTICE AREAS</strong> —
+          <a href="https://ktslaw.com/AboutUs/International-Practices">China Practice</a> ·
+          <a href="https://ktslaw.com/AboutUs/International-Practices">Japan Practice</a> ·
+          <a href="https://ktslaw.com/AboutUs/International-Practices">Sweden Practice</a>
+        </p>
+      Link:
+        text: "Locations"
+        href: "https://ktslaw.com/Locations"
+        target: ""
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 10
+    componentName: "Footer"
+    manifestName: "Footer"
+    kind: "context-only"
+    datasourceItemName: ""
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+summary:
+  totalSections: 10
+  apiAddable: 8
+  contextOnly: 2
+  withImages: 3
+
+datasourceItems: []

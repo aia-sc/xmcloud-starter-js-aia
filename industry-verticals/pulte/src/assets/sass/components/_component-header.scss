@@ -55,6 +55,15 @@
   }
 }
 
+// Pulte Homes header (logo markup lives in the header RichText datasource)
+.site-pulte .header {
+  .pulte-logo,
+  img {
+    max-height: 52px;
+    width: auto;
+  }
+}
+
 // PLAY! services specific styles
 .site-services .header {
   h1 {

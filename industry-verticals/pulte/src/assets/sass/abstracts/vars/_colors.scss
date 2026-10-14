@@ -1,3 +1,23 @@
+// Pulte Homes
+body.site-pulte,
+.site-pulte {
+  --text-body: #333333;
+  --text-body-inverted: #fff;
+  --text-colored: #003048;
+  --text-footer: #fff;
+  --text-accent: #f4c55c;
+  --bg-body: #fff;
+  --bg-footer: #343434;
+  --bg-main: #f6f4f1;
+  --bg-main-alt: #f6f4f1;
+  --bg-color: #003048;
+  --bg-saturated: #002536;
+  --bg-accent: #f4c55c;
+  --border-color: #d9d5ce;
+  --hr-color: #fff;
+  --roundness: 0.25rem;
+}
+
 // Financial
 body.site-financial,
 .site-financial {

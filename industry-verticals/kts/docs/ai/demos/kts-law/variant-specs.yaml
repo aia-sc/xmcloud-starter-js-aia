@@ -1,0 +1,99 @@
+# KTS Law variant specs — Financial PLAY! components restyled to match https://ktslaw.com/
+# Reference: homepage-screenshot.jpg, docs/ai/themes/kts-law/screenshot-desktop.png
+# Theme:     docs/ai/themes/kts-law.theme.yaml (CSS vars in src/app/globals.scss :root)
+# Styles:    src/assets/sass/variants/_kts.scss (imported from variants/index.scss)
+# Font:      Outfit (Google Fonts link in src/app/layout.tsx)
+# Pattern:   mirrors industry-verticals/MasterBrand (named export per variant, `kts-` class prefix)
+
+client: KTS Law
+sourceUrl: https://ktslaw.com/
+cssClassPrefix: kts-
+brandVars:
+  - --brand-primary        # #BA0C2F — brand red (search strip, CTA, marquee, footer)
+  - --brand-accent         # #F4364C — hero headline band
+  - --brand-secondary      # #4A152B — burgundy pillars
+  - --brand-muted          # #F2F2F2 — offices / parallax backgrounds
+  - --brand-fg             # #101820 — text
+  - --brand-header-*       # white header
+  - --brand-footer-*       # red footer, white text
+  - --brand-heading-font
+  - --brand-body-font
+  - --brand-button-radius  # 30px pill buttons
+
+variants:
+  - component: Header
+    file: src/components/navigation/Header.tsx
+    export: KTS
+    rootClass: kts-header
+    summary: White bar with bottom hairline; logo (LogoImage) left, nav/icons right via `header-right` placeholder.
+    fields: [LogoImage]
+    placeholders: [header-right]
+
+  - component: Hero
+    file: src/components/pagecontent/Hero.tsx
+    export: KTS
+    rootClass: kts-hero
+    summary: Bright red (--brand-accent) headline band with faint vertical column lines ("Connected to Next."), full-bleed portrait image beneath. Default text/CTA layers hidden.
+    fields: [Title, Image]
+
+  - component: ThreeColumnCta
+    file: src/components/pagecontent/ThreeColumnCta.tsx
+    export: KTS
+    rootClass: kts-pillars
+    summary: Full-bleed burgundy 3-column pillars; large faint 01/02/03 numbers (SubTextN), headline (TextN), outlined pill "Learn more" link (LinkN). Stacks on <992px.
+    fields: [Text1-3, SubText1-3, Link1-3]
+
+  - component: ThreeColumnCta
+    file: src/components/pagecontent/ThreeColumnCta.tsx
+    export: KTSInsights
+    rootClass: kts-insights
+    summary: White 3-up insight cards — image top (ImageN), title (TextN), red "Read more" text link (LinkN). Square corners.
+    fields: [Image1-3, Text1-3, Link1-3]
+
+  - component: PromoCta
+    file: src/components/pagecontent/PromoCta.tsx
+    export: KTS
+    rootClass: kts-search
+    summary: Full-bleed red (--brand-primary) attorney search strip — title left, outlined pill link right.
+    fields: [Title, Link]
+
+  - component: PromoCta
+    file: src/components/pagecontent/PromoCta.tsx
+    export: KTSOffices
+    rootClass: kts-offices
+    summary: Grey (--brand-muted) section — eyebrow, heading, RichText body rendered as 4-col offices link grid (`.kts-offices-grid`) plus practice areas (`.kts-practices`, blue links), optional red text link.
+    fields: [Eyebrow, Title, Text, Link]
+    authoringNote: Text RichText should wrap office lists in `<div class="kts-offices-grid"><ul>…</ul>…</div>` and practice areas in `<p class="kts-practices">`.
+
+  - component: HeadingCta
+    file: src/components/pagecontent/HeadingCta.tsx
+    export: KTS
+    rootClass: kts-heading
+    summary: Left large light heading, right solid red rounded (30px) "See all Insights" button. Stacks on mobile.
+    fields: [Heading, Link]
+
+  - component: CtaBanner
+    file: src/components/pagecontent/CtaBanner.tsx
+    export: KTS
+    rootClass: kts-marquee
+    summary: Solid red marquee with oversized white scrolling text built from Title + Text (HTML stripped). Pauses to wrapped static text under prefers-reduced-motion.
+    fields: [Title, Text]
+
+  - component: ParallaxBanner
+    file: src/components/pagecontent/ParallaxBanner.tsx
+    export: KTS
+    rootClass: kts-parallax
+    summary: Muted grey section, centered tech image only (ForegroundImage, falls back to BackgroundImage); headline/parallax layers hidden.
+    fields: [ForegroundImage, BackgroundImage]
+
+  - component: Footer
+    file: src/components/navigation/Footer.tsx
+    export: KTS
+    rootClass: kts-footer
+    summary: Solid --brand-footer-bg (primary red) footer, white text; copyright + white-inverted social icons row, hairline, privacy links + RichText links.
+    fields: [Copyright, Link1, Link2, Text1, SocialLink1-3, SocialIcon1-3]
+
+conventions:
+  - Sitecore field components only (Text, RichText, Link, NextImage/Image).
+  - isEditing guards preserved on optional Links/Eyebrow.
+  - No hex in TSX; hex only as var() fallbacks in SCSS.

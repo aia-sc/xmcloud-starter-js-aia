@@ -1,0 +1,86 @@
+[
+    {
+        "file":  "logo-white.svg",
+        "src":  "https://www.pulte.com/-/media/pulte-homes-2020-white-logo-r-sm/pulte-homes-2020-white-logo-r/pulte-homes-regular-logo-vertical_w-desktop.svg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\logo-white.svg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "logo-color.png",
+        "src":  "https://s204.q4cdn.com/680895981/files/doc_downloads/our_brands_logo/Pulte-Homes-Logo.png",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\logo-color.png",
+        "section":  "homepage"
+    },
+    {
+        "file":  "hero-family.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/02/22/17/41/410700-13--phfamily-bakingkitchen22368v21920x1240jpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\hero-family.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "card-floorplans.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/05/22/16/10/211776-13--jadevaliantkitchen02jpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\card-floorplans.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "card-personalization.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/05/22/15/53/211778-13--editorialfinancial174couplesales0119fjpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\card-personalization.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "card-ease.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/05/22/16/04/490273-13--man-at-desk-306x143-v2jpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\card-ease.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "card-quality.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/05/22/15/51/211777-13--framing-construction-hi-res-300dpijpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\card-quality.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "cares-veterans.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2019/09/10/20/19/248573-13--pultecaresbthjpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\cares-veterans.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "cares-community.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/248574-13--pultecarescommunityjpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\cares-community.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "cares-sustainability.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2019/02/05/16/59/53423-13--communitydetail109walkingtrailsjpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\cares-sustainability.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "cares-foundation.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2023/10/19/13/26/529285-13--charitable-foundation-hp-image-3jpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\cares-foundation.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "living-energy.jpg",
+        "src":  "https://www.pulte.com/-/media/pulte-2021-innovation-breakfast-5136-1920x1240.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\living-energy.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "living-movein.jpg",
+        "src":  "https://www.pulte.com/-/media/static-picturepark-assets/uncategorized/2025/09/29/19/13/qmi-page-pu-91625jpg.jpg",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\living-movein.jpg",
+        "section":  "homepage"
+    },
+    {
+        "file":  "living-questions.jpg",
+        "src":  "https://www.pulte.com/-/media/kylouisv_fixed-rate_1920x463_-031825.png",
+        "localPath":  "docs\\ai\\demos\\pulte-homes\\images\\living-questions.jpg",
+        "section":  "homepage"
+    }
+]

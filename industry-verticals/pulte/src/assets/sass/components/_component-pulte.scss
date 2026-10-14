@@ -1,0 +1,567 @@
+// Pulte Homes visual system — scoped to .site-pulte
+
+.site-pulte {
+  --font-family: 'Source Sans 3', Helvetica, Arial, sans-serif;
+  --font-heading: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --pulte-navy: #003048;
+  --pulte-navy-deep: #002536;
+  --pulte-gold: #f4c55c;
+  --pulte-link: #0066a1;
+  --pulte-charcoal: #343434;
+  --pulte-muted: #5c5c5c;
+  --pulte-border: #d9d5ce;
+  --pulte-sand: #f6f4f1;
+
+  font-family: var(--font-family);
+  color: #333;
+
+  h1,
+  h2,
+  h3,
+  .display-4,
+  .display-6,
+  .title.display-6 {
+    font-family: var(--font-heading);
+    color: var(--pulte-charcoal);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .button,
+  .button-main,
+  .button-accent,
+  .button-secondary {
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .button-main,
+  .button-accent {
+    background-color: var(--pulte-navy);
+    border-color: var(--pulte-navy);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--pulte-navy-deep);
+      border-color: var(--pulte-navy-deep);
+      color: #fff;
+    }
+  }
+
+  // ── Header ──────────────────────────────────────────────
+  .header {
+    background-color: var(--pulte-navy);
+    color: #fff;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    a,
+    .navigation-title > a {
+      color: #fff !important;
+    }
+
+    .pulte-logo {
+      display: block;
+      width: 110px;
+      height: auto;
+    }
+
+    .rich-text {
+      color: #fff;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+
+    .navigation.navigation-horizontal .component-content ul {
+      gap: 1.75rem;
+    }
+
+    .navigation.navigation-horizontal .component-content .level0 > .navigation-title > a,
+    .navigation.navigation-horizontal .component-content .level1 > .navigation-title > a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: none;
+    }
+  }
+
+  .eyebrow {
+    display: none;
+  }
+
+  // ── Hero / Carousel ─────────────────────────────────────
+  .carousel {
+    min-height: 32rem;
+
+    .carousel-item {
+      min-height: 32rem;
+    }
+
+    .carousel-item img,
+    .carousel-item video {
+      object-fit: cover;
+      filter: brightness(0.92);
+    }
+
+    .side-content {
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 3.5rem;
+
+      h1 {
+        color: #fff;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+      }
+
+      .rich-text,
+      p {
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 1.1rem;
+      }
+
+      .button,
+      .button-accent {
+        background: #e8e8e8;
+        border-color: #e8e8e8;
+        color: var(--pulte-navy);
+        border-radius: 0.35rem;
+        min-width: 12rem;
+        text-align: center;
+
+        &:hover {
+          background: #fff;
+          border-color: #fff;
+          color: var(--pulte-navy);
+        }
+      }
+    }
+
+    .carousel-indicators {
+      justify-content: flex-start;
+      margin-left: 2rem;
+    }
+  }
+
+  // ── Heading CTA ─────────────────────────────────────────
+  .heading-cta {
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+    background: #fff;
+
+    .heading-content-wrapper {
+      max-width: 46rem;
+      margin: 0 auto;
+    }
+
+    .eyebrow-accent {
+      color: var(--pulte-navy);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-family: var(--font-family);
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--pulte-muted);
+      font-size: 1.05rem;
+    }
+
+    .col-12.pt-lg-5,
+    .col-lg-auto {
+      display: none;
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    // Hide empty heading shells left over from content moves
+    &:not(:has(h2:not(:empty))):not(:has(.display-4:not(:empty))) {
+      display: none;
+    }
+  }
+
+  .four-column-cta--cares .heading-content-wrapper {
+    max-width: 46rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      text-transform: none;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+      color: var(--pulte-charcoal);
+    }
+
+    p {
+      color: var(--pulte-muted);
+      font-size: 1.05rem;
+    }
+  }
+
+  // ── Four column cards ───────────────────────────────────
+  .four-column-cta {
+    background: #fff;
+    padding-bottom: 2rem;
+
+    .content-wrapper {
+      align-items: stretch;
+      text-align: left;
+      border: 1px solid var(--pulte-border);
+      border-radius: 0.25rem;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      height: 100%;
+      transition: box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    a:hover .content-wrapper {
+      box-shadow: 0 8px 24px rgba(0, 48, 72, 0.12);
+    }
+
+    a:hover img {
+      transform: scale(1.03);
+    }
+
+    img {
+      height: 11rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      transition: transform 0.35s ease;
+    }
+
+    .text-wrapper {
+      background: #fff;
+      border-radius: 0;
+      padding: 1.25rem 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    h2 {
+      font-family: var(--font-family);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--pulte-charcoal);
+      margin: 0;
+    }
+
+    p {
+      color: var(--pulte-muted);
+      font-size: 0.95rem;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .pulte-learn-more {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.75rem;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid #bdbdbd;
+      border-radius: 0.25rem;
+      color: var(--pulte-charcoal);
+      font-size: 0.875rem;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+    .pulte-text-link {
+      color: var(--pulte-link);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    // Pulte Cares — open columns, no card chrome
+    &.four-column-cta--cares {
+      .content-wrapper {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      a:hover .content-wrapper {
+        box-shadow: none;
+      }
+
+      img {
+        height: 12rem;
+        border-radius: 0;
+      }
+
+      .text-wrapper {
+        padding: 1rem 0 0;
+      }
+
+      h2 {
+        text-transform: none;
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  // ── Three column / process ──────────────────────────────
+  .three-column-cta {
+    background: var(--pulte-sand);
+
+    .text-wrapper,
+    h2,
+    h3 {
+      font-family: var(--font-family);
+    }
+
+    a {
+      color: var(--pulte-link);
+      font-weight: 600;
+    }
+  }
+
+  // ── Promo CTAs (Pulte Cares stories) ────────────────────
+  .promo-cta {
+    .eyebrow-accent,
+    .eyebrow {
+      color: var(--pulte-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    a.button,
+    .button-simple,
+    .button-secondary {
+      color: var(--pulte-link);
+      background: transparent;
+      border: none;
+      padding-left: 0;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+        background: transparent;
+      }
+    }
+  }
+
+  // ── Article list (Pulte Living) ─────────────────────────
+  .article-list {
+    background: #fff;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    .title.display-6 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin-bottom: 0.35rem;
+    }
+
+    .pulte-living-subhead {
+      color: var(--pulte-muted);
+      font-size: 1.05rem;
+
+      a {
+        color: var(--pulte-link);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: var(--pulte-charcoal);
+    }
+
+    .article-excerpt {
+      color: var(--pulte-muted);
+      font-size: 0.95rem;
+    }
+
+    img {
+      width: 100%;
+      height: 14rem;
+      object-fit: cover;
+    }
+
+    .button,
+    .button-secondary,
+    .button-simple,
+    a.wrapper-link {
+      color: var(--pulte-link);
+      text-decoration: none;
+    }
+
+    .button-secondary,
+    .button-simple {
+      background: transparent;
+      border: none;
+      padding-left: 0;
+      font-weight: 600;
+    }
+
+    .button-main {
+      background: var(--pulte-link);
+      border-color: var(--pulte-link);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.75rem 2rem;
+      min-width: 14rem;
+
+      &:hover {
+        background: var(--pulte-navy);
+        border-color: var(--pulte-navy);
+        color: #fff;
+      }
+    }
+
+    .background {
+      background: transparent;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  // ── Five column markets ─────────────────────────────────
+  .five-column-cta {
+    background: var(--pulte-sand);
+
+    .text-wrapper {
+      font-weight: 600;
+      color: var(--pulte-navy);
+    }
+  }
+
+  // ── Documents / tools ───────────────────────────────────
+  .documents-list {
+    background: #fff;
+  }
+
+  // ── App promo / find home CTA ───────────────────────────
+  .app-promo {
+    background: var(--pulte-navy);
+    color: #fff;
+
+    h2,
+    .title,
+    p {
+      color: #fff;
+    }
+  }
+
+  // ── Rich text SEO footer block ──────────────────────────
+  .rich-text {
+    h2 {
+      font-family: var(--font-heading);
+    }
+
+    a {
+      color: var(--pulte-link);
+    }
+
+    ul {
+      columns: 2;
+      column-gap: 2rem;
+
+      @media (min-width: 992px) {
+        columns: 4;
+      }
+    }
+  }
+
+  // ── Footer ──────────────────────────────────────────────
+  .footer {
+    background-color: var(--pulte-charcoal);
+    font-size: 0.95rem;
+
+    .title,
+    .eyebrow-accent {
+      font-family: var(--font-family);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .links a,
+    .privacy-links a,
+    a {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+    }
+
+    .logo img {
+      max-width: 120px;
+      height: auto;
+      filter: none;
+    }
+
+    .content {
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    hr {
+      border-top-color: rgba(255, 255, 255, 0.2);
+      opacity: 1;
+    }
+
+    .footnote {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      opacity: 0.85;
+    }
+
+    &.with-socials .links-socials > a {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+}

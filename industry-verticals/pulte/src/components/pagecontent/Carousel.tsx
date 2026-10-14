@@ -14,6 +14,7 @@ import {
   useSitecore,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
+import { isPulteSite, PulteMediaKey, resolvePulteImage } from 'lib/pulte-media';
 
 interface Fields {
   Title: Field<string>;
@@ -36,11 +37,14 @@ interface CarouselComponentProps {
   };
 }
 
+const PULTE_SLIDE_IMAGES: PulteMediaKey[] = ['hero', 'floorPlans', 'personalization'];
+
 export const Default = (props: CarouselComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const [index, setIndex] = useState(0);
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const pulte = isPulteSite(page.siteName);
 
   const handleNext = () => {
     setIndex((prevIndex) => (prevIndex < props.fields.items.length - 1 ? prevIndex + 1 : 0));
@@ -55,44 +59,56 @@ export const Default = (props: CarouselComponentProps): JSX.Element => {
   return (
     <section className={`component carousel ${sxaStyles}`} id={id ? id : undefined}>
       <div className="carousel-inner">
-        {props.fields.items.map((item, i) => (
-          <div key={i} className={'carousel-item ' + (i == index ? 'active' : '')}>
-            {!isPageEditing && item.fields?.Video?.value?.src ? (
-              <video
-                className="object-fit-cover d-block w-100 h-100"
-                key={item.id}
-                autoPlay={true}
-                loop={true}
-                muted
-                playsInline
-                poster={item.fields.Image?.value?.src}
-              >
-                <source src={item.fields.Video.value.src} type="video/webm" />
-              </video>
-            ) : (
-              <NextImage
-                field={item.fields.Image}
-                className="object-fit-cover d-block w-100 h-100"
-                width={1920}
-                height={800}
-              />
-            )}
+        {props.fields.items.map((item, i) => {
+          const slideImage = resolvePulteImage(
+            page.siteName,
+            item.fields.Image,
+            PULTE_SLIDE_IMAGES[i] || 'hero',
+            item.fields.Title?.value || 'Pulte Homes',
+            1920,
+            900
+          );
+          const showVideo = !pulte && !isPageEditing && !!item.fields?.Video?.value?.src;
 
-            <div className="side-content">
-              <div className="container">
-                <div className="col-lg-5 col-md-6 offset-md-6 offset-lg-7">
-                  <h1 className="display-6 fw-bold">
-                    <Text field={item.fields.Title}></Text>
-                  </h1>
-                  <RichText field={item.fields.Text}></RichText>
-                  {!isPageEditing && item.fields?.Link?.value?.href && (
-                    <Link field={item.fields.Link} className="button button-accent"></Link>
-                  )}
+          return (
+            <div key={i} className={'carousel-item ' + (i == index ? 'active' : '')}>
+              {showVideo ? (
+                <video
+                  className="object-fit-cover d-block w-100 h-100"
+                  key={item.id}
+                  autoPlay={true}
+                  loop={true}
+                  muted
+                  playsInline
+                  poster={slideImage.value?.src}
+                >
+                  <source src={item.fields.Video.value?.src} type="video/webm" />
+                </video>
+              ) : (
+                <NextImage
+                  field={slideImage}
+                  className="object-fit-cover d-block w-100 h-100"
+                  width={1920}
+                  height={800}
+                />
+              )}
+
+              <div className="side-content">
+                <div className="container">
+                  <div className="col-lg-5 col-md-6 offset-md-6 offset-lg-7">
+                    <h1 className="display-6 fw-bold">
+                      <Text field={item.fields.Title}></Text>
+                    </h1>
+                    <RichText field={item.fields.Text}></RichText>
+                    {!isPageEditing && item.fields?.Link?.value?.href && (
+                      <Link field={item.fields.Link} className="button button-accent"></Link>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <ol className="carousel-indicators">
         {props.fields.items.map((_item, i) => (

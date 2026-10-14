@@ -1,0 +1,279 @@
+# KTS Law Homepage Build Plan
+# Adapted for Financial PLAY! component library (not uiim)
+# Pixel-perfect KTS variants planned for Phase 5.5
+
+client:
+  name: "KTS Law"
+  sourceUrl: "https://ktslaw.com/"
+  contentPath: "/sitecore/content/legal/kts-law"
+  codePath: "./industry-verticals/kts"
+  analyzedAt: "2026-10-07T21:20:00Z"
+  componentLibrary: "financial-play"
+  pixelPerfect: true
+
+theme:
+  file: "docs/ai/themes/kts-law.theme.yaml"
+  primary: "#D21F3C"
+  secondary: "#4A152B"
+  headingFont: "Helvetica Neue"
+  bodyFont: "Helvetica Neue"
+
+# Renderings to register in Available Renderings before assembly
+# (exist under Financial but not yet on kts-law Available Renderings)
+renderingsToRegister:
+  - { name: "Heading CTA", itemId: "{89E1D547-7CD6-4EF0-9A27-1E99410797DD}" }
+  - { name: "CTA Banner", itemId: "{488B8AC0-0EF9-4F6F-8711-78BA182B2C4C}" }
+
+sections:
+  - position: 1
+    name: "Main Navigation"
+    description: "White header — Kilpatrick logo left, search icon + hamburger right (no desktop nav links)"
+    matchType: "template"
+    componentName: "Header"
+    manifestName: "Header"
+    kind: "context-only"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "White bar, logo left, search + hamburger icons right, minimal chrome"
+      parentComponent: "Header"
+    apiAddable: false
+    matchConfidence: "high"
+    sectionBackground: "white"
+    notes: "Partial design — restyle WithLogoImage into KTS variant"
+
+  - position: 2
+    name: "Hero — Connected to Next"
+    description: "Bright red banner with large white 'Connected to Next.' + professional portrait on red with contour lines"
+    matchType: "template"
+    componentName: "Hero"
+    manifestName: "Hero"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Red top headline band + full-bleed portrait below; left-aligned white sans hero text; no CTA overlay on image"
+      parentComponent: "Hero"
+    apiAddable: true
+    renderingId: "{B7CDF75E-716A-4C59-B9B1-CD970AE0A4AE}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Hero"
+    matchConfidence: "high"
+    sectionBackground: "primary"
+    content:
+      Title: "Connected to Next."
+      Image: "hero attorney portrait on red"
+
+  - position: 3
+    name: "Hero Pillars"
+    description: "Deep burgundy 3-column band — Sharp minds / Counsel to industries / Broad & deep capability — with Learn more + faint 01/02/03"
+    matchType: "template"
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Burgundy (#4A152B) full-bleed 3-col, white text, outlined Learn more buttons, large faint numbered watermarks 01/02/03"
+      parentComponent: "ThreeColumnCta"
+    apiAddable: true
+    renderingId: "{AD385021-CE2B-4FC1-89AA-207D408034A8}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Three Column CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "secondary"
+    content:
+      cards:
+        - { Text: "Sharp minds for cutting-edge matters", Link: "Learn more", href: "https://ktslaw.com/people/" }
+        - { Text: "Counsel to the industries that are building the future", Link: "Learn more", href: "https://ktslaw.com/industries/" }
+        - { Text: "Broad & deep capability to drive your progress", Link: "Learn more", href: "https://ktslaw.com/services/" }
+
+  - position: 4
+    name: "Attorney Search Bar"
+    description: "Thin red horizontal strip — 'Search for an attorney' + arrow"
+    matchType: "template"
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Full-bleed primary-red strip, white label left, chevron right; looks like a search CTA bar"
+      parentComponent: "PromoCta"
+    apiAddable: true
+    renderingId: "{1A375FAC-6CC1-4A5A-A159-9BC6DBC66B80}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Promo CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "primary"
+    content:
+      Title: "Search for an attorney"
+      Link: { text: "Search", href: "https://ktslaw.com/people/" }
+
+  - position: 5
+    name: "Insights Heading"
+    description: "Large black heading 'Our ideas on the ideas that are changing the world.' + red rounded 'See all Insights' button right"
+    matchType: "template"
+    componentName: "HeadingCta"
+    manifestName: "HeadingCta"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Left large black heading, right solid red pill/rounded See all Insights CTA; generous white space"
+      parentComponent: "HeadingCta"
+    apiAddable: true
+    renderingId: "{89E1D547-7CD6-4EF0-9A27-1E99410797DD}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Heading CTA"
+    matchConfidence: "high"
+    sectionBackground: "white"
+    notes: "Must register Heading CTA in Available Renderings first"
+    content:
+      Heading: "Our ideas on the ideas that are changing the world."
+      Link: { text: "See all Insights", href: "https://ktslaw.com/insights/" }
+
+  - position: 6
+    name: "Insights Cards"
+    description: "Three alert cards — image top, ALERT title, red Read more link"
+    matchType: "template"
+    componentName: "ThreeColumnCta"
+    manifestName: "ThreeColumnCta"
+    kind: "simple"
+    variant: "KTSInsights"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTSInsights"
+      description: "White bg 3-up cards, image on top, ALERT eyebrow + title, red Read more text link (no filled button)"
+      parentComponent: "ThreeColumnCta"
+    apiAddable: true
+    renderingId: "{AD385021-CE2B-4FC1-89AA-207D408034A8}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Three Column CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "high"
+    sectionBackground: "white"
+    content:
+      cards:
+        - { Text: "ALERT: Executive Order Seeks to Promote Certain State & Local Government-Related AI Practices; New Rules...", Link: "Read more", href: "https://ktslaw.com/insights/" }
+        - { Text: "ALERT: California Lawmakers Postpone Effective Date for Reporting Deadline of November 17, 2023", Link: "Read more", href: "https://ktslaw.com/insights/" }
+        - { Text: "ALERT: SEC Will No Longer Review Companies' Statements on Social Media Platforms", Link: "Read more", href: "https://ktslaw.com/insights/" }
+
+  - position: 7
+    name: "Marquee Typography"
+    description: "Full-bleed red banner with oversized white scrolling text — Cutting-edge industries / Ground-breaking businesses / Pioneering ideas"
+    matchType: "template"
+    componentName: "CtaBanner"
+    manifestName: "CtaBanner"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Solid primary-red full-bleed, huge white marquee/scroll text lines, no image, no button chrome"
+      parentComponent: "CtaBanner"
+    apiAddable: true
+    renderingId: "{488B8AC0-0EF9-4F6F-8711-78BA182B2C4C}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/CTA Banner"
+    matchConfidence: "medium"
+    sectionBackground: "primary"
+    notes: "Must register CTA Banner in Available Renderings first. CSS animation for marquee."
+    content:
+      Title: "Cutting-edge industries"
+      Text: "Ground-breaking businesses · Pioneering ideas"
+
+  - position: 8
+    name: "Technical Visual"
+    description: "Light grey section with centered high-tech 3D camera lens exploded view"
+    matchType: "template"
+    componentName: "ParallaxBanner"
+    manifestName: "ParallaxBanner"
+    kind: "simple"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Muted grey (#F2F2F2) full-width, centered product/tech image, no overlay text"
+      parentComponent: "ParallaxBanner"
+    apiAddable: true
+    renderingId: "{200920AD-9645-4CB2-B72A-C7D8278E709F}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Parallax Banner"
+    matchConfidence: "high"
+    sectionBackground: "muted"
+    content:
+      Image: "camera lens assembly"
+
+  - position: 9
+    name: "Offices & Practices"
+    description: "Heading 'Relationships are local, and so are we' + OFFICES 4-col blue links + PRIMARY PRACTICE AREAS links"
+    matchType: "template"
+    componentName: "PromoCta"
+    manifestName: "PromoCta"
+    kind: "simple"
+    variant: "KTSOffices"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTSOffices"
+      description: "Grey bg, large black heading, OFFICES label + 4-col blue office links, PRIMARY PRACTICE AREAS below"
+      parentComponent: "PromoCta"
+    apiAddable: true
+    renderingId: "{1A375FAC-6CC1-4A5A-A159-9BC6DBC66B80}"
+    datasourceTemplate: "/sitecore/templates/Project/Financial/Components/Promo CTA"
+    datasourceFolderHint: "Promos"
+    matchConfidence: "medium"
+    sectionBackground: "muted"
+    notes: "Office list authored in Rich Text field as 4-column markup; practice areas as links"
+    content:
+      Title: "Relationships are local, and so are we"
+      Text: "OFFICES + location list + PRIMARY PRACTICE AREAS"
+
+  - position: 10
+    name: "Footer"
+    description: "Solid red footer — copyright, Disclaimer/Privacy/Site Map links, circular social icons"
+    matchType: "template"
+    componentName: "Footer"
+    manifestName: "Footer"
+    kind: "context-only"
+    variant: "KTS"
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "KTS"
+      description: "Solid primary-red footer, white text, horizontal legal links, circular social icon row"
+      parentComponent: "Footer"
+    apiAddable: false
+    matchConfidence: "high"
+    sectionBackground: "primary"
+    notes: "Partial design — restyle existing footer"
+
+buildOrder:
+  phase1_sitecore:
+    - Hero
+    - ThreeColumnCta  # pillars
+    - PromoCta        # search bar
+    - HeadingCta
+    - ThreeColumnCta  # insights (second datasource)
+    - CtaBanner
+    - ParallaxBanner
+    - PromoCta        # offices (second datasource)
+  phase2_theme:
+    - Apply cssVariables to globals.css
+  phase3_variants:
+    - Header.KTS
+    - Hero.KTS
+    - ThreeColumnCta.KTS
+    - ThreeColumnCta.KTSInsights
+    - PromoCta.KTS
+    - PromoCta.KTSOffices
+    - HeadingCta.KTS
+    - CtaBanner.KTS
+    - ParallaxBanner.KTS
+    - Footer.KTS
+  phase4_assembly:
+    - Register HeadingCta + CtaBanner in Available Renderings
+    - Assemble Home page top-to-bottom
+    - Wire datasources
+    - Manual: Header/Footer variants in Pages
+
+customComponents: []
