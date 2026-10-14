@@ -1,0 +1,718 @@
+{
+  "url": "https://ktslaw.com/",
+  "extractedAt": "2026-10-07T21:29:44.158Z",
+  "detectedLanguage": "en",
+  "targetLanguage": "en",
+  "translationNeeded": false,
+  "totalSections": 10,
+  "totalImages": 38,
+  "totalVideos": 0,
+  "interactionStats": {
+    "lazySourcesResolved": 0,
+    "tabsClicked": 0,
+    "accordionsExpanded": 0,
+    "carouselDotsClicked": 0,
+    "carouselArrowSlides": 0,
+    "backgroundImagesCollected": 9
+  },
+  "sections": [
+    {
+      "position": 1,
+      "tagName": "header",
+      "classHint": "navbar-fixed-top",
+      "backgroundHint": "light",
+      "headings": [],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "People",
+          "href": "https://ktslaw.com/people",
+          "target": ""
+        },
+        {
+          "text": "Services",
+          "href": "https://ktslaw.com/services",
+          "target": ""
+        },
+        {
+          "text": "Industries",
+          "href": "https://ktslaw.com/industries",
+          "target": ""
+        },
+        {
+          "text": "Insights",
+          "href": "https://ktslaw.com/insights",
+          "target": ""
+        },
+        {
+          "text": "About Us",
+          "href": "https://ktslaw.com/aboutus",
+          "target": ""
+        },
+        {
+          "text": "History",
+          "href": "https://ktslaw.com/AboutUs/History",
+          "target": ""
+        },
+        {
+          "text": "Corporate Citizenship",
+          "href": "https://ktslaw.com/AboutUs/Corporate-Citizenship",
+          "target": ""
+        },
+        {
+          "text": "Engagement & Inclusion",
+          "href": "https://ktslaw.com/AboutUs/Engagement-and-Inclusion",
+          "target": ""
+        },
+        {
+          "text": "Pro Bono",
+          "href": "https://ktslaw.com/Services/ProBono",
+          "target": ""
+        },
+        {
+          "text": "Leadership",
+          "href": "https://ktslaw.com/AboutUs/Leadership",
+          "target": ""
+        },
+        {
+          "text": "Locations",
+          "href": "https://ktslaw.com/Locations",
+          "target": ""
+        },
+        {
+          "text": "International Practices",
+          "href": "https://ktslaw.com/AboutUs/International-Practices",
+          "target": ""
+        },
+        {
+          "text": "Careers",
+          "href": "https://ktslaw.com/careers",
+          "target": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://ktslaw.com/-/media/feature/identity/kts_lockup_rgb_v3.png?la=en&h=56&w=212&hash=D363AC98A7B715770153C57820C2F860",
+          "alt": "Kilpatrick ",
+          "type": "img",
+          "width": 212,
+          "height": 56
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "tagName": "section",
+      "classHint": "kp-hp-hero",
+      "backgroundHint": "medium",
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Connected to Next®"
+        }
+      ],
+      "paragraphs": [],
+      "links": [],
+      "images": []
+    },
+    {
+      "position": 3,
+      "tagName": "section",
+      "classHint": "kp-hp-hero-img-wrapper",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [],
+      "links": [],
+      "images": [
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_02@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_03@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_04@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_05@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 428,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_06@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_07@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_02@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_03@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_04@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_05@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 428,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_06@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_07@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hp-hero-img.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_01@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-1_08@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_01@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/hero/hero-layer-2_08@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "tagName": "section",
+      "classHint": "numbered-ctas",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Sharp minds for cutting-edge matters"
+        },
+        {
+          "tag": "h2",
+          "text": "Counsel to the industries that are building the future"
+        },
+        {
+          "tag": "h2",
+          "text": "Broad & deep capability to drive your progress"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "See our people",
+          "href": "https://ktslaw.com/en/people",
+          "target": ""
+        },
+        {
+          "text": "See our industries",
+          "href": "https://ktslaw.com/industries",
+          "target": ""
+        },
+        {
+          "text": "See our services",
+          "href": "https://ktslaw.com/services",
+          "target": ""
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 5,
+      "tagName": "section",
+      "classHint": "quick-search",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Search for an attorney"
+        }
+      ],
+      "paragraphs": [],
+      "links": [],
+      "images": []
+    },
+    {
+      "position": 6,
+      "tagName": "section",
+      "classHint": "ideas-section",
+      "backgroundHint": "light",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Our ideas on the ideas that are changing the world"
+        },
+        {
+          "tag": "h3",
+          "text": "Executive Order Seeks to Preempt Certain State AI Laws and Establish a National AI Framework Initial Takeaways"
+        },
+        {
+          "tag": "h3",
+          "text": "Californias Extended Producer Responsibility Law Reporting Deadline of November 15 2025"
+        },
+        {
+          "tag": "h3",
+          "text": "SEC Will No Longer Referee Companies Exclusion of Shareholder Proposals"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "See all insights",
+          "href": "https://ktslaw.com/Insights",
+          "target": ""
+        },
+        {
+          "text": "Read more",
+          "href": "https://ktslaw.com/insights/alert/2025/12/executive-order-seeks-to-preempt-certain-state-ai-laws-and-establish-a-national-ai-framework-initial-takeaways",
+          "target": ""
+        },
+        {
+          "text": "Read more",
+          "href": "https://ktslaw.com/insights/alert/2025/11/californias-extended-producer-responsibility-law-reporting-deadline-of-november-15-2025",
+          "target": ""
+        },
+        {
+          "text": "Read more",
+          "href": "https://ktslaw.com/insights/alert/2025/11/sec-will-no-longer-referee-companies-exclusion-of-shareholder-proposals",
+          "target": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://ktslaw.com/-/media/feature/insights-photos/white-house_web.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 509,
+          "height": 339
+        },
+        {
+          "src": "https://ktslaw.com/-/media/feature/insights-photos/california-capitol-flag_web.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 509,
+          "height": 339
+        },
+        {
+          "src": "https://ktslaw.com/-/media/feature/insights-photos/boardroom-glass_web.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 509,
+          "height": 339
+        }
+      ],
+      "listItems": [
+        {
+          "title": "Our ideas on the ideas that are changing the world",
+          "link": {
+            "text": "See all insights",
+            "href": "https://ktslaw.com/Insights"
+          }
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "tagName": "section",
+      "classHint": "ticker-tape",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [
+        "Cutting-edge industries Cutting-edge industries Cutting-edge industries Cutting-edge industries Cutting-edge industries Cutting-edge industries Cutting-edge industries",
+        "Ground-breaking businesses Ground-breaking businesses Ground-breaking businesses Ground-breaking businesses Ground-breaking businesses Ground-breaking businesses Ground-breaking businesses",
+        "Pioneering ideas Pioneering ideas Pioneering ideas Pioneering ideas Pioneering ideas Pioneering ideas Pioneering ideas"
+      ],
+      "links": [],
+      "images": []
+    },
+    {
+      "position": 8,
+      "tagName": "section",
+      "classHint": "endcap-image",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [],
+      "links": [],
+      "images": [
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_02@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_03@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_04@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_05@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 428,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_06@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_07@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_01@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 160,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_02@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_03@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_04@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_05@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 428,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_06@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_07@2x.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 426,
+          "height": 1600
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-1_01@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap//endcap-image-overlay-1_08@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ktslaw.com/images/homepage/endcap/endcap-image-overlay-2_08@2x.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    {
+      "position": 9,
+      "tagName": "section",
+      "classHint": "offices-section",
+      "backgroundHint": "light",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Relationships are local, and so are we"
+        },
+        {
+          "tag": "h3",
+          "text": "Offices"
+        },
+        {
+          "tag": "h3",
+          "text": "International practices"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "Anchorage",
+          "href": "https://ktslaw.com/Locations/Anchorage",
+          "target": ""
+        },
+        {
+          "text": "Atlanta",
+          "href": "https://ktslaw.com/Locations/Atlanta",
+          "target": ""
+        },
+        {
+          "text": "Beijing",
+          "href": "https://ktslaw.com/Locations/Beijing",
+          "target": ""
+        },
+        {
+          "text": "Charlotte",
+          "href": "https://ktslaw.com/Locations/Charlotte",
+          "target": ""
+        },
+        {
+          "text": "Chicago",
+          "href": "https://ktslaw.com/Locations/Chicago",
+          "target": ""
+        },
+        {
+          "text": "Dallas",
+          "href": "https://ktslaw.com/Locations/Dallas",
+          "target": ""
+        },
+        {
+          "text": "Denver",
+          "href": "https://ktslaw.com/Locations/Denver",
+          "target": ""
+        },
+        {
+          "text": "Houston",
+          "href": "https://ktslaw.com/Locations/Houston",
+          "target": ""
+        },
+        {
+          "text": "Los Angeles",
+          "href": "https://ktslaw.com/Locations/LosAngeles",
+          "target": ""
+        },
+        {
+          "text": "New York",
+          "href": "https://ktslaw.com/Locations/NewYork",
+          "target": ""
+        },
+        {
+          "text": "Phoenix",
+          "href": "https://ktslaw.com/Locations/Phoenix",
+          "target": ""
+        },
+        {
+          "text": "Raleigh",
+          "href": "https://ktslaw.com/Locations/Raleigh",
+          "target": ""
+        },
+        {
+          "text": "San Diego",
+          "href": "https://ktslaw.com/Locations/SanDiego",
+          "target": ""
+        },
+        {
+          "text": "San Francisco",
+          "href": "https://ktslaw.com/Locations/SanFrancisco",
+          "target": ""
+        },
+        {
+          "text": "Seattle",
+          "href": "https://ktslaw.com/Locations/Seattle",
+          "target": ""
+        },
+        {
+          "text": "Shanghai",
+          "href": "https://ktslaw.com/Locations/Shanghai",
+          "target": ""
+        },
+        {
+          "text": "Silicon Valley",
+          "href": "https://ktslaw.com/Locations/SiliconValley",
+          "target": ""
+        },
+        {
+          "text": "Stockholm",
+          "href": "https://ktslaw.com/Locations/Stockholm",
+          "target": ""
+        },
+        {
+          "text": "Tokyo",
+          "href": "https://ktslaw.com/Locations/Tokyo",
+          "target": ""
+        },
+        {
+          "text": "Walnut Creek",
+          "href": "https://ktslaw.com/Locations/WalnutCreek",
+          "target": ""
+        },
+        {
+          "text": "Washington DC",
+          "href": "https://ktslaw.com/Locations/WashingtonDC",
+          "target": ""
+        },
+        {
+          "text": "Winston-Salem",
+          "href": "https://ktslaw.com/Locations/WinstonSalem",
+          "target": ""
+        },
+        {
+          "text": "China Practice",
+          "href": "https://www.ktslaw.com.cn/",
+          "target": ""
+        },
+        {
+          "text": "Japan Practice",
+          "href": "https://kilpatricktownsend.jp/",
+          "target": ""
+        },
+        {
+          "text": "Sweden Practice",
+          "href": "https://www.kilpatricktownsend.se/",
+          "target": ""
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 10,
+      "tagName": "footer",
+      "classHint": "",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [
+        "© 2026 Kilpatrick Townsend & Stockton LLP | Attorney Advertising® Connected to Next"
+      ],
+      "links": [
+        {
+          "text": "Extranet",
+          "href": "https://extranet.kilpatricktownsend.com/",
+          "target": "_blank"
+        },
+        {
+          "text": "Employee Access",
+          "href": "https://ktslaw.com/employee-access",
+          "target": ""
+        },
+        {
+          "text": "Disclaimer",
+          "href": "https://ktslaw.com/disclaimer",
+          "target": ""
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "https://ktslaw.com/privacy-policy",
+          "target": ""
+        },
+        {
+          "text": "Site Map",
+          "href": "https://ktslaw.com/site-map",
+          "target": ""
+        },
+        {
+          "text": "Connect With Us",
+          "href": "https://ktslaw.com/contact-us",
+          "target": ""
+        }
+      ],
+      "images": []
+    }
+  ]
+}
