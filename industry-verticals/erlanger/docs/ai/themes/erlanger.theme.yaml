@@ -1,0 +1,124 @@
+# Client Brand Theme — Erlanger
+# Extracted from https://www.erlanger.org/ via live computed styles and desktop screenshots.
+
+client:
+  name: "Erlanger"
+  sourceUrl: "https://www.erlanger.org/"
+  extractedAt: "2026-10-15T05:40:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#002452"
+  primaryForeground: "#ffffff"
+  secondary: "#003476"
+  secondaryForeground: "#ffffff"
+  accent: "#dab066"
+  accentForeground: "#002452"
+  background: "#ffffff"
+  foreground: "#1a1a1a"
+  muted: "#eef3f8"
+  mutedForeground: "#4a5568"
+  headerBackground: "#003476"
+  headerForeground: "#ffffff"
+  footerBackground: "#ffffff"
+  footerForeground: "#002452"
+  border: "#1e4d8c"
+  ring: "#dab066"
+  extra:
+    - { name: "ink", value: "#000000" }
+    - { name: "mainNavBackground", value: "#ffffff" }
+    - { name: "mainNavForeground", value: "#002452" }
+    - { name: "goldRule", value: "#dab066" }
+
+typography:
+  headingFamily: "Georgia, 'Times New Roman', Times, serif"
+  headingWeight: "400"
+  bodyFamily: "'Atkinson Hyperlegible', sans-serif"
+  bodyWeight: "400"
+  monoFamily: "ui-monospace, monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+  scale:
+    hero: "3.3rem"
+    h1: "3.3rem"
+    h2: "2.7rem"
+    h3: "2rem"
+    body: "1rem"
+    small: "0.8rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "1.4"
+
+spacing:
+  density: "normal"
+  sectionGap: "0"
+  containerMaxWidth: "1200px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "12px"
+  buttonRadius: "8px"
+  cardRadius: "12px"
+  imageRadius: "12px"
+  shadowStyle: "subtle"
+  borderStyle: "solid"
+
+tone:
+  overall: "corporate"
+  colorMode: "mixed"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "full-bleed-image"
+  cardStyle: "bordered"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#002452"
+      secondary: "#003476"
+      accent: "#dab066"
+  fontFamily:
+    heading: ["Georgia", "Times New Roman", "Times", "serif"]
+    body: ["Atkinson Hyperlegible", "sans-serif"]
+  borderRadius:
+    DEFAULT: "12px"
+    button: "8px"
+    card: "12px"
+
+cssVariables: |
+  :root {
+    --brand-primary: #002452;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #003476;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #dab066;
+    --brand-accent-foreground: #002452;
+    --brand-dark: #000000;
+    --brand-dark-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #1a1a1a;
+    --brand-muted: #eef3f8;
+    --brand-muted-fg: #4a5568;
+    --brand-header-bg: #003476;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #ffffff;
+    --brand-footer-fg: #002452;
+    --brand-border: #1e4d8c;
+    --brand-ring: #dab066;
+    --brand-heading-font: Georgia, "Times New Roman", Times, serif;
+    --brand-body-font: "Atkinson Hyperlegible", sans-serif;
+    --brand-radius: 12px;
+    --brand-button-radius: 8px;
+    --brand-card-radius: 12px;
+  }
+
+extraction:
+  confidence: "high"
+  method: "browser-computed-styles"
+  notes:
+    - "Local Playwright scraper failed because node_modules is not installed. Colors, fonts, and layout were read from the live page with computed styles plus desktop screenshots."
+    - "Primary brand color is navy #002452. Gold #dab066 is the CTA and underline accent, not the page background."
+    - "Headings are Georgia (system serif). Body is Atkinson Hyperlegible from Google Fonts."
+    - "Header is two tiers: navy utility bar (#003476) over a white main nav. --brand-header-bg maps to the utility bar."
+    - "Footer is white with a gold top rule, navy link text, and partner logos."
+    - "Muted section fill #eef3f8 is a visual estimate of the pale blue Before Your Visit band."

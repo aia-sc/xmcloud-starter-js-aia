@@ -13,7 +13,8 @@ const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
       // Bootstrap's `@import "progress"` otherwise hits the npm `progress` package.
-      progress: path.join(process.cwd(), 'node_modules/bootstrap/scss/_progress.scss').replace(/\\/g, '/'),
+      // A drive-letter path fails in Turbopack ("windows imports are not implemented yet").
+      progress: './node_modules/bootstrap/scss/_progress.scss',
     },
   },
 

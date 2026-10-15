@@ -1,0 +1,656 @@
+{
+  "url": "https://www.erlanger.org/",
+  "extractedAt": "2026-10-15T05:49:21.790Z",
+  "detectedLanguage": "en",
+  "targetLanguage": "en",
+  "translationNeeded": false,
+  "totalSections": 6,
+  "totalImages": 13,
+  "totalVideos": 4,
+  "interactionStats": {
+    "lazySourcesResolved": 0,
+    "tabsClicked": 0,
+    "accordionsExpanded": 3,
+    "carouselDotsClicked": 0,
+    "carouselArrowSlides": 0,
+    "backgroundImagesCollected": 4
+  },
+  "sections": [
+    {
+      "position": 1,
+      "tagName": "div",
+      "classHint": "Feature-template-item",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "The Future of Health Care"
+        }
+      ],
+      "paragraphs": [],
+      "links": [],
+      "images": [],
+      "videos": [
+        {
+          "type": "iframe-video",
+          "src": "https://www.youtube.com/embed/0zR4nAf5hFA?si=ZhZlKp4BaTZ5SMor%22&rel=0&modestbranding=1",
+          "provider": "youtube"
+        },
+        {
+          "type": "iframe-video",
+          "src": "https://www.youtube.com/embed/AIeuh_t-MTk?si=Ly-_D-yv5Z836of7%22&rel=0&modestbranding=1",
+          "provider": "youtube"
+        },
+        {
+          "type": "iframe-video",
+          "src": "https://www.youtube.com/embed/ubD_ffp_YJ8?si=IECNMlgmonMSZzog%22&rel=0&modestbranding=1",
+          "provider": "youtube"
+        },
+        {
+          "type": "iframe-video",
+          "src": "https://www.youtube.com/embed/IOHRe-l9Goc?si=OWqAoE-As4IbhzuO%22&rel=0&modestbranding=1",
+          "provider": "youtube"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "tagName": "div",
+      "classHint": "component-container card-grid default",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h3",
+          "text": "Medical Services"
+        },
+        {
+          "tag": "h4",
+          "text": "Academic, fellowship-level expertise in more medical specialties to address your unique health needs."
+        },
+        {
+          "tag": "h5",
+          "text": "Orthopaedics"
+        },
+        {
+          "tag": "h5",
+          "text": "Urology"
+        },
+        {
+          "tag": "h5",
+          "text": "Heart Care"
+        },
+        {
+          "tag": "h5",
+          "text": "Pediatrics"
+        }
+      ],
+      "paragraphs": [
+        "Erlanger serves the tri-state region with more than 50 highly specialized medical services",
+        "The region's only full-service orthopaedic program serving adults and children",
+        "Fellowship-trained physicians providing comprehensive care for all urologic diseases",
+        "The latest technology and clinical trials to keep your heart healthy",
+        "25 specialties just for kids at the region's only Children's hospital"
+      ],
+      "links": [
+        {
+          "text": "Learn More About Erlanger Orthopaedics",
+          "href": "https://www.erlanger.org/medical-services/orthopaedics",
+          "target": ""
+        },
+        {
+          "text": "Learn More About Erlanger Urology",
+          "href": "https://www.erlanger.org/medical-services/urology",
+          "target": ""
+        },
+        {
+          "text": "Learn More About Erlanger Heart Services",
+          "href": "https://www.erlanger.org/medical-services/heart",
+          "target": ""
+        },
+        {
+          "text": "Learn More About Erlanger Pediatric Services",
+          "href": "https://www.erlanger.org/childrens-health",
+          "target": ""
+        },
+        {
+          "text": "View All Erlanger Medical Services",
+          "href": "https://www.erlanger.org/medical-services",
+          "target": ""
+        }
+      ],
+      "images": [],
+      "listItems": [
+        {
+          "title": "Medical Services",
+          "description": "Medical Services"
+        },
+        {
+          "title": "Orthopaedics",
+          "description": "The region's only full-service orthopaedic program serving adults and children",
+          "link": {
+            "text": "Learn More About Erlanger Orthopaedics",
+            "href": "https://www.erlanger.org/medical-services/orthopaedics"
+          }
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "tagName": "div",
+      "classHint": "featured-links-image",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h3",
+          "text": "Before your visit"
+        },
+        {
+          "tag": "h4",
+          "text": "Visitor Information"
+        },
+        {
+          "tag": "h4",
+          "text": "Parking Options"
+        },
+        {
+          "tag": "h4",
+          "text": "Billing and Insurance"
+        }
+      ],
+      "paragraphs": [
+        "These resources will help you plan your upcoming Erlanger hospital stay, doctor appointment, or patient visit. Our goal is to make your healthcare experience as positive as possible.",
+        "Need Directions? Download the ErlangerNOW app",
+        "Before your visit, download erlangerNOW, type in where you want to go (any Erlanger hospital, practice, patient room, or waiting room), hit the \"Let's Go\" button, and you'll receive a route based on your precise location. Once onsite, save your parking spot for easy return and receive turn-by-turn directions from the parking lot to your destination inside (Erlanger downtown and Erlanger East Hospital campuses only).",
+        "With ErlangerNOW in hand, you can also: • Bookmark your favorite locations • Drop a pin anywhere in the hospital and share your pinned location with other app users",
+        "Erlanger offers convenient valet and garage parking for our main downtown hospital and adjacent Medical Mall, as well as free ground-level parking at our other locations.",
+        "Check if insurance covers your care, pay your bill now, apply for financial assistance, and learn about our payment process."
+      ],
+      "links": [
+        {
+          "text": "Download the App",
+          "href": "https://erlanger.gz.link/app",
+          "target": ""
+        },
+        {
+          "text": "download erlangerNOW,",
+          "href": "https://erlanger.gz.link/app",
+          "target": ""
+        },
+        {
+          "text": "Click here for visitation policies, lodging resources, onsite dining options, and more",
+          "href": "https://www.erlanger.org/patient-and-family-resources/visitor-information",
+          "target": ""
+        },
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/patient-and-family-resources/parking",
+          "target": ""
+        },
+        {
+          "text": "Learn more",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance",
+          "target": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/erlangernow/erlangernow_app_icon.ashx?h=74&w=75&hash=E1A1E4AD4B609DA622B645412E15C69B",
+          "alt": "ErlangerNOW app icon",
+          "type": "img",
+          "width": 75,
+          "height": 74
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/featured-links/insurance.ashx",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.erlanger.org/assets/dist/img/patterns/search-bg.png",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.erlanger.org/assets/dist/img/patterns/dot.png",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/cta-highlights/featuredcta.ashx",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        }
+      ],
+      "listItems": [
+        {
+          "title": "Before your visit",
+          "description": "Helpful Links"
+        },
+        {
+          "title": "Visitor Information",
+          "description": "",
+          "link": {
+            "text": "",
+            "href": "https://erlanger.gz.link/app"
+          },
+          "image": {
+            "src": "https://www.erlanger.org/-/media/erlanger-media/erlangernow/erlangernow_app_icon.ashx?h=74&w=75&hash=E1A1E4AD4B609DA622B645412E15C69B",
+            "alt": "ErlangerNOW app icon"
+          }
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "tagName": "div",
+      "classHint": "component-container featured-cta black ",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h3",
+          "text": "Our mission is to promote, support, and encourage clinical research"
+        }
+      ],
+      "paragraphs": [
+        "In keeping with Erlanger's core mission and vision, Erlanger Institute for Clinical Research (EICR) seeks to provide excellent medical care and quality service to our patients while also striving to improve healthcare through clinical research - including clinical trials."
+      ],
+      "links": [
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/clinical-research",
+          "target": ""
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 5,
+      "tagName": "div",
+      "classHint": "Feature-template-item",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h4",
+          "text": "Erlanger by the Numbers"
+        },
+        {
+          "tag": "h1",
+          "text": "7"
+        },
+        {
+          "tag": "h5",
+          "text": "World-class hospitals"
+        },
+        {
+          "tag": "h1",
+          "text": "57"
+        },
+        {
+          "tag": "h5",
+          "text": "Medical Specialties"
+        },
+        {
+          "tag": "h1",
+          "text": "28"
+        },
+        {
+          "tag": "h5",
+          "text": "Primary Care Locations"
+        },
+        {
+          "tag": "h1",
+          "text": "55"
+        },
+        {
+          "tag": "h5",
+          "text": "Clinical Research Trials"
+        }
+      ],
+      "paragraphs": [
+        "Five adult and the only children's hospital in the region.",
+        "34 adult and 23 pediatric. The most in the region.",
+        "50 doctors covering 10 counties",
+        "The advantage of a teaching hospital"
+      ],
+      "links": [
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/locations/erlanger-hospitals",
+          "target": ""
+        },
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/medical-services",
+          "target": ""
+        },
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/medical-services/primary-care",
+          "target": ""
+        },
+        {
+          "text": "Learn More",
+          "href": "https://www.erlanger.org/clinical-research",
+          "target": ""
+        }
+      ],
+      "images": [],
+      "listItems": [
+        {
+          "title": "Erlanger by the Numbers"
+        },
+        {
+          "title": "7",
+          "description": "Five adult and the only children's hospital in the region.",
+          "link": {
+            "text": "Learn More",
+            "href": "https://www.erlanger.org/locations/erlanger-hospitals"
+          }
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "tagName": "footer",
+      "classHint": "footer",
+      "backgroundHint": "light",
+      "headings": [
+        {
+          "tag": "h3",
+          "text": "FOR PATIENTS"
+        },
+        {
+          "tag": "h3",
+          "text": "FOR PROFESSIONALS"
+        },
+        {
+          "tag": "h3",
+          "text": "QUICK LINKS"
+        },
+        {
+          "tag": "h3",
+          "text": "COMPANY"
+        },
+        {
+          "tag": "h3",
+          "text": "FOR PATIENTS"
+        },
+        {
+          "tag": "h3",
+          "text": "FOR PROFESSIONALS"
+        },
+        {
+          "tag": "h3",
+          "text": "QUICK LINKS"
+        },
+        {
+          "tag": "h3",
+          "text": "COMPANY"
+        }
+      ],
+      "paragraphs": [
+        "Voted Best of the Best over the past decade.",
+        "Get the ErlangerNOW app",
+        "Erlanger is a teaching hospital system affiliated with the University of Tennessee Health Science Center.",
+        "Advances Medical excellence in our region through investments in technology, clinical programs, medical education, research and facilities."
+      ],
+      "links": [
+        {
+          "text": "BACK TO TOP",
+          "href": "https://www.erlanger.org/#main-content",
+          "target": ""
+        },
+        {
+          "text": "423-778-7000",
+          "href": "tel:4237787000",
+          "target": ""
+        },
+        {
+          "text": "Visit the UTHSC website",
+          "href": "https://www.erlanger.org/about-us/a-teaching-hospital/",
+          "target": ""
+        },
+        {
+          "text": "Learn more about the Foundation",
+          "href": "https://www.erlangerfoundation.org/",
+          "target": ""
+        },
+        {
+          "text": "Financial Assistance",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/financial-assistance-policy",
+          "target": ""
+        },
+        {
+          "text": "Price Transparency",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/price-transparency",
+          "target": ""
+        },
+        {
+          "text": "Share Your Story",
+          "href": "https://www.erlanger.org/contact-us/share-your-story-form",
+          "target": ""
+        },
+        {
+          "text": "No Surprises Act",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/no-surprises-act",
+          "target": ""
+        },
+        {
+          "text": "Pay Your Bill Now",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/pay-your-bill-now",
+          "target": ""
+        },
+        {
+          "text": "Insurance Accepted",
+          "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/accepted-insurance",
+          "target": ""
+        },
+        {
+          "text": "Patient Rights",
+          "href": "https://www.erlanger.org/patient-and-family-resources/policies/patients-rights",
+          "target": ""
+        },
+        {
+          "text": "Healthcare Professionals",
+          "href": "https://www.erlanger.org/for-healthcare-professionals",
+          "target": ""
+        },
+        {
+          "text": "Observation Privileges",
+          "href": "https://www.erlanger.org/for-healthcare-professionals/medical-staff-office/credentialing-and-privileging/observation-privileges",
+          "target": ""
+        },
+        {
+          "text": "Physician Login",
+          "href": "https://www.erlanger.org/for-healthcare-professionals/for-physicians",
+          "target": ""
+        },
+        {
+          "text": "Student Clinicals",
+          "href": "https://www.erlanger.org/for-healthcare-professionals/student-clinical-placement",
+          "target": ""
+        },
+        {
+          "text": "Physician Recruitment",
+          "href": "https://www.erlanger.org/careers",
+          "target": ""
+        },
+        {
+          "text": "Board Calendar",
+          "href": "https://www.erlanger.org/about-us/boards/authority-board",
+          "target": ""
+        },
+        {
+          "text": "For Associates",
+          "href": "https://www.erlanger.org/for-associates",
+          "target": ""
+        },
+        {
+          "text": "ErlangerNOW",
+          "href": "https://www.erlanger.org/patient-and-family-resources/patient-tools/erlangernow",
+          "target": ""
+        },
+        {
+          "text": "For Vendors",
+          "href": "https://www.erlanger.org/for-vendors",
+          "target": ""
+        },
+        {
+          "text": "Volunteering",
+          "href": "https://www.erlanger.org/volunteering",
+          "target": ""
+        },
+        {
+          "text": "Job Shadowing",
+          "href": "https://www.erlanger.org/careers/job-shadowing",
+          "target": ""
+        },
+        {
+          "text": "About Us",
+          "href": "https://www.erlanger.org/about-us",
+          "target": ""
+        },
+        {
+          "text": "Careers",
+          "href": "https://www.erlanger.org/careers",
+          "target": ""
+        },
+        {
+          "text": "Newsroom",
+          "href": "https://erlangerhealth.wordpress.com/",
+          "target": ""
+        },
+        {
+          "text": "Contact Us",
+          "href": "https://www.erlanger.org/contact-us",
+          "target": ""
+        },
+        {
+          "text": "HealthyU Blog",
+          "href": "https://blog.erlanger.org/",
+          "target": ""
+        },
+        {
+          "text": "Sitemap",
+          "href": "https://www.erlanger.org/sitemap",
+          "target": ""
+        },
+        {
+          "text": "Patient Privacy Practices",
+          "href": "https://www.erlanger.org/patient-and-family-resources/policies#NPP",
+          "target": ""
+        },
+        {
+          "text": "Digital Privacy Policy",
+          "href": "https://www.erlanger.org/patient-and-family-resources/policies/digital-privacy",
+          "target": ""
+        },
+        {
+          "text": "Disclaimer",
+          "href": "https://www.erlanger.org/patient-and-family-resources/policies#webdisclaimer",
+          "target": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://www.erlanger.org/assets/dist/img/arrow.svg",
+          "alt": "",
+          "type": "img",
+          "width": 10,
+          "height": 7
+        },
+        {
+          "src": "https://www.erlanger.org/assets/dist/img/arrow-white.svg",
+          "alt": "",
+          "type": "img",
+          "width": 10,
+          "height": 7
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/header/logo.ashx",
+          "alt": "Erlanger home",
+          "type": "img",
+          "width": 258,
+          "height": 70
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/badges-and-seals/best-of-the-best/2026/best_of_best_2026_graphic.ashx",
+          "alt": "Best of the Best 2026",
+          "type": "img",
+          "width": 1156,
+          "height": 1815
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/erlangernow/app-apple-v2.ashx?h=39&w=110&hash=39623ABC5C147C8082409DD280D753E4",
+          "alt": "Available on the App Store",
+          "type": "img",
+          "width": 110,
+          "height": 39
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/erlangernow/app-android-v2.ashx?h=37&w=127&hash=3D214884B92F810CE6791A627A702ADD",
+          "alt": "Get it on Google Play",
+          "type": "img",
+          "width": 127,
+          "height": 37
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/footer/university-of-tennessee.ashx",
+          "alt": "University of Tennessee Health Science Center logo",
+          "type": "img",
+          "width": 300,
+          "height": 78
+        },
+        {
+          "src": "https://www.erlanger.org/-/media/erlanger-media/logos/foundation/erla_foundation_logo_color.ashx?h=103&w=300&hash=E76CBF67778F803C565B278EC6D4095D",
+          "alt": "Erlanger Foundation logo",
+          "type": "img",
+          "width": 300,
+          "height": 103
+        }
+      ],
+      "listItems": [
+        {
+          "title": "Erlanger",
+          "description": "Phone:",
+          "link": {
+            "text": "",
+            "href": "https://www.erlanger.org/"
+          },
+          "image": {
+            "src": "https://www.erlanger.org/-/media/erlanger-media/header/logo.ashx",
+            "alt": "Erlanger home"
+          }
+        },
+        {
+          "title": "University of Tennessee Health Science Center",
+          "description": "University of Tennessee Health Science Center",
+          "link": {
+            "text": "",
+            "href": "https://uthsc.edu/comc/"
+          },
+          "image": {
+            "src": "https://www.erlanger.org/-/media/erlanger-media/footer/university-of-tennessee.ashx",
+            "alt": "University of Tennessee Health Science Center logo"
+          }
+        },
+        {
+          "title": "FOR PATIENTS",
+          "description": "FOR PATIENTS",
+          "link": {
+            "text": "Financial Assistance",
+            "href": "https://www.erlanger.org/patient-and-family-resources/billing-and-insurance/financial-assistance-policy"
+          }
+        }
+      ]
+    }
+  ]
+}

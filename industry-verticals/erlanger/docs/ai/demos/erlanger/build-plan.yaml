@@ -1,0 +1,272 @@
+# Demo Build Plan — Erlanger homepage
+client:
+  name: "Erlanger"
+  sourceUrl: "https://www.erlanger.org/"
+  contentRoot: "/sitecore/content/medical/erlanger"
+  themeFile: "docs/ai/themes/erlanger.theme.yaml"
+  analyzedAt: "2026-10-15T05:45:00Z"
+
+pageAnalysis:
+  screenshotFiles:
+    desktop: "user-provided homepage screenshot plus live desktop captures"
+    mobile: ""
+    hero: ""
+  totalSections: 8
+  templateMatches: 7
+  customRequired: 1
+  libraryStatus: "missing"
+  libraryNote: "The 18 UIIM template components are not in src/components/uiim and not in Sitecore under Project/medical. Pixel-perfect work means creating those components (templates, renderings, React) for the sections below, then applying Erlanger variants."
+
+sections:
+  - position: 1
+    description: "Two-tier header. Navy utility bar with About Us, Careers, Clinical Research, Giving, Contact Us, Pay Your Bill, MyChart, Children's Hospital, search, and text-size controls. White bar underneath with the gold flower logo, erlanger wordmark, and FIND A DOCTOR, MEDICAL SERVICES, LOCATIONS, PATIENTS & FAMILY RESOURCES."
+    matchedComponent:
+      registryId: "navigation-header"
+      manifestName: "NavigationHeader"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: false
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "Two-tier solid header. Top utility bar #003476 with white links. Main bar white with logo left and uppercase nav links."
+      parentComponent: "NavigationHeader"
+    sectionBackground: "default"
+    content:
+      Title: "Erlanger"
+      UtilityLinks:
+        - "About Us"
+        - "Careers"
+        - "Clinical Research"
+        - "Giving"
+        - "Contact Us"
+        - "Pay Your Bill"
+        - "MyChart"
+        - "Children's Hospital"
+      NavLinks:
+        - "FIND A DOCTOR"
+        - "MEDICAL SERVICES"
+        - "LOCATIONS"
+        - "PATIENTS & FAMILY RESOURCES"
+    contentNotes: "Context-only. Lives in the header partial design. Cannot be added with add_component_on_page."
+    variantReason: "Solid bars, not a transparent overlay. No existing variant is a two-tier utility plus main nav."
+
+  - position: 2
+    description: "Full-bleed photo of a clinician with a phone. Left side has eyebrow DOWNLOAD THE APP, serif headline Introducing ErlangerNOW, a short paragraph, and a LEARN MORE link with a gold underline. Right side is a stack of four white cards with a gold corner: Find A Doctor, Medical Services, Locations, My Chart."
+    matchedComponent:
+      registryId: "hero-banner"
+      manifestName: "HeroBanner"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "medium"
+      apiAddable: true
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "Full-bleed photo with left-aligned serif copy and a vertical stack of four white quick-link cards on the right."
+      parentComponent: "HeroBanner"
+    sectionBackground: "dark"
+    content:
+      Eyebrow: "DOWNLOAD THE APP"
+      Title: "Introducing ErlangerNOW"
+      Description: "Get turn-by-turn directions, save your parking spot, and access MyChart, all from a single app."
+      PrimaryLink: "LEARN MORE"
+      QuickLinks:
+        - { title: "Find A Doctor", href: "https://www.erlanger.org/find-a-doctor" }
+        - { title: "Medical Services", href: "https://www.erlanger.org/medical-services" }
+        - { title: "Locations", href: "https://www.erlanger.org/locations" }
+        - { title: "My Chart", href: "https://www.erlanger.org/medical-services/mychart" }
+    contentNotes: "HeroBanner is a simple component. The four quick-link cards need extra link fields or child items so the pixel-perfect variant stays content-driven."
+    variantReason: "BackgroundImage covers the photo and overlay text, but not the stacked quick-link cards."
+
+  - position: 3
+    description: "Black band titled The Future of Health Care with a 2x2 grid of YouTube videos: History of Firsts, It's Our DNA, Healthcare Forward, We Are Erlanger."
+    matchedComponent:
+      registryId: ""
+      manifestName: "ErlangerVideoGrid"
+      variant: "Default"
+      matchType: "custom"
+      matchConfidence: "high"
+      apiAddable: true
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "Default"
+      description: "Centered serif heading on black, then a 2x2 grid of rounded YouTube embeds."
+      parentComponent: "ErlangerVideoGrid"
+    sectionBackground: "dark"
+    content:
+      Title: "The Future of Health Care"
+      Videos:
+        - { title: "History of Firsts", embed: "https://www.youtube.com/embed/0zR4nAf5hFA" }
+        - { title: "It's Our DNA", embed: "https://www.youtube.com/embed/AIeuh_t-MTk" }
+        - { title: "Healthcare Forward", embed: "https://www.youtube.com/embed/ubD_ffp_YJ8" }
+        - { title: "We Are Erlanger", embed: "https://www.youtube.com/embed/IOHRe-l9Goc" }
+    contentNotes: "No template component is a 2x2 video grid. Videos stay as URLs. Do not download the mp4 files. Use poster images if the embed cannot play in the editor."
+    variantReason: "FeatureHighlight WithVideo is a single video. ImageGallery is photos only."
+
+  - position: 4
+    description: "Navy band. Small tracked label MEDICAL SERVICES, serif headline about fellowship-level expertise, supporting line, then four bordered cards: Orthopaedics, Urology, Heart Care, Pediatrics. Each card has a description and a gold-underlined learn-more link. A gold pill button says View All Erlanger Medical Services. A dotted pattern sits on the right."
+    matchedComponent:
+      registryId: "feature-cards-grid"
+      manifestName: "FeatureCardsGrid"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "Navy section, centered serif intro, four bordered text cards, gold pill CTA, dotted accent on the right."
+      parentComponent: "FeatureCardsGrid"
+    sectionBackground: "primary"
+    content:
+      Eyebrow: "MEDICAL SERVICES"
+      Title: "Academic, fellowship-level expertise in more medical specialties to address your unique health needs."
+      Description: "Erlanger serves the tri-state region with more than 50 highly specialized medical services"
+      PrimaryLink: "View All Erlanger Medical Services"
+      Cards:
+        - { title: "Orthopaedics", description: "The region's only full-service orthopaedic program serving adults and children", link: "https://www.erlanger.org/medical-services/orthopaedics" }
+        - { title: "Urology", description: "Fellowship-trained physicians providing comprehensive care for all urologic diseases", link: "https://www.erlanger.org/medical-services/urology" }
+        - { title: "Heart Care", description: "The latest technology and clinical trials to keep your heart healthy", link: "https://www.erlanger.org/medical-services/heart" }
+        - { title: "Pediatrics", description: "25 specialties just for kids at the region's only Children's hospital", link: "https://www.erlanger.org/childrens-health" }
+    contentNotes: "Desktop is four cards across. Cards are text only, no icons or photos."
+    variantReason: "Default is a light 3-column icon grid. This section is a dark four-up text grid with a section CTA."
+
+  - position: 5
+    description: "Pale blue band. Left column heading Before your visit plus a short intro. Right column is an accordion: Visitor Information, Parking Options, Billing and Insurance."
+    matchedComponent:
+      registryId: "faq-accordion"
+      manifestName: "FAQAccordion"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "medium"
+      apiAddable: true
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "Split layout. Intro copy on the left, accordion rows with gold rules on the right, pale blue background."
+      parentComponent: "FAQAccordion"
+    sectionBackground: "muted"
+    content:
+      Title: "Before your visit"
+      Description: "These resources will help you plan your upcoming Erlanger hospital stay, doctor appointment, or patient visit. Our goal is to make your healthcare experience as positive as possible."
+      Items:
+        - { title: "Visitor Information", summary: "Need Directions? Download the ErlangerNOW app" }
+        - { title: "Parking Options", summary: "Valet and garage parking downtown, free ground-level parking at other locations." }
+        - { title: "Billing and Insurance", summary: "Check coverage, pay a bill, apply for financial assistance, and learn the payment process." }
+    contentNotes: "Accordion content is long on the live site, especially Visitor Information. Phase 2.5 should pull the full copy."
+    variantReason: "TwoColumn splits questions into two columns. This layout is intro plus a single accordion."
+
+  - position: 6
+    description: "Split feature. Operating-room photograph on the left. On the right, serif headline Our mission is to promote, support, and encourage clinical research, with body copy about the Erlanger Institute for Clinical Research."
+    matchedComponent:
+      registryId: "feature-highlight"
+      manifestName: "FeatureHighlight"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "Full-bleed split. Photograph left, serif headline and body on a dark panel right."
+      parentComponent: "FeatureHighlight"
+    sectionBackground: "dark"
+    content:
+      Title: "Our mission is to promote, support, and encourage clinical research"
+      Description: "In keeping with Erlanger's core mission and vision, Erlanger Institute for Clinical Research (EICR) seeks to provide excellent medical care and quality service to our patients while also striving to improve healthcare through clinical research - including clinical trials."
+      PrimaryLink: "https://www.erlanger.org/clinical-research"
+    contentNotes: "Confirm the learn-more label during content extraction."
+    variantReason: "Default is a light side-by-side feature. This one is photographic and dark."
+
+  - position: 7
+    description: "Black band, Erlanger by the Numbers. Four white cards in a 2x2 grid. Huge navy serif numbers 7, 57, 28, and 55, with a title, a short line, and a gold-underlined Learn More."
+    matchedComponent:
+      registryId: "trust-stats"
+      manifestName: "TrustStatsRow"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+    variantMatch: "none"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "2x2 white cards on black. Giant serif number, title, description, and gold underlined link."
+      parentComponent: "TrustStatsRow"
+    sectionBackground: "dark"
+    content:
+      Title: "Erlanger by the Numbers"
+      Stats:
+        - { value: "7", label: "World-class hospitals", description: "Five adult and the only children's hospital in the region.", href: "https://www.erlanger.org/locations/erlanger-hospitals" }
+        - { value: "57", label: "Medical Specialties", description: "34 adult and 23 pediatric. The most in the region.", href: "https://www.erlanger.org/medical-services" }
+        - { value: "28", label: "Primary Care Locations", description: "50 doctors covering 10 counties", href: "https://www.erlanger.org/medical-services/primary-care" }
+        - { value: "55", label: "Clinical Research Trials", description: "The advantage of a teaching hospital", href: "https://www.erlanger.org/clinical-research" }
+    contentNotes: "Each stat has its own link. The template child may need a link field."
+    variantReason: "Default is a single horizontal row of numbers. The live section is a 2x2 card grid on black."
+
+  - position: 8
+    description: "White mega footer with a gold bar across the top. Erlanger address and phone, social icons, Best of the Best badge, app store buttons, UTHSC and Erlanger Foundation blocks, and link columns FOR PATIENTS, FOR PROFESSIONALS, QUICK LINKS, and COMPANY."
+    matchedComponent:
+      registryId: "footer"
+      manifestName: "SiteFooter"
+      variant: "Erlanger"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: false
+    variantMatch: "partial"
+    customVariantNeeded:
+      name: "Erlanger"
+      description: "White mega footer, gold top rule, logo and contact column, partner column, and four link groups."
+      parentComponent: "SiteFooter"
+    sectionBackground: "default"
+    content:
+      Address: "975 East 3rd Street, Chattanooga, TN 37403"
+      Phone: "423-778-7000"
+      Hours: "8AM – Midnight, 7 days a week"
+      Columns:
+        - "FOR PATIENTS"
+        - "FOR PROFESSIONALS"
+        - "QUICK LINKS"
+        - "COMPANY"
+    contentNotes: "Context-only. Lives in the footer partial design. Cannot be added with add_component_on_page."
+    variantReason: "MegaFooter is the closest structure. The gold rule, partner logos, and app badges are specific to Erlanger."
+
+customComponents:
+  - name: "ErlangerVideoGrid"
+    reason: "2x2 YouTube grid on a black band. No template component renders multiple video embeds."
+    fields:
+      - { name: "Title", type: "Single-Line Text" }
+    childFields:
+      - { name: "VideoTitle", type: "Single-Line Text" }
+      - { name: "VideoUrl", type: "Single-Line Text" }
+      - { name: "PosterImage", type: "Image" }
+
+buildOrder:
+  phase1_sitecore:
+    - { position: 2, manifestName: "HeroBanner", matchType: "template" }
+    - { position: 3, manifestName: "ErlangerVideoGrid", matchType: "custom" }
+    - { position: 4, manifestName: "FeatureCardsGrid", matchType: "template" }
+    - { position: 5, manifestName: "FAQAccordion", matchType: "template" }
+    - { position: 6, manifestName: "FeatureHighlight", matchType: "template" }
+    - { position: 7, manifestName: "TrustStatsRow", matchType: "template" }
+  phase2_theme: "docs/ai/themes/erlanger.theme.yaml"
+  phase3_custom:
+    - "ErlangerVideoGrid"
+  manual:
+    - { position: 1, manifestName: "NavigationHeader" }
+    - { position: 8, manifestName: "SiteFooter" }
+
+homePageCleanup:
+  note: "Home currently renders the financial starter, not Erlanger. These OOB components cannot be removed via MCP."
+  components:
+    - "Carousel"
+    - "Promo CTA"
+    - "Five Column CTA"
+    - "Three Column CTA"
+    - "Promo CTA"
+    - "Promo CTA"
+    - "Two Column CTA"
+    - "Article List"
+    - "Documents List"
+    - "App Promo"

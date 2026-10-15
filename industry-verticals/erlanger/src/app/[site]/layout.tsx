@@ -16,7 +16,7 @@ export default async function SiteLayout({
     <>
       <Bootstrap siteName={site} isPreviewMode={isEnabled} />
       {children}
-      <ProfileWidget />
+      {process.env.NODE_ENV !== 'development' && <ProfileWidget />}
     </>
   );
 }

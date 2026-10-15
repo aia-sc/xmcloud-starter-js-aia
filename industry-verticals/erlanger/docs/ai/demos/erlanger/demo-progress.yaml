@@ -1,0 +1,74 @@
+# Demo Progress Tracker — Erlanger
+
+client:
+  name: "Erlanger"
+  sourceUrl: "https://www.erlanger.org/"
+  contentRoot: "/sitecore/content/medical/erlanger"
+  homePageId: "{1D0A2240-F04C-4EBF-B70B-884CA0EAF250}"
+  startedAt: "2026-10-15T05:30:00Z"
+  lastUpdatedAt: "2026-10-15T06:10:00Z"
+
+phases:
+  phase0_inputs:
+    status: "complete"
+    screenshot: true
+    url: "https://www.erlanger.org/"
+    contentHubHost: "https://aia-verticals.sitecoresandbox.cloud/"
+    contentHubValidated: false
+
+  phase0_5_manifest:
+    status: "complete"
+    validationMode: "quick"
+    result: "fail"
+    notes: "Manifest points at main/main-website and fmc-custom-demo. Live site is /sitecore/content/medical/erlanger. Project renderings and component templates are not deployed. UIIM React files are not in this app."
+
+  phase1_theme:
+    status: "complete"
+    themeFile: "docs/ai/themes/erlanger.theme.yaml"
+    userApproved: true
+
+  phase2_analysis:
+    status: "complete"
+    buildPlanFile: "docs/ai/demos/erlanger/build-plan.yaml"
+    totalSections: 8
+    userApproved: true
+
+  phase2_5_content:
+    status: "complete"
+    contentMapFile: "docs/ai/demos/erlanger/extracted-content.json"
+    extractorUsed: true
+
+  phase3_content:
+    status: "complete"
+    completedSections: 8
+    totalSections: 8
+
+  phase4_theme:
+    status: "complete"
+    themeDelivery: "src/assets/erlanger-home.scss"
+    cssWritten: true
+    fontsAdded: true
+
+  phase5_custom:
+    status: "complete"
+    customComponentsNeeded: 8
+    customComponentsBuilt: 8
+
+  phase5_5_variants:
+    status: "complete"
+    variantsNeeded: 8
+    variantsCreated: 8
+    variantSpecsFile: ""
+    skippedReason: "Default export renders the Erlanger layout because Pages cannot set FieldNames through the API."
+    userRequestedPixelPerfect: true
+
+  phase6_assembly:
+    status: "complete"
+    componentsAdded: 8
+    datasourcesWired: 6
+    totalComponents: 8
+
+  phase7_summary:
+    status: "pending"
+
+sections: []
