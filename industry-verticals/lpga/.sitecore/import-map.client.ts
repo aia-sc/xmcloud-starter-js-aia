@@ -27,6 +27,7 @@ import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, T
 import Head from 'next/head';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { ParallaxBackgroundImage } from 'components/non-sitecore/ParallaxBackgroundImage';
+import { normalizeLpgaListFields } from 'lib/lpga-graphql-fields';
 import { IconAccent } from 'components/non-sitecore/IconAccent';
 import { createPortal } from 'react-dom';
 import { UserCircle, X, Loader2, RotateCcw, Copy, Check } from 'lucide-react';
@@ -200,6 +201,12 @@ const importMap = [
     module: 'components/non-sitecore/ParallaxBackgroundImage',
     exports: [
       { name: 'ParallaxBackgroundImage', value: ParallaxBackgroundImage },
+    ]
+  },
+  {
+    module: 'lib/lpga-graphql-fields',
+    exports: [
+      { name: 'normalizeLpgaListFields', value: normalizeLpgaListFields },
     ]
   },
   {

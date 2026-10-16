@@ -32,6 +32,8 @@ import * as PageBackground from 'src/components/pagecontent/PageBackground';
 import * as LpgaTournamentLeaderboard from 'src/components/pagecontent/LpgaTournamentLeaderboard';
 import * as LpgaStandings from 'src/components/pagecontent/LpgaStandings';
 import * as LpgaFeaturedNews from 'src/components/pagecontent/LpgaFeaturedNews';
+import * as LpgaAthleteProfile from 'src/components/pagecontent/LpgaAthleteProfile';
+import * as LpgaAthleteDirectory from 'src/components/pagecontent/LpgaAthleteDirectory';
 import * as ImageGallery from 'src/components/pagecontent/ImageGallery';
 import * as HeroBanner from 'src/components/pagecontent/HeroBanner';
 import * as Hero from 'src/components/pagecontent/Hero';
@@ -109,6 +111,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LpgaTournamentLeaderboard', { ...LpgaTournamentLeaderboard, componentType: 'client' }],
   ['LpgaStandings', { ...LpgaStandings, componentType: 'client' }],
   ['LpgaFeaturedNews', { ...LpgaFeaturedNews, componentType: 'client' }],
+  ['LpgaAthleteProfile', { ...LpgaAthleteProfile, componentType: 'client' }],
+  ['LpgaAthleteDirectory', { ...LpgaAthleteDirectory, componentType: 'client' }],
   ['ImageGallery', { ...ImageGallery, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner, componentType: 'client' }],
   ['Hero', { ...Hero, componentType: 'client' }],
