@@ -16,8 +16,10 @@ import * as ErlangerVideoGrid from 'src/components/uiim/media/ErlangerVideoGrid'
 import * as ErlangerVisit from 'src/components/uiim/content/ErlangerVisit';
 import * as ErlangerStats from 'src/components/uiim/content/ErlangerStats';
 import * as ErlangerResearch from 'src/components/uiim/content/ErlangerResearch';
+import * as ErlangerDiversityMessage from 'src/components/uiim/content/ErlangerDiversityMessage';
 import * as ErlangerSpecialtyCards from 'src/components/uiim/cards/ErlangerSpecialtyCards';
 import * as ErlangerHero from 'src/components/uiim/banners/ErlangerHero';
+import * as ErlangerFindDoctorHero from 'src/components/uiim/banners/ErlangerFindDoctorHero';
 import * as SearchResults from 'src/components/search/SearchResults';
 import * as PreviewSearch from 'src/components/search/PreviewSearch';
 import * as MoreLikeThis from 'src/components/search/MoreLikeThis';
@@ -95,8 +97,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ErlangerVisit', { ...ErlangerVisit }],
   ['ErlangerStats', { ...ErlangerStats }],
   ['ErlangerResearch', { ...ErlangerResearch }],
+  ['ErlangerDiversityMessage', { ...ErlangerDiversityMessage }],
   ['ErlangerSpecialtyCards', { ...ErlangerSpecialtyCards }],
   ['ErlangerHero', { ...ErlangerHero }],
+  ['ErlangerFindDoctorHero', { ...ErlangerFindDoctorHero }],
   ['SearchResults', { ...SearchResults }],
   ['PreviewSearch', { ...PreviewSearch }],
   ['MoreLikeThis', { ...MoreLikeThis }],

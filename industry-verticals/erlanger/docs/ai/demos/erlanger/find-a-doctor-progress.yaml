@@ -1,0 +1,21 @@
+# Find a Doctor page — Erlanger
+page:
+  path: "/sitecore/content/medical/erlanger/Home/find-a-doctor"
+  itemId: "{1098ED6E-53A5-49AC-8E51-536841938687}"
+  route: "/find-a-doctor"
+  sourceUrl: "https://www.erlanger.org/find-a-doctor"
+
+components:
+  - name: ErlangerFindDoctorHero
+    renderingId: "{21EBA025-72F9-4F4B-8B1D-F765C26A292A}"
+    templateId: "{43D0DEF0-2457-4D02-AFB9-9498A2330FBA}"
+  - name: ErlangerDiversityMessage
+    renderingId: "{E5E05BCB-A1CF-473E-8288-0223435DFCE0}"
+    templateId: "{59F2AECA-FE5C-4717-AA9F-60DECD93BA8B}"
+  - name: ErlangerFooter
+    renderingId: "{74B13DDF-04F1-48EC-81A8-216B281B5FE4}"
+    note: "Context-only; enhanced to match Find a Doctor footer"
+
+notes:
+  - Site header partial is intentionally left visible (no CSS hide).
+  - Financial footer partial is hidden when ErlangerFooter is present.

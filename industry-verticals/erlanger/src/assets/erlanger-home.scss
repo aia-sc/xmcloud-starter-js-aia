@@ -415,10 +415,202 @@
   text-decoration: none;
 }
 
+.erlanger-fad-hero {
+  position: relative;
+  min-height: 420px;
+  color: #fff;
+  background: #0a2748 var(--fad-hero-image) center / cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.erlanger-fad-hero__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 36, 82, 0.72) 0%, rgba(0, 52, 118, 0.55) 45%, rgba(0, 36, 82, 0.35) 100%);
+}
+
+.erlanger-fad-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 72px 24px 64px;
+}
+
+.erlanger-fad-hero h1 {
+  margin: 0 0 36px;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1.05;
+  color: #fff;
+}
+
+.erlanger-fad-hero__form {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  gap: 18px 20px;
+  align-items: end;
+}
+
+.erlanger-fad-hero__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.erlanger-fad-hero__field label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.erlanger-fad-hero__field input,
+.erlanger-fad-hero__field select {
+  width: 100%;
+  height: 52px;
+  border: 0;
+  border-radius: 2px;
+  padding: 0 14px;
+  font-size: 16px;
+  color: #222;
+  background: #fff;
+  appearance: none;
+}
+
+.erlanger-fad-hero__select-wrap,
+.erlanger-fad-hero__input-wrap {
+  position: relative;
+}
+
+.erlanger-fad-hero__select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+.erlanger-fad-hero__keypad {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  background:
+    linear-gradient(#666 0 0) 0 0 / 4px 4px,
+    linear-gradient(#666 0 0) 7px 0 / 4px 4px,
+    linear-gradient(#666 0 0) 14px 0 / 4px 4px,
+    linear-gradient(#666 0 0) 0 7px / 4px 4px,
+    linear-gradient(#666 0 0) 7px 7px / 4px 4px,
+    linear-gradient(#666 0 0) 14px 7px / 4px 4px,
+    linear-gradient(#666 0 0) 0 14px / 4px 4px,
+    linear-gradient(#666 0 0) 7px 14px / 4px 4px,
+    linear-gradient(#666 0 0) 14px 14px / 4px 4px;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.erlanger-fad-hero__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.erlanger-fad-hero__location::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: inset 0 0 0 3px transparent;
+  background: radial-gradient(circle at 50% 45%, #fff 28%, transparent 30%);
+}
+
+.erlanger-fad-hero__actions {
+  padding-bottom: 0;
+}
+
+.erlanger-fad-hero__actions button {
+  height: 52px;
+  min-width: 128px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--brand-accent);
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.erlanger-diversity {
+  background: #fff;
+}
+
+.erlanger-diversity__inner {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 48px 24px 36px;
+}
+
+.erlanger-diversity__copy {
+  color: #222;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.erlanger-diversity__copy p {
+  margin: 0;
+}
+
+.erlanger-diversity__link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #1a5fb4;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.erlanger-diversity__topbar {
+  background: var(--brand-accent);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 28px;
+}
+
+.erlanger-diversity__topbar button {
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
 .erlanger-footer {
   background: #fff;
-  border-top: 14px solid var(--brand-accent);
-  padding: 48px 24px 32px;
+  padding: 48px 24px 20px;
   color: #444;
 }
 
@@ -426,23 +618,42 @@
   width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: 1.15fr 1.15fr 1fr 1fr;
+  gap: 36px 28px;
+}
+
+.erlanger-footer__logo {
+  height: 52px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.erlanger-footer__brand p,
+.erlanger-footer__partners p {
+  margin: 0 0 12px;
+  line-height: 1.45;
+  font-size: 15px;
 }
 
 .erlanger-footer a {
-  color: var(--brand-primary);
+  color: #1a5fb4;
   font-weight: 700;
-  text-decoration: none;
-  border-bottom: 2px solid var(--brand-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border-bottom: 0;
 }
 
 .erlanger-footer h3 {
-  color: var(--brand-secondary);
+  color: #222;
   font-family: var(--brand-body-font);
   font-size: 14px;
   letter-spacing: 0.08em;
   font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.erlanger-footer__stack-title {
+  margin-top: 28px;
 }
 
 .erlanger-footer li {
@@ -455,8 +666,90 @@
   padding: 0;
 }
 
-/* Hide leftover OOB body components only — never hide the site header/footer. */
+.erlanger-footer__social {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 18px;
+}
+
+.erlanger-footer__social a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.erlanger-footer__badge {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.erlanger-footer__badge-copy {
+  font-size: 14px !important;
+}
+
+.erlanger-footer__app-label {
+  margin-top: 18px !important;
+  font-weight: 700;
+}
+
+.erlanger-footer__apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.erlanger-footer__apps a {
+  text-decoration: none;
+}
+
+.erlanger-footer__partner-logo {
+  max-width: 220px;
+  height: auto;
+  margin: 0 0 12px;
+  display: block;
+}
+
+.erlanger-footer__partner-logo--foundation {
+  margin-top: 28px;
+  max-width: 180px;
+}
+
+.erlanger-footer__legal {
+  width: min(1180px, 100%);
+  margin: 36px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  color: #777;
+  font-size: 13px;
+}
+
+.erlanger-footer__legal a {
+  color: #777;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* Hide leftover OOB body components only — never hide the site header. */
 :is(.prod-mode, .editing-mode):has(.erlanger-home) #content .component:not(.erlanger-home) {
+  display: none !important;
+}
+
+/* When ErlangerFooter is on the page, suppress the financial footer partial. */
+:is(.prod-mode, .editing-mode):has(.erlanger-footer) #footer {
   display: none !important;
 }
 
@@ -467,11 +760,13 @@
   .erlanger-specialties__grid,
   .erlanger-stats__grid,
   .erlanger-footer__grid,
-  .erlanger-video__grid {
+  .erlanger-video__grid,
+  .erlanger-fad-hero__form {
     grid-template-columns: 1fr;
   }
 
-  .erlanger-hero h1 {
+  .erlanger-hero h1,
+  .erlanger-fad-hero h1 {
     font-size: 44px;
   }
 
