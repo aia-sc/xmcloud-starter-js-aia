@@ -140,3 +140,86 @@ export const LargeImage = (props: CtaBannerProps): JSX.Element => {
     </div>
   );
 };
+
+/** Full-bleed LPGA navy band with bold title and white/accent CTA */
+export const Lpga = (props: CtaBannerProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const brandPrimary = 'var(--brand-primary, #001E41)';
+  const brandAccent = 'var(--brand-accent, #C8FF00)';
+  const brandWhite = '#ffffff';
+
+  return (
+    <div
+      className={`component cta-banner lpga-cta-banner ${sxaStyles}`}
+      id={id ? id : undefined}
+      style={{
+        background: brandPrimary,
+        color: brandWhite,
+        fontFamily: "var(--brand-heading-font, 'Figtree', sans-serif)",
+      }}
+    >
+      <div className="container py-5">
+        <div className="row align-items-center row-gap-4">
+          <div className="col-lg-8">
+            {(props.fields?.Eyebrow?.value || isPageEditing) && (
+              <h6
+                className="mb-2"
+                style={{
+                  color: brandAccent,
+                  fontWeight: 700,
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                <Text field={props.fields.Eyebrow} />
+              </h6>
+            )}
+            <h2
+              className="mb-3"
+              style={{
+                fontWeight: 800,
+                fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+                letterSpacing: '-0.02em',
+                textTransform: 'uppercase',
+                lineHeight: 1.1,
+              }}
+            >
+              <Text field={props.fields.Title} />
+            </h2>
+            {(props.fields?.Text?.value || isPageEditing) && (
+              <div className="fs-5 mb-0" style={{ opacity: 0.92, maxWidth: '40rem' }}>
+                <RichText field={props.fields.Text} />
+              </div>
+            )}
+          </div>
+          <div className="col-lg-4 d-flex justify-content-lg-end">
+            {(isPageEditing || props.fields?.Link?.value?.href) && (
+              <Link
+                field={props.fields.Link}
+                className="text-decoration-none"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '0.85rem 1.5rem',
+                  background: brandAccent,
+                  color: brandPrimary,
+                  fontWeight: 800,
+                  fontSize: '0.8125rem',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  borderRadius: 'var(--brand-button-radius, 0.125rem)',
+                  border: `2px solid ${brandAccent}`,
+                }}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

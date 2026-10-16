@@ -1,0 +1,128 @@
+# Client Brand Theme — LPGA
+# Extracted from: https://www.lpga.com
+# Sources: Playwright scrape + hero/desktop screenshots
+
+client:
+  name: "LPGA"
+  sourceUrl: "https://www.lpga.com"
+  extractedAt: "2026-10-16T15:00:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#001E41"
+  primaryForeground: "#ffffff"
+  secondary: "#003A70"
+  secondaryForeground: "#ffffff"
+  accent: "#C8FF00"
+  accentForeground: "#001E41"
+  background: "#ffffff"
+  foreground: "#171717"
+  muted: "#F4F6F8"
+  mutedForeground: "#5A6872"
+  headerBackground: "#ffffff"
+  headerForeground: "#001E41"
+  footerBackground: "#001E41"
+  footerForeground: "#C0C8D0"
+  border: "#D8DDE3"
+  ring: "#C8FF00"
+  extra:
+    - { name: "utility-nav", value: "#001E41" }
+    - { name: "live-pill", value: "#C8FF00" }
+    - { name: "highlights-tag", value: "#F5C518" }
+    - { name: "inspire-purple", value: "#5B2C8A" }
+    - { name: "newsletter-yellow", value: "#F5C518" }
+
+typography:
+  headingFamily: "'Figtree', sans-serif"
+  headingWeight: "700"
+  bodyFamily: "'Figtree', sans-serif"
+  bodyWeight: "400"
+  monoFamily: "'Roboto Mono', monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Roboto+Serif:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap"
+  scale:
+    hero: "3rem"
+    h1: "2.25rem"
+    h2: "1.75rem"
+    h3: "1.25rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "relaxed"
+  notes:
+    - "Figtree is the primary UI font (nav, body, buttons)."
+    - "Roboto Serif appears on article titles (editorial pages)."
+
+spacing:
+  density: "normal"
+  sectionGap: "4rem"
+  containerMaxWidth: "1440px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0.25rem"
+  buttonRadius: "0.125rem"
+  cardRadius: "0.5rem"
+  imageRadius: "0.25rem"
+  shadowStyle: "subtle"
+  borderStyle: "subtle"
+
+tone:
+  overall: "sports-media"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "full-bleed-image"
+  cardStyle: "flat"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#001E41"
+      secondary: "#003A70"
+      accent: "#C8FF00"
+  fontFamily:
+    heading: ["Figtree", "sans-serif"]
+    body: ["Figtree", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0.25rem"
+    button: "0.125rem"
+    card: "0.5rem"
+
+cssVariables: |
+  :root {
+    --brand-primary: #001E41;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #003A70;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #C8FF00;
+    --brand-accent-foreground: #001E41;
+    --brand-bg: #ffffff;
+    --brand-fg: #171717;
+    --brand-muted: #F4F6F8;
+    --brand-muted-fg: #5A6872;
+    --brand-header-bg: #ffffff;
+    --brand-header-fg: #001E41;
+    --brand-footer-bg: #001E41;
+    --brand-footer-fg: #C0C8D0;
+    --brand-border: #D8DDE3;
+    --brand-ring: #C8FF00;
+    --brand-heading-font: 'Figtree', sans-serif;
+    --brand-body-font: 'Figtree', sans-serif;
+    --brand-radius: 0.25rem;
+    --brand-button-radius: 0.125rem;
+    --brand-card-radius: 0.5rem;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Primary navy #001E41 from primary button computed style rgb(0, 30, 65)."
+    - "Accent neon green #C8FF00 used for LIVE pill, HOW TO WATCH CTA border, and focus ring."
+    - "Utility nav is dark navy; main nav is white with navy text and Rolex sponsor block."
+    - "Figtree is the site UI font; Roboto Serif used on editorial/article titles."
+    - "Homepage hero is a promotional Impact Award banner (full-bleed photo) above a dark tournament info band."
+    - "Buttons are nearly square (2px radius); cards use modest rounding."
+    - "Content Hub was unavailable (503) at Phase 0 — image uploads will use manual fallback."

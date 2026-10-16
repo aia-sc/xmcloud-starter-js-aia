@@ -1,0 +1,306 @@
+# LPGA Custom Sitecore Components — Created Item IDs
+# Generated: 2026-10-16
+# Site: /sitecore/content/sports/lpga
+# Kind: list (parent + child datasources with ComponentQuery)
+
+generatedAt: "2026-10-16T15:18:00Z"
+status: complete
+failures: []
+
+lookups:
+  dataRoot: "{77B1762A-5B3F-4F2A-B86E-A971F989A9AD}"
+  componentsRoot: "{33429731-C234-4706-AF63-439AEB11D72B}"
+  renderingsPageContent: "{41452CAD-79A8-4389-BD0F-52E1EBE7A8F9}"
+  renderingParamsRoot: "{C253C8D5-7F4E-41AF-87E0-E7156C91A1BE}"
+  headlessVariantsRoot: "{2DD3CB2A-009F-4B3A-A47F-25E3C2EA0C67}"
+  availableRenderingsPageContent: "{71815F16-BC20-4785-8C7B-F3616A02C168}"
+  horizonDatasourceGrouping: "{D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2}"
+
+containers:
+  foldersContainer:
+    name: Folders
+    path: /sitecore/templates/Project/Financial/Folders
+    itemId: "{6063D609-868E-439F-9475-7750CFB9B67C}"
+    note: Created (was missing)
+  categoryLpgaComponents:
+    name: LPGA
+    path: /sitecore/templates/Project/Financial/Components/LPGA
+    itemId: "{F7014634-7DBF-42D5-B557-645019B832B0}"
+  categoryLpgaRenderingParams:
+    name: LPGA
+    path: /sitecore/templates/Project/Financial/Rendering Parameters/LPGA
+    itemId: "{2732E219-0B1B-4F30-830A-F739B9C2960C}"
+  categoryLpgaRenderings:
+    name: LPGA
+    path: /sitecore/layout/Renderings/Project/Financial/Page Content/LPGA
+    itemId: "{A329EA38-4FD6-445E-9CA1-606807DAD02F}"
+
+availableRenderings:
+  itemId: "{71815F16-BC20-4785-8C7B-F3616A02C168}"
+  action: append
+  appendedIds:
+    - "{CFAA630F-19B8-4AB6-BD6F-19705C405115}" # LpgaTournamentLeaderboard
+    - "{33CB5579-2B51-4767-A044-AA0739A729FF}" # LpgaFeaturedNews
+    - "{D90F2A00-1552-4AEE-B8CE-3D621B055390}" # LpgaStandings
+  lastKnownValue: "{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{8094185B-4C72-40C8-B005-C6ED91708754}|{F9905F68-21E8-4C6F-8B89-56BB99020D31}|{CCC3A815-5DE9-4529-BAD5-874548667D66}|{AD385021-CE2B-4FC1-89AA-207D408034A8}|{35075000-760E-4FF3-BD1C-F2EEBA251DCB}|{333DEF3E-C272-4AD9-A493-8D5CCAE08312}|{1F52FB4E-FB4B-40ED-A5D8-F8F9784B36F2}|{20E5EA95-6B50-49CD-8852-433B7C565F06}|{3A9A9D22-C092-4B54-9511-EB202CEABE8D}|{75464A5E-CBB7-4F96-BBBC-104AFE57923A}|{B7CDF75E-716A-4C59-B9B1-CD970AE0A4AE}|{1A375FAC-6CC1-4A5A-A159-9BC6DBC66B80}|{200920AD-9645-4CB2-B72A-C7D8278E709F}|{CFAA630F-19B8-4AB6-BD6F-19705C405115}|{33CB5579-2B51-4767-A044-AA0739A729FF}|{D90F2A00-1552-4AEE-B8CE-3D621B055390}"
+
+components:
+  - name: LpgaTournamentLeaderboard
+    kind: list
+    category: LPGA
+    status: complete
+
+    templates:
+      parent:
+        name: LpgaTournamentLeaderboard
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaTournamentLeaderboard
+        itemId: "{5F4DF34D-D2BB-443A-ABCC-7558ED91E459}"
+        sectionId: "{F3DE9BE7-BD41-4CEA-A161-0A0A0FD3B2AD}"
+        fields:
+          - { name: SectionTitle, type: Single-Line Text, itemId: "{796C2C9A-7D9B-4745-A5E5-3EDEDE7A74F0}" }
+          - { name: Dates, type: Single-Line Text, itemId: "{FF55BD83-6AE9-46D6-AB43-C6645445C1C1}" }
+          - { name: Location, type: Single-Line Text, itemId: "{FAA61E21-A65D-4F00-951E-0B2D99553E01}" }
+          - { name: WeatherText, type: Single-Line Text, itemId: "{3F812774-B862-4094-AB1F-585C852485DE}" }
+          - { name: PrimaryLink, type: General Link, itemId: "{37A6AFEC-9567-40B7-88E9-1243FC6221CF}" }
+          - { name: SecondaryLink, type: General Link, itemId: "{B2265225-C264-4B60-BBEA-7C056D4B06A9}" }
+        standardValues:
+          itemId: "{DA837213-B76B-456B-A0FD-0C69D40B06BA}"
+          linked: true # silent-write
+          masters: ["{419ABE65-15B7-4562-A992-922EFB118382}"] # LpgaPlayerCard
+        horizonDatasourceGrouping: true
+        baseTemplates: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{44A022DB-56D3-419A-B43B-E27E4D8E9C41}|{D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2}"
+
+      child:
+        name: LpgaPlayerCard
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaPlayerCard
+        itemId: "{419ABE65-15B7-4562-A992-922EFB118382}"
+        sectionId: "{756908D8-7895-4164-9B4F-F561F558B612}"
+        fields:
+          - { name: Rank, type: Single-Line Text, itemId: "{D953407F-5BBC-4273-A574-2F0C4A19A4EE}" }
+          - { name: PlayerName, type: Single-Line Text, itemId: "{BFF6E50D-D2EE-425A-93FD-866409890BB7}" }
+          - { name: Country, type: Single-Line Text, itemId: "{F9C1F1B7-8215-4338-A5E3-DD50DDA0C80B}" }
+          - { name: TotalScore, type: Single-Line Text, itemId: "{8B70ACCC-35B1-4085-8D41-83830525F215}" }
+          - { name: Thru, type: Single-Line Text, itemId: "{70D74271-C610-4C2D-BB2A-5A6415E15476}" }
+          - { name: PlayerPhoto, type: Image, itemId: "{BE9378B1-BFBC-4C0A-877C-D61FFE7B4168}" }
+          - { name: FavoriteLabel, type: Single-Line Text, itemId: "{462A5745-4824-4649-82E0-4B4E9CC9E543}" }
+        standardValues:
+          itemId: "{93FA7672-9917-4C3A-BDC2-E0EC2A5B6C8F}"
+          linked: true # silent-write
+
+      folder:
+        name: LpgaTournamentLeaderboard Folder
+        path: /sitecore/templates/Project/Financial/Folders/LpgaTournamentLeaderboard Folder
+        itemId: "{A5DF2D75-892E-4376-9A13-C9EE47122581}"
+        standardValues:
+          itemId: "{27EF11C1-133B-4932-A111-EB9406E25A22}"
+          linked: true # silent-write
+          masters: ["{5F4DF34D-D2BB-443A-ABCC-7558ED91E459}"]
+
+      renderingParams:
+        name: LpgaTournamentLeaderboard
+        path: /sitecore/templates/Project/Financial/Rendering Parameters/LPGA/LpgaTournamentLeaderboard
+        itemId: "{4DD9F62B-2583-42A5-9D02-F94F16B8E9BE}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: LpgaTournamentLeaderboard
+      path: /sitecore/content/sports/lpga/Data/LpgaTournamentLeaderboard
+      itemId: "{CFA0A25C-8395-4AA4-AD1A-35C5F8242D52}"
+      insertOptionsSet: true # silent-write
+      exampleItem:
+        name: Buick LPGA Shanghai Leaderboard
+        itemId: "{D5DDFCEC-1558-4F07-8D99-02C1F0A9D295}"
+      exampleChildren:
+        - { name: Yin Ruoning, itemId: "{9BC510B6-451B-44A7-AA78-AF53813C51CC}" }
+        - { name: Nelly Korda, itemId: "{AA36BDD1-E9CA-4A07-966A-DBD83AB35825}" }
+
+    rendering:
+      name: LpgaTournamentLeaderboard
+      path: /sitecore/layout/Renderings/Project/Financial/Page Content/LPGA/LpgaTournamentLeaderboard
+      itemId: "{CFAA630F-19B8-4AB6-BD6F-19705C405115}"
+      componentName: LpgaTournamentLeaderboard
+      parametersTemplateId: "{4DD9F62B-2583-42A5-9D02-F94F16B8E9BE}"
+      datasourceTemplatePath: /sitecore/templates/Project/Financial/Components/LPGA/LpgaTournamentLeaderboard
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerId: "{62C5F9C8-ADCA-47F7-B5AB-9623FBA3DA4F}"
+      containerPath: /sitecore/content/sports/lpga/Presentation/Headless Variants/LpgaTournamentLeaderboard
+      variants:
+        - { name: Default, itemId: "{4C07D10E-2916-4A2C-B6B6-9FE8285CEF97}" }
+        - { name: Lpga, itemId: "{10D8A161-6B4D-4FFA-8205-48EB86F5B092}" }
+
+  - name: LpgaFeaturedNews
+    kind: list
+    category: LPGA
+    status: complete
+
+    templates:
+      parent:
+        name: LpgaFeaturedNews
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaFeaturedNews
+        itemId: "{DF8C3D02-8C4E-43F9-867B-B22A85C1117F}"
+        sectionId: "{F86BE285-FF5D-4E01-AEFF-E9FF82EF8918}"
+        fields:
+          - { name: SectionTitle, type: Single-Line Text, itemId: "{9BBA8B71-FFDB-4BB4-8B61-24FC3736A9AD}" }
+          - { name: FeaturedHeadline, type: Single-Line Text, itemId: "{4E7AFE69-3F36-47B7-A730-A4563220E8CA}" }
+          - { name: FeaturedSummary, type: Rich Text, itemId: "{9E2A0FD7-D98F-4D03-BD6E-DDCDDFAB84A9}" }
+          - { name: FeaturedImage, type: Image, itemId: "{B504FB93-0C90-4222-B7E9-0B90FDEFEBF9}" }
+          - { name: FeaturedLink, type: General Link, itemId: "{824DF9BB-A47A-4DAE-92B1-C55F4921C547}" }
+        standardValues:
+          itemId: "{8A7A0746-F51D-4E5D-945D-25E7FF4C2090}"
+          linked: true
+          masters: ["{7271A7B8-1B05-4C86-8DC6-B9F246FB0E8F}"]
+        horizonDatasourceGrouping: true
+        baseTemplates: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{44A022DB-56D3-419A-B43B-E27E4D8E9C41}|{D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2}"
+
+      child:
+        name: LpgaNewsItem
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaNewsItem
+        itemId: "{7271A7B8-1B05-4C86-8DC6-B9F246FB0E8F}"
+        sectionId: "{531CD14C-7311-45ED-BBD1-BB1E01CD3C6C}"
+        fields:
+          - { name: Headline, type: Single-Line Text, itemId: "{C85EF21D-3627-4779-8C91-22ACFC563C36}" }
+          - { name: Summary, type: Rich Text, itemId: "{611B797A-6A53-4C48-9C94-6D700D901022}" }
+          - { name: ItemLink, type: General Link, itemId: "{7F8F3B1D-8AA5-4117-A34A-AE3D68AC8C29}" }
+          - { name: ItemImage, type: Image, itemId: "{A73BD995-B863-4DEB-8CD4-7DBD86964349}" }
+        standardValues:
+          itemId: "{2676EF47-DB0C-43B1-A2AB-3A5E9195FF03}"
+          linked: true
+
+      folder:
+        name: LpgaFeaturedNews Folder
+        path: /sitecore/templates/Project/Financial/Folders/LpgaFeaturedNews Folder
+        itemId: "{354E90E8-B64C-4506-BC7E-00B239CE22CC}"
+        standardValues:
+          itemId: "{029B4D50-57C6-42DD-99B2-70C94E916A3C}"
+          linked: true
+          masters: ["{DF8C3D02-8C4E-43F9-867B-B22A85C1117F}"]
+
+      renderingParams:
+        name: LpgaFeaturedNews
+        path: /sitecore/templates/Project/Financial/Rendering Parameters/LPGA/LpgaFeaturedNews
+        itemId: "{3782C19F-50EE-4114-A1F7-23441D4200ED}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: LpgaFeaturedNews
+      path: /sitecore/content/sports/lpga/Data/LpgaFeaturedNews
+      itemId: "{81838A27-9955-46C1-B50D-27EFD0304E91}"
+      insertOptionsSet: true
+      exampleItem:
+        name: Buick LPGA Shanghai News
+        itemId: "{0638C746-637E-41A3-910A-4E5CFFC3E546}"
+      exampleChildren:
+        - { name: How to Watch Shanghai, itemId: "{CCC6E235-BEEF-408C-AE00-1F99BD73345C}" }
+        - { name: Course Preview, itemId: "{A7C34B42-A047-46BE-A0F1-01E2C425FD8B}" }
+
+    rendering:
+      name: LpgaFeaturedNews
+      path: /sitecore/layout/Renderings/Project/Financial/Page Content/LPGA/LpgaFeaturedNews
+      itemId: "{33CB5579-2B51-4767-A044-AA0739A729FF}"
+      componentName: LpgaFeaturedNews
+      parametersTemplateId: "{3782C19F-50EE-4114-A1F7-23441D4200ED}"
+      datasourceTemplatePath: /sitecore/templates/Project/Financial/Components/LPGA/LpgaFeaturedNews
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerId: "{0B68DAC1-8011-43D8-9124-D9F6BF63F7DB}"
+      containerPath: /sitecore/content/sports/lpga/Presentation/Headless Variants/LpgaFeaturedNews
+      variants:
+        - { name: Default, itemId: "{8C6A5496-5AA0-465D-9FC0-85ABFC8C7EBD}" }
+        - { name: Lpga, itemId: "{9755878C-DCE7-400C-B0AA-3D73CFB95EA2}" }
+
+  - name: LpgaStandings
+    kind: list
+    category: LPGA
+    status: complete
+
+    templates:
+      parent:
+        name: LpgaStandings
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaStandings
+        itemId: "{D16DA76F-2FCF-4EDB-97A3-040B200DF594}"
+        sectionId: "{355A9B1B-1D87-42CD-89BD-EF902CBE3CE3}"
+        fields:
+          - { name: SectionTitle, type: Single-Line Text, itemId: "{6F7E3EE4-5225-4AE6-8253-CBB08CA455CB}" }
+          - { name: LeftTitle, type: Single-Line Text, itemId: "{8B2F216E-9EAE-49F7-8796-4168AC26ECB4}" }
+          - { name: RightTitle, type: Single-Line Text, itemId: "{6BAD43DF-EC1F-4074-9049-D5AFA026253B}" }
+        standardValues:
+          itemId: "{355CABA0-8CF2-4048-BEF0-79E79F26CB22}"
+          linked: true
+          masters: ["{F7CD7DAA-CEB2-4289-8C68-D5BA571C3562}"]
+        horizonDatasourceGrouping: true
+        baseTemplates: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{44A022DB-56D3-419A-B43B-E27E4D8E9C41}|{D0F6BE14-2A2D-4C56-ACB5-80CAA573B8E2}"
+
+      child:
+        name: LpgaStandingRow
+        path: /sitecore/templates/Project/Financial/Components/LPGA/LpgaStandingRow
+        itemId: "{F7CD7DAA-CEB2-4289-8C68-D5BA571C3562}"
+        sectionId: "{A6BA6176-B578-48E4-94A0-DCF025C8BFA9}"
+        fields:
+          - { name: PlayerName, type: Single-Line Text, itemId: "{A974D0B0-0CF1-4E3F-9BE8-4A0D3F1B3801}" }
+          - { name: Rank, type: Single-Line Text, itemId: "{392B7692-4A02-45DF-B5DF-9C233177BEA2}" }
+          - { name: Points, type: Single-Line Text, itemId: "{213F35B7-A197-43E0-B04E-2356FF3A349D}" }
+          - { name: Events, type: Single-Line Text, itemId: "{0FD2631F-9811-41AE-BFC7-4CCBAE887053}" }
+          - { name: Wins, type: Single-Line Text, itemId: "{BA3E5F2D-0651-48D5-A5AF-AC214C0C4189}" }
+          - { name: Top10, type: Single-Line Text, itemId: "{C0DDD827-D603-451F-B6C7-C61DAD5F0928}" }
+          - { name: PlayerPhoto, type: Image, itemId: "{66FBB9ED-1443-4F14-BE4A-DF93DCA773CB}" }
+          - { name: Side, type: Single-Line Text, itemId: "{EAAAB37A-13A3-4EBA-A751-A8711D952A14}" }
+        standardValues:
+          itemId: "{EA6740C7-3098-4A8A-A29C-BB5CBED45A91}"
+          linked: true
+
+      folder:
+        name: LpgaStandings Folder
+        path: /sitecore/templates/Project/Financial/Folders/LpgaStandings Folder
+        itemId: "{9E4DACF1-A01F-4360-B7C2-B7339674FF67}"
+        standardValues:
+          itemId: "{06854F52-705D-45F7-8C82-0F2AD41445C4}"
+          linked: true
+          masters: ["{D16DA76F-2FCF-4EDB-97A3-040B200DF594}"]
+
+      renderingParams:
+        name: LpgaStandings
+        path: /sitecore/templates/Project/Financial/Rendering Parameters/LPGA/LpgaStandings
+        itemId: "{3BFCE28F-11D4-4676-B392-254F4274C80D}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: LpgaStandings
+      path: /sitecore/content/sports/lpga/Data/LpgaStandings
+      itemId: "{36FD1D60-DA00-448E-A62E-076DC403A2F3}"
+      insertOptionsSet: true
+      exampleItem:
+        name: Race to CME Globe Standings
+        itemId: "{846D2FF1-973F-4415-AF09-93BC716225D0}"
+      exampleChildren:
+        - { name: Jeeno Thitikul, itemId: "{2D4D6A87-C754-4CB2-AB03-E61A35965FDA}", side: left }
+        - { name: Lauren Coughlin, itemId: "{5C60946A-EB5E-46D1-B66E-CC6B4E4C0FFA}", side: right }
+
+    rendering:
+      name: LpgaStandings
+      path: /sitecore/layout/Renderings/Project/Financial/Page Content/LPGA/LpgaStandings
+      itemId: "{D90F2A00-1552-4AEE-B8CE-3D621B055390}"
+      componentName: LpgaStandings
+      parametersTemplateId: "{3BFCE28F-11D4-4676-B392-254F4274C80D}"
+      datasourceTemplatePath: /sitecore/templates/Project/Financial/Components/LPGA/LpgaStandings
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerId: "{5BF45E8E-9CB0-430E-A0B5-D15DDDC246B4}"
+      containerPath: /sitecore/content/sports/lpga/Presentation/Headless Variants/LpgaStandings
+      variants:
+        - { name: Default, itemId: "{04FD2CB2-FB6B-40AB-AE11-7100DE297DC9}" }
+        - { name: Lpga, itemId: "{9A909957-3892-45CC-A796-35EDC5AB79EF}" }
+
+notes:
+  - "Folders container under Project/Financial was missing and was created."
+  - "__Standard values and __Masters updates are silent-write (empty updatedFields is normal)."
+  - "Datasource Template / Datasource Location / ComponentQuery were written successfully on all three renderings."
+  - "Available Renderings append returned updatedFields with full concatenated value (verified)."
+  - "Example image fields left empty (no DAM upload in this task)."
+  - "React TSX components were out of scope for this Sitecore-items-only request."

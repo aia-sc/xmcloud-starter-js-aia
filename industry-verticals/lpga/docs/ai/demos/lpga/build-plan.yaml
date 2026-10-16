@@ -1,0 +1,408 @@
+# Demo Build Plan — LPGA Homepage
+client:
+  name: "LPGA"
+  sourceUrl: "https://www.lpga.com"
+  themeFile: "docs/ai/themes/lpga.theme.yaml"
+  analyzedAt: "2026-10-16T15:10:00Z"
+  targetPage: "Home"
+  contentRoot: "/sitecore/content/sports/lpga"
+  codeRoot: "industry-verticals/lpga"
+  notes: >
+    uiim template React/Sitecore items are not present in this environment.
+    Template matches in this plan are the intended registry mapping; Phase 5 will
+    implement missing components as LPGA custom (Erlanger pattern) under
+    Project/Financial renderings + sports/lpga content, uploading assets to Content Hub.
+
+pageAnalysis:
+  screenshotFiles:
+    desktop: "docs/ai/demos/lpga/screenshot-desktop.png"
+    hero: "docs/ai/demos/lpga/screenshot-hero.png"
+    userReference: "docs/ai/demos/lpga/homepage-reference.jpg"
+    articleSavedForLater: "docs/ai/demos/lpga/reference/article-how-to-watch-shanghai.jpg"
+  totalSections: 16
+  templateMatches: 12
+  customRequired: 4
+
+sections:
+  - position: 1
+    description: "Thin Impact Award / Impact promo banner with golfer photo, logo, and Donate/Winner CTA"
+    matchedComponent:
+      registryId: "announcement-bar"
+      manifestName: "AnnouncementBar"
+      variant: "Highlight"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "primary"
+    content:
+      Message: "Brooke Henderson — 2026 Impact Award Winner"
+      BarLink: { text: "Learn more", href: "https://www.lpga.com" }
+    contentNotes: "Full-bleed photo strip; AnnouncementBar is thinner — Phase 5.5 Lpga variant can deepen visual"
+    variantReason: "High-contrast promotional strip at very top"
+    customVariantNeeded:
+      name: "LpgaImpact"
+      description: "Full-width photo promo strip with Impact logo left, athlete photo, winner title"
+      parentComponent: "AnnouncementBar"
+
+  - position: 2
+    description: "Main nav — LPGA logo, Tour/Leaderboard/Schedule/Athletes/Stats/News, search, Rolex clock block"
+    matchedComponent:
+      registryId: "navigation-header"
+      manifestName: "NavigationHeader"
+      variant: "Default"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: false
+      variantMatch: "partial"
+    sectionBackground: "default"
+    content:
+      CtaLabel: "LIVE"
+      navLinks: ["LIVE", "Leaderboard", "Schedule", "Athletes", "Stats", "News & Video"]
+    contentNotes: "Utility nav (Tours/Partners/Learn) sits above; Rolex sponsor clock is distinctive — custom variant"
+    variantReason: "Solid white bar with navy text (tone.navStyle: solid-bar)"
+    customVariantNeeded:
+      name: "Lpga"
+      description: "White main nav + dark utility bar + LIVE green pill + Rolex clock sponsor block"
+      parentComponent: "NavigationHeader"
+
+  - position: 3
+    description: "LIVE tournament band (Buick LPGA Shanghai) with dates, location, weather, View Leaderboard / How to Watch CTAs, horizontal player score cards"
+    matchedComponent:
+      registryId: ""
+      manifestName: "LpgaTournamentLeaderboard"
+      variant: "Default"
+      matchType: "custom"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "none"
+    sectionBackground: "dark"
+    content:
+      Title: "Buick LPGA Shanghai"
+      Dates: "Oct 15 - Oct 18, 2026"
+      Location: "Shanghai, People's Republic of China"
+      PrimaryCta: "VIEW LEADERBOARD"
+      SecondaryCta: "HOW TO WATCH"
+    contentNotes: "Live scores + player cards with Favorite — no template covers this sports pattern"
+    customVariantNeeded: null
+
+  - position: 4
+    description: "Featured news hero — large story image + headline left; Top News sidebar list right; smaller story thumbnails below"
+    matchedComponent:
+      registryId: ""
+      manifestName: "LpgaFeaturedNews"
+      variant: "Default"
+      matchType: "custom"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "none"
+    sectionBackground: "default"
+    content:
+      Title: "Featured tournament news"
+      PrimaryHeadline: "Lead story with athlete photo"
+    contentNotes: "Asymmetric news layout — do not force into HeroBanner alone"
+    customVariantNeeded: null
+
+  - position: 5
+    description: "Tour Highlights — horizontal row of tall portrait video/photo cards with athlete names"
+    matchedComponent:
+      registryId: "feature-cards-grid"
+      manifestName: "FeatureCardsGrid"
+      variant: "Carousel"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "default"
+    content:
+      Title: "Tour Highlights"
+    contentNotes: "Portrait cards with HIGHLIGHTS tags; carousel on live site"
+    variantReason: "Horizontal scrolling portrait cards"
+    customVariantNeeded:
+      name: "LpgaHighlights"
+      description: "Tall portrait cards with yellow HIGHLIGHTS tag and athlete name overlay"
+      parentComponent: "FeatureCardsGrid"
+
+  - position: 6
+    description: "Bright green full-width Tour Schedule CTA banner"
+    matchedComponent:
+      registryId: "cta-banner"
+      manifestName: "CTABanner"
+      variant: "Default"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "exact"
+    sectionBackground: "accent"
+    content:
+      Title: "2026 LPGA Tour Schedule"
+      PrimaryLink: { text: "View Schedule", href: "https://www.lpga.com/tournaments" }
+    contentNotes: "Solid green/brand accent banner"
+    variantReason: "Centered text + single CTA on colored background"
+
+  - position: 7
+    description: "From the Tour — video thumbnail grid (4-up) with play icons, titles, timestamps"
+    matchedComponent:
+      registryId: "feature-cards-grid"
+      manifestName: "FeatureCardsGrid"
+      variant: "WithImages"
+      matchType: "template"
+      matchConfidence: "medium"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "default"
+    content:
+      Title: "From the Tour"
+    contentNotes: "Video play overlays — Phase 5.5 LpgaVideo variant; videos metadata-only"
+    variantReason: "Image-top cards in multi-column grid"
+    customVariantNeeded:
+      name: "LpgaVideoGrid"
+      description: "4-column video cards with play icon, duration, HIGHLIGHTS tag, relative time"
+      parentComponent: "FeatureCardsGrid"
+
+  - position: 8
+    description: "Press conferences — larger 2–3 column video thumbnails of players at microphones"
+    matchedComponent:
+      registryId: "feature-cards-grid"
+      manifestName: "FeatureCardsGrid"
+      variant: "TwoColumn"
+      matchType: "template"
+      matchConfidence: "medium"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "muted"
+    content:
+      Title: "Press Conferences"
+    contentNotes: "Reuse FeatureCardsGrid with TwoColumn; custom LpgaPress variant if needed"
+    variantReason: "Fewer, wider cards"
+
+  - position: 9
+    description: "Explore the LPGA — 6 white cards (Epson Tour, Amateurs, Professionals, Foundation, Girls Golf, Schools)"
+    matchedComponent:
+      registryId: "value-proposition-grid"
+      manifestName: "ValuePropositionGrid"
+      variant: "Default"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "muted"
+    content:
+      Title: "Explore the LPGA"
+    contentNotes: "Logo + short blurb + plus affordance per card"
+    variantReason: "3x2 icon/logo + text grid"
+    customVariantNeeded:
+      name: "LpgaExplore"
+      description: "White cards with org logos, short description, plus icon"
+      parentComponent: "ValuePropositionGrid"
+
+  - position: 10
+    description: "LPGA Drive On / Hall of Fame dark navy brand mission banners"
+    matchedComponent:
+      registryId: "feature-highlight"
+      manifestName: "FeatureHighlight"
+      variant: "Centered"
+      matchType: "template"
+      matchConfidence: "medium"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "dark"
+    content:
+      Title: "LPGA Drive On"
+      Description: "Brand initiative / Hall of Fame promotion"
+    contentNotes: "May be two stacked dark banners — can use two FeatureHighlight datasources or one CTABanner"
+    variantReason: "Centered text on dark full-width band"
+
+  - position: 11
+    description: "Founding Partners — logo cards with short descriptive blurbs (Rolex, CME, etc.)"
+    matchedComponent:
+      registryId: "logo-cloud"
+      manifestName: "LogoCloud"
+      variant: "WithLabels"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "partial"
+    sectionBackground: "default"
+    content:
+      Title: "Founding Partners"
+    contentNotes: "Cards with logos + blurbs — WithLabels closest; LpgaPartners variant for card chrome"
+    variantReason: "Partner logos with text labels"
+    customVariantNeeded:
+      name: "LpgaPartners"
+      description: "White card grid with partner logo + short description"
+      parentComponent: "LogoCloud"
+
+  - position: 12
+    description: "See Who's Trending / Get Social — horizontal circular player headshots"
+    matchedComponent:
+      registryId: "feature-cards-grid"
+      manifestName: "FeatureCardsGrid"
+      variant: "Carousel"
+      matchType: "template"
+      matchConfidence: "low"
+      apiAddable: true
+      variantMatch: "none"
+    sectionBackground: "default"
+    content:
+      Title: "See Who's Trending"
+    contentNotes: "Circular story bubbles — weak template fit; prefer custom LpgaSocialStories OR Phase 5.5 circular carousel"
+    variantReason: "Horizontal scroll of people cards"
+    customVariantNeeded:
+      name: "LpgaSocial"
+      description: "Circular Instagram-style player story bubbles with names"
+      parentComponent: "FeatureCardsGrid"
+
+  - position: 13
+    description: "LPGA App promo — phone mockup + Scores/News/Videos copy + store CTAs"
+    matchedComponent:
+      registryId: "cta-banner"
+      manifestName: "CTABanner"
+      variant: "WithImage"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "exact"
+    sectionBackground: "secondary"
+    content:
+      Title: "LPGA APP"
+      Description: "Scores, News, Videos, and more"
+      PrimaryLink: { text: "Download", href: "https://www.lpga.com" }
+    contentNotes: "Financial starter also has AppPromo — may map to that in Phase 5 if faster"
+    variantReason: "CTA with supporting image (phone mockup)"
+
+  - position: 14
+    description: "Race to CME Globe / Rolex Player of the Year standings side-by-side (or player comparison)"
+    matchedComponent:
+      registryId: ""
+      manifestName: "LpgaStandings"
+      variant: "Default"
+      matchType: "custom"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "none"
+    sectionBackground: "muted"
+    content:
+      Title: "Featured Competition Leaders"
+    contentNotes: "Sports ranking tables — no template equivalent"
+    customVariantNeeded: null
+
+  - position: 15
+    description: "Inspire a Million More Girls — purple full-width CTA with Donate/Learn More"
+    matchedComponent:
+      registryId: "cta-banner"
+      manifestName: "CTABanner"
+      variant: "WithImage"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "exact"
+    sectionBackground: "accent"
+    content:
+      Title: "Inspire a Million More Girls"
+      PrimaryLink: { text: "Donate Now", href: "https://www.lpga.com" }
+    contentNotes: "Purple brand banner (inspire-purple from theme extras)"
+    variantReason: "Full-width conversion CTA with imagery"
+
+  - position: 16
+    description: "Yellow newsletter signup — Sign up for the latest LPGA news + email field"
+    matchedComponent:
+      registryId: "newsletter-signup"
+      manifestName: "NewsletterSignup"
+      variant: "Banner"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: true
+      variantMatch: "exact"
+    sectionBackground: "accent"
+    content:
+      Title: "Sign up for the latest LPGA news"
+      PrimaryLink: { text: "Subscribe", href: "#" }
+    contentNotes: "Bright yellow full-width form banner"
+    variantReason: "Full-width colored background with email form"
+
+  - position: 17
+    description: "Footer — LPGA logo, multi-column links, app stores, social icons, partner logos, copyright"
+    matchedComponent:
+      registryId: "footer"
+      manifestName: "SiteFooter"
+      variant: "MegaFooter"
+      matchType: "template"
+      matchConfidence: "high"
+      apiAddable: false
+      variantMatch: "partial"
+    sectionBackground: "dark"
+    content:
+      BrandLogo: "LPGA logo white"
+    contentNotes: "Context-only — partial design / manual placement"
+    variantReason: "Extensive multi-column footer with social + apps"
+    customVariantNeeded:
+      name: "Lpga"
+      description: "Navy mega footer with 4 link columns, app badges, social circles, partner strip"
+      parentComponent: "SiteFooter"
+
+customComponents:
+  - name: "LpgaTournamentLeaderboard"
+    position: 3
+    reason: "Live tournament header + player score carousel unique to sports sites"
+    suggestedFields:
+      - Title
+      - Dates
+      - Location
+      - WeatherText
+      - PrimaryLink
+      - SecondaryLink
+      - children: [Rank, PlayerName, Country, Photo, TotalScore, Thru, FavoriteLabel]
+    approach: "Create list component under Project/Financial + Data folder under sports/lpga"
+
+  - name: "LpgaFeaturedNews"
+    position: 4
+    reason: "Asymmetric featured story + Top News sidebar + secondary thumbnails"
+    suggestedFields:
+      - Title
+      - FeaturedImage
+      - FeaturedHeadline
+      - FeaturedLink
+      - children: [Headline, Summary, Link]  # sidebar + secondary
+    approach: "Custom list component; avoid forcing HeroBanner"
+
+  - name: "LpgaStandings"
+    position: 14
+    reason: "Dual ranking tables (CME Globe / Rolex POY) or player comparison stats"
+    suggestedFields:
+      - LeftTitle
+      - RightTitle
+      - children: [PlayerName, Photo, Rank, Points, Events, Wins, Top10]
+    approach: "Custom list component with two parent groups or two sibling datasources"
+
+buildOrder:
+  phase1_sitecore:
+    - AnnouncementBar
+    - NavigationHeader  # manual / partial
+    - LpgaTournamentLeaderboard  # custom
+    - LpgaFeaturedNews  # custom
+    - FeatureCardsGrid  # Tour Highlights
+    - CTABanner  # Schedule
+    - FeatureCardsGrid  # From the Tour videos
+    - FeatureCardsGrid  # Press conferences
+    - ValuePropositionGrid  # Explore
+    - FeatureHighlight  # Drive On / Hall of Fame
+    - LogoCloud  # Partners
+    - FeatureCardsGrid  # Trending/Social
+    - CTABanner  # App
+    - LpgaStandings  # custom
+    - CTABanner  # Inspire
+    - NewsletterSignup
+    - SiteFooter  # manual / partial
+  phase2_theme: "Inline LPGA :root CSS variables into globals.css + Figtree/Roboto Serif fonts"
+  phase3_custom:
+    - LpgaTournamentLeaderboard
+    - LpgaFeaturedNews
+    - LpgaStandings
+  phase5_5_candidates:
+    - AnnouncementBar → LpgaImpact
+    - NavigationHeader → Lpga
+    - FeatureCardsGrid → LpgaHighlights / LpgaVideoGrid / LpgaSocial
+    - ValuePropositionGrid → LpgaExplore
+    - LogoCloud → LpgaPartners
+    - SiteFooter → Lpga

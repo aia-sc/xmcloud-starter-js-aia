@@ -74,6 +74,45 @@ body.site-services.dark,
   --roundness: 0.375rem;
 }
 
+// LPGA
+body.site-lpga,
+.site-lpga {
+  --text-body: #171717;
+  --text-body-inverted: #fff;
+  --text-colored: #001e41;
+  --text-footer: #c0c8d0;
+  --text-accent: #c8ff00;
+  --bg-body: #fff;
+  --bg-footer: #001e41;
+  --bg-main: #f4f6f8;
+  --bg-main-alt: #fff;
+  --bg-color: #003a70;
+  --bg-saturated: #001e41;
+  --bg-accent: #c8ff00;
+  --border-color: #d8dde3;
+  --hr-color: #d8dde3;
+  --roundness: 0.25rem;
+}
+
+body.site-lpga.dark,
+.dark .site-lpga {
+  --text-body: #fff;
+  --text-body-inverted: #171717;
+  --text-colored: #c8ff00;
+  --text-footer: #c0c8d0;
+  --text-accent: #c8ff00;
+  --bg-body: #001e41;
+  --bg-footer: #001020;
+  --bg-main: #003a70;
+  --bg-main-alt: #001e41;
+  --bg-color: #003a70;
+  --bg-saturated: #003a70;
+  --bg-accent: #c8ff00;
+  --border-color: #003a70;
+  --hr-color: #003a70;
+  --roundness: 0.25rem;
+}
+
 // Backgrounds colors
 $bg-transparent: transparent !default;
 $bg-basic-color: var(--bg-body) !default;

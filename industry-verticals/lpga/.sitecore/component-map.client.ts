@@ -28,6 +28,9 @@ import * as ProjectList from 'src/components/pagecontent/ProjectList';
 import * as ProjectDetails from 'src/components/pagecontent/ProjectDetails';
 import * as ParallaxBanner from 'src/components/pagecontent/ParallaxBanner';
 import * as PageBackground from 'src/components/pagecontent/PageBackground';
+import * as LpgaTournamentLeaderboard from 'src/components/pagecontent/LpgaTournamentLeaderboard';
+import * as LpgaStandings from 'src/components/pagecontent/LpgaStandings';
+import * as LpgaFeaturedNews from 'src/components/pagecontent/LpgaFeaturedNews';
 import * as ImageGallery from 'src/components/pagecontent/ImageGallery';
 import * as HeroBanner from 'src/components/pagecontent/HeroBanner';
 import * as Hero from 'src/components/pagecontent/Hero';
@@ -100,6 +103,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProjectDetails', { ...ProjectDetails }],
   ['ParallaxBanner', { ...ParallaxBanner }],
   ['PageBackground', { ...PageBackground }],
+  ['LpgaTournamentLeaderboard', { ...LpgaTournamentLeaderboard }],
+  ['LpgaStandings', { ...LpgaStandings }],
+  ['LpgaFeaturedNews', { ...LpgaFeaturedNews }],
   ['ImageGallery', { ...ImageGallery }],
   ['HeroBanner', { ...HeroBanner }],
   ['Hero', { ...Hero }],

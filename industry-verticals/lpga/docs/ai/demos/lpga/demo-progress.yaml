@@ -1,0 +1,105 @@
+# Demo Progress Tracker — LPGA
+client:
+  name: "LPGA"
+  sourceUrl: "https://www.lpga.com"
+  startedAt: "2026-10-16T14:49:00Z"
+  lastUpdatedAt: "2026-10-16T16:30:00Z"
+
+phases:
+  phase0_inputs:
+    status: "complete"
+    screenshot: true
+    url: "https://www.lpga.com"
+
+  phase0_5_manifest:
+    status: "complete"
+    validationMode: "quick"
+    result: "pass-with-warnings"
+
+  phase1_theme:
+    status: "complete"
+    themeFile: "docs/ai/themes/lpga.theme.yaml"
+    userApproved: true
+
+  phase2_analysis:
+    status: "complete"
+    buildPlanFile: "docs/ai/demos/lpga/build-plan.yaml"
+    totalSections: 17
+    userApproved: true
+
+  phase2_5_content:
+    status: "complete"
+    contentMapFile: "docs/ai/demos/lpga/content-map.yaml"
+    extractorUsed: true
+
+  phase3_content:
+    status: "complete"
+    completedSections: 8
+    totalSections: 11
+    notes: "Custom + CTA/AppPromo datasources populated; CH images wired"
+
+  phase4_theme:
+    status: "complete"
+    themeDelivery: "globals-inlined"
+    cssWritten: true
+    fontsAdded: true
+
+  phase5_custom:
+    status: "complete"
+    customComponentsNeeded: 3
+    customComponentsBuilt: 3
+
+  phase5_5_variants:
+    status: "complete"
+    variantsNeeded: 4
+    variantsCreated: 4
+    variantSpecsFile: ""
+    userRequested: "pixel-perfect"
+    notes: "Default export = Lpga visual; Sitecore Lpga variant defs created"
+
+  phase6_assembly:
+    status: "complete"
+    componentsAdded: 7
+    datasourcesWired: 7
+    totalComponents: 7
+    notes: "FeaturedNews + Standings placed and populated; OOB Financial cleanup remains manual"
+
+  phase7_summary:
+    status: "complete"
+
+sections:
+  - position: 3
+    componentName: "LpgaTournamentLeaderboard"
+    kind: "list"
+    phase3: { status: "populated", itemId: "{D5DDFCEC-1558-4F07-8D99-02C1F0A9D295}" }
+    phase6: { status: "wired", componentInstanceId: "88929da0-bf01-49e0-ade5-ada7d0f1858a" }
+  - position: 4
+    componentName: "LpgaFeaturedNews"
+    kind: "list"
+    phase3: { status: "populated", itemId: "{EC9396EF-B573-4E77-807E-06F55AB79280}" }
+    phase6: { status: "wired", componentInstanceId: "6b7009cc-5a7a-476c-a862-55780a6bc7ec" }
+  - position: 6
+    componentName: "CtaBanner"
+    kind: "simple"
+    phase3: { status: "populated", itemId: "{CCAEC809-E262-4E01-8F47-228B8F59F1DB}" }
+    phase6: { status: "wired", componentInstanceId: "aa068337-78e3-49d8-a7ff-cef0b66abff5" }
+  - position: 10
+    componentName: "CtaBanner"
+    kind: "simple"
+    phase3: { status: "populated", itemId: "{BCB406D8-57EA-4135-8E85-230330C9F319}" }
+    phase6: { status: "wired", componentInstanceId: "8364af15-57e8-4243-adbe-dd71b37433f9" }
+  - position: 13
+    componentName: "AppPromo"
+    kind: "simple"
+    phase3: { status: "populated", itemId: "{ABFF123C-27CE-4D10-80E1-A04A815952AE}" }
+    phase6: { status: "wired", componentInstanceId: "27b21b8c-6764-41d9-b244-8cc304401b9b" }
+  - position: 14
+    componentName: "LpgaStandings"
+    kind: "list"
+    phase3: { status: "populated", itemId: "{7FC4DD5C-4C33-4A6B-9D6E-E6DB8AF2CF0C}" }
+    phase6: { status: "wired", componentInstanceId: "8cdd66b4-9497-4773-8b85-44e52ef4f864" }
+  - position: 15
+    componentName: "CtaBanner"
+    kind: "simple"
+    phase3: { status: "populated", itemId: "{3C5252D9-72AF-4CE8-A1DD-1F53B3815498}" }
+    phase6: { status: "wired", componentInstanceId: "9f1e179a-e60d-40b9-8b0c-8d4bd3b01f9a" }

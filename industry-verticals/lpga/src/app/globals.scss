@@ -1,3 +1,27 @@
+:root {
+  --brand-primary: #001E41;
+  --brand-primary-foreground: #ffffff;
+  --brand-secondary: #003A70;
+  --brand-secondary-foreground: #ffffff;
+  --brand-accent: #C8FF00;
+  --brand-accent-foreground: #001E41;
+  --brand-bg: #ffffff;
+  --brand-fg: #171717;
+  --brand-muted: #F4F6F8;
+  --brand-muted-fg: #5A6872;
+  --brand-header-bg: #ffffff;
+  --brand-header-fg: #001E41;
+  --brand-footer-bg: #001E41;
+  --brand-footer-fg: #C0C8D0;
+  --brand-border: #D8DDE3;
+  --brand-ring: #C8FF00;
+  --brand-heading-font: 'Figtree', sans-serif;
+  --brand-body-font: 'Figtree', sans-serif;
+  --brand-radius: 0.25rem;
+  --brand-button-radius: 0.125rem;
+  --brand-card-radius: 0.5rem;
+}
+
 @import "tailwindcss";
 @import '../assets/basic/fonts';
 @import 'bootstrap/scss/bootstrap';

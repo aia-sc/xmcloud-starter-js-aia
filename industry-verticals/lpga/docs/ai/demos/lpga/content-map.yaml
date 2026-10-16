@@ -1,0 +1,281 @@
+# LPGA Homepage Content Map
+# Content from screenshot analysis + partial DOM extraction (site is heavily client-rendered).
+# Images uploaded to Content Hub — see images/image-manifest.json
+
+client:
+  name: "LPGA"
+  createdAt: "2026-10-16T15:20:00Z"
+  sourceUrl: "https://www.lpga.com"
+  contentSource: "screenshot+extractor"
+
+sections:
+  - position: 1
+    componentName: "AnnouncementBar"
+    manifestName: "AnnouncementBar"
+    kind: "simple"
+    datasourceItemName: "LPGA - Impact Banner"
+    apiAddable: true
+    fields:
+      Message: "Brooke Henderson — 2026 Impact Award Winner"
+      BackgroundColor: "#001E41"
+    children: []
+    imageFields:
+      - field: "BarImage"
+        src: "https://tpc.googlesyndication.com/simgad/18429721542302474710?"
+        alt: "LPGA Impact Award"
+        localFile: "section1-img2.jpg"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 2
+    componentName: "NavigationHeader"
+    manifestName: "NavigationHeader"
+    kind: "context-only"
+    datasourceItemName: "LPGA - Navigation Header"
+    apiAddable: false
+    fields:
+      CtaLabel: "LIVE"
+    children:
+      - name: "LPGA - Nav LIVE"
+        fields: { LinkText: "LIVE", LinkUrl: { text: "LIVE", href: "https://www.lpga.com" } }
+      - name: "LPGA - Nav Leaderboard"
+        fields: { LinkText: "Leaderboard", LinkUrl: { text: "Leaderboard", href: "https://www.lpga.com/leaderboards" } }
+      - name: "LPGA - Nav Schedule"
+        fields: { LinkText: "Schedule", LinkUrl: { text: "Schedule", href: "https://www.lpga.com/tournaments" } }
+      - name: "LPGA - Nav Athletes"
+        fields: { LinkText: "Athletes", LinkUrl: { text: "Athletes", href: "https://www.lpga.com/athletes" } }
+      - name: "LPGA - Nav Stats"
+        fields: { LinkText: "Stats", LinkUrl: { text: "Stats", href: "https://www.lpga.com/stats" } }
+      - name: "LPGA - Nav News"
+        fields: { LinkText: "News & Video", LinkUrl: { text: "News & Video", href: "https://www.lpga.com/news" } }
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 3
+    componentName: "LpgaTournamentLeaderboard"
+    manifestName: "LpgaTournamentLeaderboard"
+    kind: "list"
+    datasourceItemName: "LPGA - Tournament Leaderboard"
+    apiAddable: true
+    fields:
+      SectionTitle: "Buick LPGA Shanghai"
+      Dates: "Oct 15 - Oct 18, 2026"
+      Location: "Shanghai, People's Republic of China"
+      WeatherText: "73°"
+      PrimaryLink: { text: "VIEW LEADERBOARD", href: "https://www.lpga.com/tournaments" }
+      SecondaryLink: { text: "HOW TO WATCH", href: "https://www.lpga.com/news/2026/how-to-watch-the-2026-buick-lpga-shanghai" }
+    children:
+      - name: "LPGA - Player Hye-Jin Choi"
+        fields: { Rank: "1", PlayerName: "Hye-Jin Choi", Country: "KOR", TotalScore: "-6", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+      - name: "LPGA - Player Amy Yang"
+        fields: { Rank: "T2", PlayerName: "Amy Yang", Country: "KOR", TotalScore: "-4", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+      - name: "LPGA - Player Grace Kim"
+        fields: { Rank: "T2", PlayerName: "Grace Kim", Country: "AUS", TotalScore: "-4", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+      - name: "LPGA - Player Erika Hara"
+        fields: { Rank: "T4", PlayerName: "Erika Hara", Country: "JPN", TotalScore: "-3", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+      - name: "LPGA - Player Rio Takeda"
+        fields: { Rank: "T4", PlayerName: "Rio Takeda", Country: "JPN", TotalScore: "-3", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+      - name: "LPGA - Player Carlota Ciganda"
+        fields: { Rank: "T4", PlayerName: "Carlota Ciganda", Country: "ESP", TotalScore: "-3", Thru: "F", FavoriteLabel: "Favorite" }
+        imageFields: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 4
+    componentName: "LpgaFeaturedNews"
+    manifestName: "LpgaFeaturedNews"
+    kind: "list"
+    datasourceItemName: "LPGA - Featured News"
+    apiAddable: true
+    fields:
+      SectionTitle: "Top Stories"
+      FeaturedHeadline: "Tune In: Third Round 11:00 PM - 4:00 AM EDT on Golf Channel"
+      FeaturedSummary: "<p>Missed second round action? Catch up on second-round highlights to see leader Hye-Jin Choi setting the pace at the Buick LPGA Shanghai, then tune in for live third-round coverage on the Golf Channel from 11:00 PM - 4:00 AM EDT.</p>"
+      FeaturedLink: { text: "HOW TO WATCH", href: "https://www.lpga.com/news/2026/how-to-watch-the-2026-buick-lpga-shanghai" }
+    children:
+      - name: "LPGA - News Sidebar 1"
+        fields:
+          Headline: "Hye-Jin Choi maintains lead at Buick LPGA Shanghai"
+          Summary: "<p>Tournament news update from Shanghai.</p>"
+          ItemLink: { text: "Read more", href: "https://www.lpga.com/news" }
+        imageFields: []
+      - name: "LPGA - News Sidebar 2"
+        fields:
+          Headline: "Five things to know about Buick LPGA Shanghai"
+          Summary: "<p>Key storylines heading into the weekend.</p>"
+          ItemLink: { text: "Read more", href: "https://www.lpga.com/news" }
+        imageFields: []
+      - name: "LPGA - News Sidebar 3"
+        fields:
+          Headline: "Hometown favorite Ruoning Yin opens with 68"
+          Summary: "<p>Local star charges up the leaderboard.</p>"
+          ItemLink: { text: "Read more", href: "https://www.lpga.com/news" }
+        imageFields: []
+    imageFields:
+      - field: "FeaturedImage"
+        src: "https://cf-images.us-east-1.prod.boltdns.net/v1/static/6057949431001/25986ce5-98fc-48ea-8d21-01a90fc82d61/4f2b22c5-f1cd-44c7-ad38-e5badadfd3e8/1920x1080/match/image.jpg"
+        alt: "Buick LPGA Shanghai highlights"
+        localFile: "section1-img1.jpg"
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 6
+    componentName: "CtaBanner"
+    manifestName: "CTABanner"
+    kind: "simple"
+    datasourceItemName: "LPGA - Tour Schedule CTA"
+    apiAddable: true
+    fields:
+      Eyebrow: "TOUR"
+      Title: "2026 LPGA Tour Schedule"
+      Text: "<p>Follow every tournament on the LPGA Tour calendar.</p>"
+      Link: { text: "View Schedule", href: "https://www.lpga.com/tournaments" }
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 10
+    componentName: "CtaBanner"
+    manifestName: "CTABanner"
+    kind: "simple"
+    datasourceItemName: "LPGA - Drive On Banner"
+    apiAddable: true
+    fields:
+      Eyebrow: "DRIVE ON"
+      Title: "LPGA Drive On"
+      Text: "<p>Celebrating the athletes who drive the game forward.</p>"
+      Link: { text: "Learn more", href: "https://www.lpga.com" }
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "https://www.lpga.com/-/media/images/lpga/hub-landing-pages/drive-on/page-overview/prt26-mockup---lpga-drive-on---landing-page_full-width-spotlight---1280x268.jpg"
+        alt: "LPGA Drive On"
+        localFile: "section1-img3.jpg"
+    matchConfidence: "medium"
+    contentSource: "extractor"
+
+  - position: 10b
+    componentName: "CtaBanner"
+    manifestName: "CTABanner"
+    kind: "simple"
+    datasourceItemName: "LPGA - Hall of Fame Banner"
+    apiAddable: true
+    fields:
+      Eyebrow: "LEGACY"
+      Title: "LPGA Hall of Fame"
+      Text: "<p>Honoring the legends who built the Tour.</p>"
+      Link: { text: "Explore", href: "https://www.lpga.com" }
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "https://www.lpga.com/-/media/images/lpga/hub-landing-pages/hall-of-fame/lpga-hall-of-fame-fw-spotlight-bg_1280x268.jpg"
+        alt: "LPGA Hall of Fame"
+        localFile: "section1-img5.jpg"
+    matchConfidence: "medium"
+    contentSource: "extractor"
+
+  - position: 13
+    componentName: "AppPromo"
+    manifestName: "AppPromo"
+    kind: "simple"
+    datasourceItemName: "LPGA - App Promo"
+    apiAddable: true
+    fields:
+      Title: "LPGA APP"
+      Text: "<p>Scores, News, Videos, and more — all in one place.</p>"
+      Link: { text: "Download", href: "https://www.lpga.com" }
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "https://www.lpga.com/-/media/images/lpga/landing-pages/lpga-app/com25-webgr---landing-page-header---with-scorecard.jpg"
+        alt: "LPGA App"
+        localFile: "section1-img6.jpg"
+    matchConfidence: "high"
+    contentSource: "extractor"
+
+  - position: 14
+    componentName: "LpgaStandings"
+    manifestName: "LpgaStandings"
+    kind: "list"
+    datasourceItemName: "LPGA - Competition Standings"
+    apiAddable: true
+    fields:
+      SectionTitle: "Featured Competition Leaders"
+      LeftTitle: "Race to the CME Globe"
+      RightTitle: "Rolex Player of the Year"
+    children:
+      - name: "LPGA - CME 1"
+        fields: { Side: "left", Rank: "1", PlayerName: "Nelly Korda", Points: "3735", Events: "18", Wins: "7", Top10: "12" }
+        imageFields: []
+      - name: "LPGA - CME 2"
+        fields: { Side: "left", Rank: "2", PlayerName: "Lydia Ko", Points: "2890", Events: "16", Wins: "2", Top10: "9" }
+        imageFields: []
+      - name: "LPGA - CME 3"
+        fields: { Side: "left", Rank: "3", PlayerName: "Minjee Lee", Points: "2510", Events: "17", Wins: "1", Top10: "8" }
+        imageFields: []
+      - name: "LPGA - POY 1"
+        fields: { Side: "right", Rank: "1", PlayerName: "Nelly Korda", Points: "244", Events: "18", Wins: "7", Top10: "12" }
+        imageFields: []
+      - name: "LPGA - POY 2"
+        fields: { Side: "right", Rank: "2", PlayerName: "Lydia Ko", Points: "198", Events: "16", Wins: "2", Top10: "9" }
+        imageFields: []
+      - name: "LPGA - POY 3"
+        fields: { Side: "right", Rank: "3", PlayerName: "Ruoning Yin", Points: "176", Events: "15", Wins: "2", Top10: "7" }
+        imageFields: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 15
+    componentName: "CtaBanner"
+    manifestName: "CTABanner"
+    kind: "simple"
+    datasourceItemName: "LPGA - Inspire CTA"
+    apiAddable: true
+    fields:
+      Eyebrow: "FOUNDATION"
+      Title: "Inspire a Million More Girls"
+      Text: "<p>Help the LPGA Foundation grow the game for the next generation.</p>"
+      Link: { text: "Donate Now", href: "https://www.lpga.com" }
+    children: []
+    imageFields:
+      - field: "Image"
+        src: "https://www.lpga.com/-/media/images/replace_me/full-width-spotlight-people.jpg"
+        alt: "Inspire a Million More Girls"
+        localFile: "section1-img9.jpg"
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+  - position: 17
+    componentName: "SiteFooter"
+    manifestName: "SiteFooter"
+    kind: "context-only"
+    datasourceItemName: "LPGA - Site Footer"
+    apiAddable: false
+    fields: {}
+    children: []
+    imageFields: []
+    matchConfidence: "high"
+    contentSource: "screenshot"
+
+summary:
+  totalSections: 11
+  simpleComponents: 6
+  listComponents: 3
+  contextOnly: 2
+  imagesMapped: 6
+  contentHubUploaded: 9
+
+manualVideoTasks:
+  - section: 4
+    component: "LpgaFeaturedNews"
+    posterLocalFile: "section1-img1.jpg"
+    note: "Homepage video player uses Brightcove blob URL — use poster image only; SE can wire live stream later"

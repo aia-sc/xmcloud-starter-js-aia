@@ -1,0 +1,300 @@
+{
+  "url": "https://www.lpga.com",
+  "extractedAt": "2026-10-16T15:15:29.506Z",
+  "detectedLanguage": "en",
+  "targetLanguage": "en",
+  "translationNeeded": false,
+  "totalSections": 5,
+  "totalImages": 9,
+  "totalVideos": 1,
+  "interactionStats": {
+    "lazySourcesResolved": 0,
+    "tabsClicked": 0,
+    "accordionsExpanded": 19,
+    "carouselDotsClicked": 0,
+    "carouselArrowSlides": 0,
+    "backgroundImagesCollected": 8
+  },
+  "sections": [
+    {
+      "position": 1,
+      "tagName": "div",
+      "classHint": "_dsp-flex _ai-stretch _fb-auto _bxs-border-box _mih-0px _miw-0px _fs-0 _fd-column _contain-strict _p",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Tune In: Third Round 11:00 PM - 4:00 AM EDT on Golf Channel"
+        }
+      ],
+      "paragraphs": [
+        "AD Audio Descriptions",
+        "This is a modal window.",
+        "Beginning of dialog window. Escape will cancel and close the window.",
+        "End of dialog window.",
+        "This is a modal window. This modal can be closed by pressing the Escape key or activating the close button.",
+        "Tune In: Third Round 11:00 PM - 4:00 AM EDT on Golf Channel",
+        "Missed second round action? Catch up on second-round highlights to see leader Hye-Jin Choi setting the pace at the Buick LPGA Shanghai, then tune in for live third-round coverage on the Golf Channel from 11:00 PM - 4:00 AM EDT."
+      ],
+      "links": [
+        {
+          "text": "HOW TO WATCH",
+          "href": "https://www.lpga.com/news/2026/how-to-watch-the-2026-buick-lpga-shanghai",
+          "target": "_self"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/6057949431001/25986ce5-98fc-48ea-8d21-01a90fc82d61/4f2b22c5-f1cd-44c7-ad38-e5badadfd3e8/1920x1080/match/image.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "https://tpc.googlesyndication.com/simgad/18429721542302474710?",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/lpga/hub-landing-pages/drive-on/page-overview/prt26-mockup---lpga-drive-on---landing-page_full-width-spotlight---1280x268.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/lpga/hub-landing-pages/drive-on/page-overview/forddriveonlogo_376x168.png",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/lpga/hub-landing-pages/hall-of-fame/lpga-hall-of-fame-fw-spotlight-bg_1280x268.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/lpga/landing-pages/lpga-app/com25-webgr---landing-page-header---with-scorecard.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/lpga/gifs/app-launch-ig-reel.gif",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/replace_me/full-width-spotlight-bg.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://www.lpga.com/-/media/images/replace_me/full-width-spotlight-people.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        }
+      ],
+      "listItems": [
+        {
+          "title": "",
+          "description": "Video Player is loading.Play VideoPlaySkip BackwardSkip ForwardUnmuteCurrent Time 0:00/Duration 9:59Loaded: 1.67%0:00Stream Type LIVESeek to live, currently behind liveLIVERemaining Time -9:59 1xPlayback RateChaptersChaptersAD Audio DescriptionsCaptionscaptions settings, opens captions settings dialogcaptions off, selectedAudio Tracken (Main), selectedSharePicture-in-PictureFullscreenThis is a modal window.Beginning of dialog window. Escape will cancel and close the window.TextColorWhiteBlackRedGreenBlueYellowMagentaCyanOpacityOpaqueSemi-TransparentText BackgroundColorBlackWhiteRedGreenBlueYellowMagentaCyanOpacityOpaqueSemi-TransparentTransparentCaption Area BackgroundColorBlackWhiteRedGreenBlueYellowMagentaCyanOpacityTransparentSemi-TransparentOpaqueFont Size50%75%100%125%150%175%200%300%400%Text Edge StyleNoneRaisedDepressedUniformDrop shadowFont FamilyProportional Sans-SerifMonospace Sans-SerifProportional SerifMonospace SerifCasualScriptSmall CapsResetDoneClose Modal DialogEnd of dialog window.Close Modal DialogThis is a modal window. This modal can be closed by pressing the Escape key or activating the close button.Close Modal DialogThis is a modal window. This modal can be closed by pressing the Escape key or activating the close button.",
+          "badge": "1.67%",
+          "image": {
+            "src": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/6057949431001/25986ce5-98fc-48ea-8d21-01a90fc82d61/4f2b22c5-f1cd-44c7-ad38-e5badadfd3e8/1920x1080/match/image.jpg",
+            "alt": ""
+          }
+        },
+        {
+          "description": "Tune In: Third Round 11:00 PM - 4:00 AM EDT on Golf Channel",
+          "link": {
+            "text": "HOW TO WATCH",
+            "href": "https://www.lpga.com/news/2026/how-to-watch-the-2026-buick-lpga-shanghai"
+          }
+        }
+      ],
+      "videos": [
+        {
+          "type": "video",
+          "poster": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/6057949431001/25986ce5-98fc-48ea-8d21-01a90fc82d61/4f2b22c5-f1cd-44c7-ad38-e5badadfd3e8/1920x1080/match/image.jpg",
+          "sources": [
+            {
+              "src": "blob:https://www.lpga.com/28278b90-b7cf-4bbd-8963-c313d93e2417",
+              "type": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "tagName": "div",
+      "classHint": "_dsp-flex _ai-stretch _fb-auto _bxs-border-box _mih-0px _miw-0px _fs-0 _fd-column _contain-strict _p",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [
+        "Ladies European Tour (LET)"
+      ],
+      "links": [
+        {
+          "text": "Epson Tour",
+          "href": "https://www.epsontour.com/",
+          "target": ""
+        },
+        {
+          "text": "Ladies European Tour (LET)",
+          "href": "https://ladieseuropeantour.com/",
+          "target": "_blank"
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 3,
+      "tagName": "div",
+      "classHint": "_dsp-flex _ai-stretch _fb-auto _bxs-border-box _mih-0px _miw-0px _fs-0 _fd-column _contain-strict _p",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "Epson Tour",
+          "href": "https://www.epsontour.com/",
+          "target": ""
+        },
+        {
+          "text": "LCAP",
+          "href": "https://www.lpga.com/lcap",
+          "target": ""
+        },
+        {
+          "text": "LEAP",
+          "href": "https://www.lpga.com/leap",
+          "target": ""
+        },
+        {
+          "text": "Q-Series",
+          "href": "https://www.lpga.com/tournaments/lpga-qualifying-series",
+          "target": "_self"
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 4,
+      "tagName": "div",
+      "classHint": "_dsp-flex _ai-stretch _fb-auto _bxs-border-box _mih-0px _miw-0px _fs-0 _fd-column _contain-strict _p",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [
+        "Find a Teacher",
+        "LPGA Amateurs",
+        "LPGA Foundation"
+      ],
+      "links": [
+        {
+          "text": "LPGA Pros",
+          "href": "https://www.lpga.com/professionals",
+          "target": ""
+        },
+        {
+          "text": "Find a Teacher",
+          "href": "https://professionals.lpga.com/find-a-teacher/find",
+          "target": "_blank"
+        },
+        {
+          "text": "LPGA Amateurs",
+          "href": "https://lpgaamateurs.com/",
+          "target": "_blank"
+        },
+        {
+          "text": "Girls Golf",
+          "href": "https://www.girlsgolf.org/",
+          "target": "_blank"
+        },
+        {
+          "text": "LPGA Foundation",
+          "href": "https://www.lpga.com/lpga-foundation",
+          "target": ""
+        },
+        {
+          "text": "Donate",
+          "href": "https://www.girlsgolf.org/give",
+          "target": "_blank"
+        },
+        {
+          "text": "Golf Tips",
+          "href": "https://www.youtube.com/@lpgaprofessionals",
+          "target": "_blank"
+        },
+        {
+          "text": "#inviteHER",
+          "href": "https://lpgaamateurs.com/inviteher/",
+          "target": ""
+        }
+      ],
+      "images": []
+    },
+    {
+      "position": 5,
+      "tagName": "div",
+      "classHint": "_dsp-flex _ai-stretch _fb-auto _bxs-border-box _mih-0px _miw-0px _fs-0 _fd-column _contain-strict _p",
+      "backgroundHint": "dark",
+      "headings": [],
+      "paragraphs": [
+        "Professionals Member Login",
+        "Professionals Home",
+        "Become a Certified Professional",
+        "Teacher Education Program Schedule",
+        "Upcoming Events",
+        "Available Job Opportunities"
+      ],
+      "links": [
+        {
+          "text": "Professionals Member Login",
+          "href": "https://www.lpga.com/professionals/member-login",
+          "target": "_blank"
+        },
+        {
+          "text": "Professionals Home",
+          "href": "https://www.lpga.com/professionals",
+          "target": ""
+        },
+        {
+          "text": "Become a Certified Professional",
+          "href": "https://www.lpga.com/professionals/tep-overview#tab-list",
+          "target": "_blank"
+        },
+        {
+          "text": "Teacher Education Program Schedule",
+          "href": "https://www.lpga.com/professionals/tep-schedule",
+          "target": ""
+        },
+        {
+          "text": "Upcoming Events",
+          "href": "https://display.ecal.net/widget.html?widgetType=calendar&apiKey=XrhRX82K3C8vRnEuLED1E076LOF60OmEQz57TaHUbU6449d2e9&widgetId=678176c4ff3ef20008fb94a6",
+          "target": "_blank"
+        },
+        {
+          "text": "Available Job Opportunities",
+          "href": "https://www.golfelevatedconsulting.com/career-services",
+          "target": "_blank"
+        }
+      ],
+      "images": []
+    }
+  ]
+}
