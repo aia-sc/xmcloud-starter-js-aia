@@ -310,7 +310,8 @@ export const ProfileWidget = () => {
   const [resetting, setResetting] = useState(false);
 
   const activateFallback = useCallback((reason: string, details?: unknown) => {
-    console.error('[ProfileWidget] Falling back to ProfileIdWidget:', reason, details ?? '');
+    // Use warn — console.error surfaces as a Next.js Dev Tools "Issue" badge.
+    console.warn('[ProfileWidget] Falling back to ProfileIdWidget:', reason, details ?? '');
     setProfile(null);
     setUseFallback(true);
     setLoading(false);

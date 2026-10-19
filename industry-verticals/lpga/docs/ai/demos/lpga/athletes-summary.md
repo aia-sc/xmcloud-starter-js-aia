@@ -38,8 +38,27 @@ Built from [Athlete Directory](https://www.lpga.com/athletes/directory) and [Sak
 - http://localhost:3000/athletes/brittany-altomare
 - …(same pattern for remaining 8 athletes)
 
+## Content Hub headshots
+
+10 directory headshots uploaded to Content Hub (`docs/ai/demos/lpga/images/athletes/image-manifest.json`) and wired into:
+
+- Directory card `Photo` fields
+- Profile `HeroImage` fields
+
+| Athlete | Asset ID |
+|---------|----------|
+| Brittany Altomare | 84591 |
+| Narin An | 84474 |
+| Pajaree Anannarukarn | 84479 |
+| Aditi Ashok | 84484 |
+| Saki Baba | 84495 |
+| Jenny Bae | 84502 |
+| Laetitia Beck | 84509 |
+| Ana Belac | 84521 |
+| Jaravee Boonchant | 84529 |
+| Celine Borge | 84537 |
+
 ## Notes
 
-- Directory cards use initials when photos are empty (CH upload optional).
 - Saki Baba profile includes CME/Rolex ranks, full stats, and 2 news items from the screenshot.
 - Other athlete profiles have name/country/bio stubs ready for richer stats later.
