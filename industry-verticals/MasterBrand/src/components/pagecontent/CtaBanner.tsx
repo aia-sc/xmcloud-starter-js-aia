@@ -141,7 +141,7 @@ export const LargeImage = (props: CtaBannerProps): JSX.Element => {
   );
 };
 
-/* MasterBrand variant — 50/50 muted panel left, full-bleed image right; no accents */
+/* MasterBrand variant — full-width primary band, centered copy, outline button */
 export const MasterBrand = (props: CtaBannerProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
@@ -151,21 +151,13 @@ export const MasterBrand = (props: CtaBannerProps): JSX.Element => {
   return (
     <div className={`component cta-banner mb-cta-banner ${sxaStyles}`} id={id ? id : undefined}>
       <div className="mb-cta-banner__panel">
-        {(isPageEditing || props.fields?.Eyebrow?.value) && (
-          <h6 className="mb-cta-banner__eyebrow">
-            <Text field={props.fields.Eyebrow} />
-          </h6>
-        )}
         <h2 className="mb-cta-banner__title">
           <Text field={props.fields.Title} />
         </h2>
         <RichText field={props.fields.Text} className="mb-cta-banner__text" />
         {(isPageEditing || props.fields?.Link?.value?.href) && (
-          <Link field={props.fields.Link} className="mb-link-underline" />
+          <Link field={props.fields.Link} className="mb-btn mb-btn--ghost" />
         )}
-      </div>
-      <div className="mb-cta-banner__media">
-        <NextImage field={props.fields.Image} width={900} height={700} />
       </div>
     </div>
   );

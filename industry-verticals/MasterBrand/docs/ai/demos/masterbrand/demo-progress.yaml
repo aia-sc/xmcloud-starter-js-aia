@@ -5,8 +5,8 @@
 
 client:
   name: "MasterBrand"
-  sourceUrl: "https://www.masterbrandcabinets.com/"
-  contentPath: "/sitecore/content/Financial/masterbrand"
+  sourceUrl: "https://masterbrand.com/"
+  contentPath: "/sitecore/content/homebuilding/masterbrand"
   codePath: "./industry-verticals/MasterBrand"
   startedAt: "2026-10-02T13:51:00Z"
   lastUpdatedAt: "2026-10-02T14:20:00Z"

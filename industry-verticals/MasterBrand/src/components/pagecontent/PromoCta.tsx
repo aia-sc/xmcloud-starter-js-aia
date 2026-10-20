@@ -191,15 +191,19 @@ export const WithBackgroundImage = (props: PromoCtaProps): JSX.Element => {
   );
 };
 
-/* MasterBrand variant — 50/50 image left, muted panel right, underlined text link, no accents */
+/* MasterBrand variant — 50/50 split. Eyebrow "text-first" puts copy on the left. */
 export const MasterBrand = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const sxaStyles = `${props.params?.styles || ''}`;
+  const textFirst = props.fields?.Eyebrow?.value === 'text-first';
 
   return (
-    <div className={`component promo-cta mb-promo ${sxaStyles}`} id={id ? id : undefined}>
+    <div
+      className={`component promo-cta mb-promo ${textFirst ? 'mb-promo--text-first' : ''} ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
       <div className="mb-promo__media">
         <NextImage field={props.fields.Image} width={900} height={700} />
       </div>
@@ -209,10 +213,7 @@ export const MasterBrand = (props: PromoCtaProps): JSX.Element => {
         </h2>
         <RichText field={props.fields.Text} className="mb-promo__text" />
         {(isPageEditing || props.fields?.Link?.value?.href) && (
-          <Link field={props.fields.Link} className="mb-link-underline" />
-        )}
-        {(isPageEditing || props.fields?.Link2?.value?.href) && (
-          <Link field={props.fields.Link2} className="mb-link-underline mt-3" />
+          <Link field={props.fields.Link} className="mb-btn" />
         )}
       </div>
     </div>

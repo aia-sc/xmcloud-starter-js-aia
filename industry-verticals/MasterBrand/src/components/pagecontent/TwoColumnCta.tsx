@@ -110,7 +110,7 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
   );
 };
 
-/* MasterBrand variant — left overlay image+Title1/Link1; right muted panel Title2/Text2/Link2 */
+/* MasterBrand variant — dark copy panel left, photograph right */
 export const MasterBrand = (props: TwoColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
@@ -119,34 +119,21 @@ export const MasterBrand = (props: TwoColumnCtaProps): JSX.Element => {
 
   return (
     <div className={`component two-column-cta mb-two-col ${sxaStyles}`} id={id ? id : undefined}>
-      <div className="mb-two-col__overlay">
-        <div className="mb-overlay-card">
-          <div className="mb-overlay-card__media">
-            <NextImage field={props.fields.Image1} width={900} height={700} />
-          </div>
-          <div className="mb-overlay-card__gradient" aria-hidden="true" />
-          <div className="mb-overlay-card__content">
-            <h2 className="mb-overlay-card__title">
-              <Text field={props.fields.Title1} />
-            </h2>
-            {(isPageEditing || props.fields?.Link1?.value?.href) && (
-              <Link field={props.fields.Link1} className="mb-link-underline mb-link-underline--white" />
-            )}
-          </div>
-        </div>
-      </div>
       <div className="mb-two-col__panel">
         <h2 className="mb-two-col__title">
-          <Text field={props.fields.Title2} />
+          <Text field={props.fields.Title1} />
         </h2>
-        {(isPageEditing || props.fields?.Text2?.value) && (
+        {(isPageEditing || props.fields?.Text1?.value) && (
           <p className="mb-two-col__text">
-            <Text field={props.fields.Text2} />
+            <Text field={props.fields.Text1} />
           </p>
         )}
-        {(isPageEditing || props.fields?.Link2?.value?.href) && (
-          <Link field={props.fields.Link2} className="mb-link-underline" />
+        {(isPageEditing || props.fields?.Link1?.value?.href) && (
+          <Link field={props.fields.Link1} className="mb-btn mb-btn--ghost" />
         )}
+      </div>
+      <div className="mb-two-col__photo">
+        <NextImage field={props.fields.Image1} width={900} height={700} />
       </div>
     </div>
   );

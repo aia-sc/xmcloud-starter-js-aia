@@ -1,0 +1,273 @@
+{
+  "url": "https://masterbrand.com/",
+  "extractedAt": "2026-10-20T03:36:00.424Z",
+  "detectedLanguage": "en-US",
+  "targetLanguage": "en",
+  "translationNeeded": false,
+  "totalSections": 1,
+  "totalImages": 23,
+  "totalVideos": 0,
+  "interactionStats": {
+    "lazySourcesResolved": 0,
+    "tabsClicked": 5,
+    "accordionsExpanded": 0,
+    "carouselDotsClicked": 0,
+    "carouselArrowSlides": 0,
+    "backgroundImagesCollected": 6
+  },
+  "sections": [
+    {
+      "position": 1,
+      "tagName": "div",
+      "classHint": "pane pane--content",
+      "backgroundHint": "dark",
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Corporate Overview"
+        },
+        {
+          "tag": "h2",
+          "text": "What We Do"
+        },
+        {
+          "tag": "h2",
+          "text": "The MasterBrand Commitment"
+        },
+        {
+          "tag": "h2",
+          "text": "Key Brands"
+        },
+        {
+          "tag": "h2",
+          "text": "Careers"
+        },
+        {
+          "tag": "h2",
+          "text": "Governance"
+        },
+        {
+          "tag": "h2",
+          "text": "History"
+        },
+        {
+          "tag": "h2",
+          "text": "Our People"
+        }
+      ],
+      "paragraphs": [
+        "For over 70 years, MasterBrand has been shaping the places where people come together, enriching lives and creating meaningful memories for our customers. That, combined with our stylish products, top-notch dealer network and dedicated employees, has helped make us the number one North American residential cabinet business.",
+        "We are the largest manufacturer of residential cabinets in North America and offer a comprehensive portfolio of leading residential cabinetry products for the kitchen, bathroom and other parts of the home. Delivered through our exceptional distribution network, MasterBrand products are available in a wide variety of designs, finishes and styles and span the most attractive categories of the cabinets market: stock, semi-custom and premium cabinetry.",
+        "We have a cultural foundation for doing the right thing for people and our planet. We are building upon our solid framework by continuously exploring additional opportunities to protect our environment, empower our employees and operate our company under robust corporate governance policies and comprehensive oversight.",
+        "Be part of something bigger - come build your next career opportunity with MasterBrand!"
+      ],
+      "links": [
+        {
+          "text": "View Our Brand Portfolio",
+          "href": "https://masterbrand.com/brand-portfolio/default.aspx",
+          "target": ""
+        },
+        {
+          "text": "Learn More",
+          "href": "https://masterbrand.com/about-us/csr/default.aspx",
+          "target": ""
+        },
+        {
+          "text": "View Open Positions",
+          "href": "https://masterbrand.wd12.myworkdayjobs.com/en-US/Careers",
+          "target": "_blank"
+        },
+        {
+          "text": "Learn More about",
+          "href": "https://masterbrand.com/investors/governance/governance-documents/default.aspx",
+          "target": ""
+        },
+        {
+          "text": "Learn More about",
+          "href": "https://masterbrand.com/about-us/history/default.aspx",
+          "target": ""
+        },
+        {
+          "text": "Learn More about",
+          "href": "https://masterbrand.com/careers/default.aspx",
+          "target": ""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/corp-overview",
+          "alt": "",
+          "type": "img",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/2026/05/Gilc-QWO-CS-NordicBreeze_PNT-CsP-RegentGreen_K2.jpg",
+          "alt": "",
+          "type": "img",
+          "width": 7200,
+          "height": 4800
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/images/trees.jpg",
+          "alt": "tall trees in a forest",
+          "type": "img",
+          "width": 3000,
+          "height": 2000
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/2026/05/SHEN_Logo_Centered_Black.jpg",
+          "alt": "shenandoah",
+          "type": "img",
+          "width": 6707,
+          "height": 1624
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/our_brands_logo/logo-1951-Cab_dark.png",
+          "alt": "1951",
+          "type": "img",
+          "width": 700,
+          "height": 370
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/our_brands_logo/logo-Timberlake.png",
+          "alt": "Timberlake",
+          "type": "img",
+          "width": 5120,
+          "height": 845
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/our_brands_logo/logo-WoodmarkCabinetry.png",
+          "alt": "Woodmark",
+          "type": "img",
+          "width": 1219,
+          "height": 391
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/doc_downloads/our_brands_logo/logo-waypoint-living-spaces.png",
+          "alt": "Waypoint",
+          "type": "img",
+          "width": 319,
+          "height": 90
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/om_comboh_pms_silvernavy-002.jpg",
+          "alt": "Omega",
+          "type": "img",
+          "width": 2048,
+          "height": 629
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/Aristokraft.png",
+          "alt": "Aristokraft",
+          "type": "img",
+          "width": 1500,
+          "height": 260
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/bertchlogoblack-002.png",
+          "alt": "Bertch",
+          "type": "img",
+          "width": 576,
+          "height": 130
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/Decora.png",
+          "alt": "Decora",
+          "type": "img",
+          "width": 1500,
+          "height": 575
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/Diamond.png",
+          "alt": "Diamond",
+          "type": "img",
+          "width": 1500,
+          "height": 295
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/duralogo-horz-wht-003.png",
+          "alt": "Durasupreme",
+          "type": "img",
+          "width": 695,
+          "height": 200
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/hc_rgb_gray-002.jpg",
+          "alt": "Homecrest",
+          "type": "img",
+          "width": 1500,
+          "height": 225
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/kc_pms_graygreen.jpg",
+          "alt": "Kitchen",
+          "type": "img",
+          "width": 2048,
+          "height": 397
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/brand-logos/2024/man_rgb_black-002.jpg",
+          "alt": "Mantra",
+          "type": "img",
+          "width": 1501,
+          "height": 215
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/corp-overview.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/career-man.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/governance.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/history.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/our-people.jpg",
+          "alt": "",
+          "type": "background",
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://s201.q4cdn.com/943623151/files/design/banner/hero-img.jpg",
+          "alt": "",
+          "type": "background-unmatched",
+          "width": null,
+          "height": null
+        }
+      ],
+      "listItems": [
+        {
+          "title": "Corporate Overview",
+          "description": "For over 70 years, MasterBrand has been shaping the places where people come together, enriching lives and creating meaningful memories for our customers. That, combined with our stylish products, top-notch dealer network and dedicated employees, has helped make us the number one North American residential cabinet business."
+        },
+        {
+          "image": {
+            "src": "https://s201.q4cdn.com/943623151/files/design/corporate_landing/corp-overview",
+            "alt": ""
+          }
+        }
+      ]
+    }
+  ]
+}

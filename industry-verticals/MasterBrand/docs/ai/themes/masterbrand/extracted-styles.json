@@ -1,45 +1,43 @@
 {
   "colors": {
-    "bodyBackground": "rgb(255, 255, 255)",
+    "bodyBackground": "rgba(0, 0, 0, 0)",
     "bodyColor": "rgb(33, 37, 41)",
-    "headerBackground": "rgb(79, 117, 139)",
+    "headerBackground": "rgba(0, 0, 0, 0)",
     "headerColor": "rgb(33, 37, 41)",
-    "footerBackground": "rgb(234, 234, 234)",
+    "footerBackground": "rgb(247, 247, 247)",
     "footerColor": "rgb(33, 37, 41)",
+    "heroBackground": null,
     "primaryButtonBackground": "rgb(79, 117, 139)",
     "primaryButtonColor": "rgb(255, 255, 255)",
-    "primaryButtonBorderRadius": "0px",
-    "linkColor": "rgb(255, 255, 255)"
+    "primaryButtonBorderRadius": "50px",
+    "linkColor": "rgb(79, 117, 139)"
   },
   "typography": {
-    "bodyFontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "bodyFontFamily": "Montserrat, sans-serif",
     "bodyFontSize": "16px",
     "bodyFontWeight": "400",
     "bodyLineHeight": "24px",
-    "h1FontFamily": "Esteban",
-    "h1FontSize": "56px",
-    "h1FontWeight": "300",
+    "h1FontFamily": "Montserrat, sans-serif",
+    "h1FontSize": "32px",
+    "h1FontWeight": "700",
     "h1LetterSpacing": "normal",
-    "h1TextTransform": "none",
-    "h2FontFamily": "Esteban",
+    "h1TextTransform": "capitalize",
+    "h2FontFamily": "Montserrat, sans-serif",
     "h2FontSize": "32px",
-    "h2FontWeight": "500",
-    "h3FontFamily": "Montserrat",
+    "h2FontWeight": "700",
+    "h3FontFamily": "Montserrat, sans-serif",
     "h3FontSize": "28px",
     "h3FontWeight": "700",
-    "pFontSize": "16px",
-    "pLineHeight": "24px"
+    "pFontSize": "56px",
+    "pLineHeight": "67px"
   },
   "shape": {
-    "cardBorderRadius": "3px",
-    "cardBoxShadow": "none",
-    "cardBorder": "0px none rgb(33, 37, 41)"
+    "imgBorderRadius": "0px"
   },
   "spacing": {
-    "containerMaxWidth": "90%"
+    "heroMinHeight": "0px",
+    "heroPadding": "0px",
+    "containerMaxWidth": "1220px"
   },
-  "cssVariables": {
-    "--primary": "#007bff",
-    "--secondary": "#6c757d"
-  }
+  "cssVariables": {}
 }

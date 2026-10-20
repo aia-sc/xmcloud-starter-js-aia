@@ -107,3 +107,22 @@ export const Default = (props: FiveColumnCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* MasterBrand variant — centered logo row on white. Empty image slots are skipped. */
+export const MasterBrand = (props: FiveColumnCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  const logos = [props.fields.Image1, props.fields.Image2, props.fields.Image3, props.fields.Image4, props.fields.Image5].filter(
+    (image) => image?.value?.src
+  );
+
+  return (
+    <div className={`component five-column-cta mb-logo-row ${sxaStyles}`} id={id ? id : undefined}>
+      {logos.map((image, index) => (
+        <div className="mb-logo-row__item" key={image.value?.src || index}>
+          <NextImage field={image} width={240} height={80} />
+        </div>
+      ))}
+    </div>
+  );
+};

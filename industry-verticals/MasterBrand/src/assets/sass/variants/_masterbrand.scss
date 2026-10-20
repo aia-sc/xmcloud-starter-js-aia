@@ -8,9 +8,18 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding: 0 1.5rem 4rem;
+  padding: 0 1.5rem;
+
+  &--image-only {
+    min-height: 52vh;
+
+    .mb-hero__overlay,
+    .mb-hero__content {
+      display: none;
+    }
+  }
   color: var(--brand-primary-foreground, #fff);
   font-family: var(--brand-body-font);
 
@@ -48,8 +57,8 @@
 
   &__title {
     font-family: var(--brand-heading-font);
-    font-weight: 400;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     line-height: 1.2;
     color: #fff;
     margin: 0 0 1.5rem;
@@ -72,6 +81,26 @@
   &:hover {
     background: #fff;
     color: var(--brand-primary, #4f758b) !important;
+  }
+}
+
+.mb-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--brand-button-radius, 9999px);
+  background: var(--brand-primary, #4f758b);
+  color: #fff !important;
+  font-family: var(--brand-body-font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 2px solid var(--brand-primary, #4f758b);
+  width: fit-content;
+
+  &--ghost {
+    background: transparent;
+    color: #fff !important;
+    border-color: #fff;
   }
 }
 
@@ -271,8 +300,18 @@
     }
   }
 
+  &--text-first {
+    .mb-promo__media {
+      order: 2;
+    }
+
+    .mb-promo__panel {
+      order: 1;
+    }
+  }
+
   &__panel {
-    background: var(--brand-muted, #f5f4f1);
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -283,8 +322,8 @@
 
   &__title {
     font-family: var(--brand-heading-font);
-    font-weight: 400;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.2;
     margin: 0 0 1rem;
     color: var(--brand-fg, #212529);
@@ -351,25 +390,23 @@
 }
 
 .mb-cta-banner {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  min-height: 420px;
+  display: block !important;
   width: 100%;
-  padding: 0 !important;
   margin: 0;
-
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr;
-  }
+  background: var(--brand-primary, #4f758b);
+  color: #fff;
 
   &__panel {
-    background: var(--brand-muted, #f5f4f1);
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 3rem 2.5rem;
+    padding: 3.5rem 1.5rem;
     font-family: var(--brand-body-font);
-    color: var(--brand-fg, #212529);
+    color: #fff;
   }
 
   &__eyebrow {
@@ -383,17 +420,17 @@
 
   &__title {
     font-family: var(--brand-heading-font);
-    font-weight: 400;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.2;
     margin: 0 0 1rem;
-    color: var(--brand-fg, #212529);
+    color: #fff;
   }
 
   &__text {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--brand-muted-fg, #5a6570);
+    color: #fff;
     margin-bottom: 1.5rem;
 
     p {
@@ -439,29 +476,67 @@
   }
 
   &__panel {
-    background: var(--brand-muted, #f5f4f1);
+    background: #1c1c1c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 3rem 2.5rem;
     font-family: var(--brand-body-font);
-    color: var(--brand-fg, #212529);
+    color: #fff;
+  }
+
+  &__photo {
+    min-height: 360px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   &__title {
     font-family: var(--brand-heading-font);
-    font-weight: 400;
+    font-weight: 600;
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.2;
     margin: 0 0 1rem;
-    color: var(--brand-fg, #212529);
+    color: #fff;
   }
 
   &__text {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--brand-muted-fg, #5a6570);
+    color: #fff;
     margin-bottom: 1.5rem;
+  }
+}
+
+.mb-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  background: #fff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 72px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -531,7 +606,7 @@
       height: 40px;
       width: auto;
       object-fit: contain;
-      filter: brightness(0) invert(1);
+      filter: none;
     }
   }
 

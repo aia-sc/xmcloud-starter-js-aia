@@ -167,11 +167,9 @@ export const MasterBrand = (props: HeadingCtaProps): JSX.Element => {
         </h6>
       )}
       <div className="mb-heading__row">
-        <span className="mb-heading__rule" aria-hidden="true" />
         <h2 className="mb-heading__title">
           <Text field={props.fields?.Heading} />
         </h2>
-        <span className="mb-heading__rule" aria-hidden="true" />
       </div>
       {(isPageEditing || props.fields?.Text?.value) && (
         <p className="mb-heading__text">
