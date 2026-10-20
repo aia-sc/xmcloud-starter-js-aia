@@ -17,9 +17,9 @@ const asField = (node: unknown) => {
   return jsonValue !== undefined ? jsonValue : node;
 };
 
-export function normalizeLpgaListFields<TParent extends Record<string, unknown>>(
+export function normalizeLpgaListFields<TParent extends object>(
   fields: unknown,
-  parentMap: Record<keyof TParent & string, string>,
+  parentMap: Record<string, string>,
   childMap: Record<string, string>
 ): TParent & { items: Array<{ name: string; url: string; fields: Record<string, unknown> }> } {
   const raw = (fields || {}) as Record<string, unknown>;

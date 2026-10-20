@@ -266,7 +266,7 @@ const LpgaTournamentLeaderboardView = (props: LpgaTournamentLeaderboardProps): J
           </div>
           <div className="col-lg-5">
             <div className="d-flex flex-wrap gap-2 justify-content-lg-end">
-              {(fields.PrimaryLink?.value?.href || isEditing) && (
+              {fields.PrimaryLink && (fields.PrimaryLink.value?.href || isEditing) && (
                 <Link
                   field={fields.PrimaryLink}
                   className="text-decoration-none"
@@ -286,7 +286,7 @@ const LpgaTournamentLeaderboardView = (props: LpgaTournamentLeaderboardProps): J
                   }}
                 />
               )}
-              {(fields.SecondaryLink?.value?.href || isEditing) && (
+              {fields.SecondaryLink && (fields.SecondaryLink.value?.href || isEditing) && (
                 <Link
                   field={fields.SecondaryLink}
                   className="text-decoration-none"

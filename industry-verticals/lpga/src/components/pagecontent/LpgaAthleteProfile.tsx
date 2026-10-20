@@ -331,7 +331,7 @@ const LpgaAthleteProfileView = (props: LpgaAthleteProfileProps): JSX.Element => 
 
                 return (
                   <div key={item.url || item.name} className="col-md-6">
-                    {ItemLink?.value?.href || isEditing ? (
+                    {ItemLink && (ItemLink.value?.href || isEditing) ? (
                       <Link field={ItemLink} className="text-decoration-none d-block h-100">
                         {card}
                       </Link>

@@ -117,7 +117,7 @@ const AthleteCard = ({
     </div>
   );
 
-  if (ProfileLink?.value?.href || isEditing) {
+  if (ProfileLink && (ProfileLink.value?.href || isEditing)) {
     return (
       <Link field={ProfileLink} className="text-decoration-none d-block">
         {content}

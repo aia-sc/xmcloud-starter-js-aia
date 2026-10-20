@@ -144,7 +144,7 @@ const LpgaFeaturedNewsView = (props: LpgaFeaturedNewsProps): JSX.Element => {
                     <RichText field={fields.FeaturedSummary} />
                   </div>
                 )}
-                {(fields.FeaturedLink?.value?.href || isEditing) && (
+                {fields.FeaturedLink && (fields.FeaturedLink.value?.href || isEditing) && (
                   <Link
                     field={fields.FeaturedLink}
                     className="text-decoration-none"
