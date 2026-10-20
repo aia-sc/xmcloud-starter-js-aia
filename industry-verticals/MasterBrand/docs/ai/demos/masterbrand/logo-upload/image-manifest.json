@@ -1,0 +1,19 @@
+[
+  {
+    "src": "masterbrand-logo",
+    "alt": "MasterBrand",
+    "localFile": "masterbrand-logo.png",
+    "sectionPosition": 1,
+    "type": "img",
+    "status": "downloaded",
+    "approved": true,
+    "uploadStatus": "uploaded",
+    "assetId": 84748,
+    "assetIdentifier": "k1gEkR_vSiG9vDNyJwkeRw",
+    "publicUrl": "https://aia-verticals.sitecoresandbox.cloud/api/public/content/84748-masterbrand-logo?v=d84ff2af",
+    "thumbnailUrl": "https://aia-verticals.sitecoresandbox.cloud/api/gateway/84748/thumbnail",
+    "width": 1000,
+    "height": 117,
+    "imageFieldXml": "<Image src=\"https://aia-verticals.sitecoresandbox.cloud/api/public/content/84748-masterbrand-logo?v=d84ff2af\" dam-id=\"k1gEkR_vSiG9vDNyJwkeRw\" width=\"1000\" height=\"117\" alt=\"MasterBrand\" dam-content-type=\"Image\" thumbnailsrc=\"https://aia-verticals.sitecoresandbox.cloud/api/gateway/84748/thumbnail\" />"
+  }
+]

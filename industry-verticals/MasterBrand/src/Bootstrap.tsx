@@ -17,11 +17,8 @@ const Bootstrap = ({
   isPreviewMode: boolean;
 }): JSX.Element | null => {
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.debug('Browser Events SDK is not initialized in development environment');
-      return;
-    }
-
+    // ProfileWidget calls personalize() on every page, including local dev.
+    // Skipping init here surfaces "[IE-002] SDK not initialized".
     if (isPreviewMode) {
       console.debug('Browser Events SDK is not initialized in edit and preview modes');
       return;

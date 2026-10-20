@@ -54,22 +54,36 @@ export const WithLogoImage = (props: HeaderProps): JSX.Element => {
   );
 };
 
-/* MasterBrand variant — solid primary bar, logo left, white nav via header-right */
+const masterBrandNav = [
+  { href: '/', label: 'Overview' },
+  { href: 'https://www.masterbrand.com/about-us/default.aspx', label: 'About Us' },
+  { href: 'https://www.masterbrand.com/investors/default.aspx', label: 'Investors' },
+  { href: 'https://www.masterbrand.com/brand-portfolio/default.aspx', label: 'Brand Portfolio' },
+  { href: 'https://www.masterbrand.com/careers/default.aspx', label: 'Careers' },
+];
+
+/* MasterBrand variant — white bar, wordmark left, five text links right */
 export const MasterBrand = (props: HeaderProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
   const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
 
   return (
     <div className={`component header mb-header ${sxaStyles}`} id={id ? id : undefined}>
-      <div className={`container container-${props.params?.ContainerWidth?.toLowerCase() || 'fluid'}-fluid`}>
-        <div className="row align-items-center">
-          <div className="col-auto">
-            <a href="/" className="mb-header__logo">
-              <NextImage field={props.fields.LogoImage} width={200} height={50} />
+      <div className="mb-header__inner">
+        <a href="/" className="mb-header__logo" aria-label="MasterBrand">
+          <NextImage field={props.fields?.LogoImage} width={274} height={32} />
+        </a>
+        <nav className="mb-header__nav" aria-label="Primary">
+          {masterBrandNav.map((item) => (
+            <a key={item.label} href={item.href}>
+              {item.label}
             </a>
-          </div>
-          <div className="col mb-header__nav">
+          ))}
+        </nav>
+        {isEditing && (
+          <div className="mb-header__editing">
             <AppPlaceholder
               name="header-right"
               rendering={props.rendering}
@@ -77,7 +91,7 @@ export const MasterBrand = (props: HeaderProps): JSX.Element => {
               componentMap={props.componentMap}
             />
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

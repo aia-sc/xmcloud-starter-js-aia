@@ -18,7 +18,7 @@
  * Geo is resolved once per session via a public IP lookup (display only).
  * Device is inferred from the browser user agent (display only).
  *
- * Note: Bootstrap does not initialize analytics in development or Pages editor / preview.
+ * Note: Bootstrap does not initialize analytics in Pages editor / preview.
  * The widget still renders in those modes with an unavailable profile ID message.
  *
  * Docs:
@@ -310,7 +310,7 @@ export const ProfileIdWidget = () => {
             ) : (
               <span className="text-foreground/50 text-xs leading-snug">
                 {profileResolved
-                  ? 'Profile ID unavailable — analytics is not initialized in editing, preview, or development.'
+                  ? 'Profile ID unavailable — analytics is not initialized in editing or preview.'
                   : 'Resolving profile ID…'}
               </span>
             )}

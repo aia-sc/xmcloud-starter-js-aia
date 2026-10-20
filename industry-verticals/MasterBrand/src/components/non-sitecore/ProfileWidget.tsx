@@ -8,8 +8,8 @@
  * If personalize fails or returns an unexpected payload, falls back to
  * `ProfileIdWidget` and logs the error to the console for debugging.
  *
- * Note: Bootstrap does not initialize analytics/personalize in development or
- * Pages editor / preview — that path uses the ProfileIdWidget fallback.
+ * Pages editor / preview does not initialize the SDK. That path uses the
+ * ProfileIdWidget fallback without treating the missing init as a failure.
  */
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -316,41 +316,69 @@ export const ProfileWidget = () => {
     setLoading(false);
   }, []);
 
-  const loadProfile = useCallback(async () => {
-    setLoading(true);
+  const loadProfile = useCallback(
+    async (attempt = 0) => {
+      setLoading(true);
 
-    try {
-      const response = await personalize({
-        channel: 'WEB',
-        friendlyId: 'profile',
-      });
+      try {
+        const response = await personalize({
+          channel: 'WEB',
+          friendlyId: 'profile',
+        });
 
-      if (!response) {
-        activateFallback('personalize returned no data');
-        return;
+        if (!response) {
+          // The SDK returns null when no flow exists for friendlyId "profile"
+          // (404) or the visitor has no browser id yet. Use the id widget quietly.
+          console.debug(
+            '[ProfileWidget] No profile experience returned; using ProfileIdWidget.'
+          );
+          setProfile(null);
+          setUseFallback(true);
+          setLoading(false);
+          return;
+        }
+
+        if (isFailedPersonalizeResponse(response)) {
+          activateFallback(response.message || 'personalize request failed', response);
+          return;
+        }
+
+        const nextProfile = extractProfile(response);
+        if (!nextProfile) {
+          activateFallback('unexpected personalize response shape', response);
+          return;
+        }
+
+        setUseFallback(false);
+        setProfile(nextProfile);
+        setLoading(false);
+      } catch (err) {
+        const message =
+          err instanceof Error ? err.message : 'personalize threw an unexpected error';
+        const sdkNotReady = message.includes('IE-002') || message.includes('SDK not initialized');
+
+        // Bootstrap initializes the SDK in an effect. Retry briefly if this
+        // call wins that race, then fall back quietly in preview.
+        if (sdkNotReady && attempt < 3) {
+          window.setTimeout(() => {
+            void loadProfile(attempt + 1);
+          }, 800);
+          return;
+        }
+
+        if (sdkNotReady) {
+          console.debug('[ProfileWidget] SDK is not initialized; using ProfileIdWidget.');
+          setProfile(null);
+          setUseFallback(true);
+          setLoading(false);
+          return;
+        }
+
+        activateFallback(message, err);
       }
-
-      if (isFailedPersonalizeResponse(response)) {
-        activateFallback(response.message || 'personalize request failed', response);
-        return;
-      }
-
-      const nextProfile = extractProfile(response);
-      if (!nextProfile) {
-        activateFallback('unexpected personalize response shape', response);
-        return;
-      }
-
-      setUseFallback(false);
-      setProfile(nextProfile);
-      setLoading(false);
-    } catch (err) {
-      activateFallback(
-        err instanceof Error ? err.message : 'personalize threw an unexpected error',
-        err
-      );
-    }
-  }, [activateFallback]);
+    },
+    [activateFallback]
+  );
 
   useEffect(() => {
     setMounted(true);
