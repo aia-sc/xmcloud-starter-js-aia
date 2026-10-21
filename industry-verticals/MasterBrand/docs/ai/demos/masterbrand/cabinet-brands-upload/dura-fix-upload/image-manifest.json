@@ -1,0 +1,22 @@
+[
+  {
+    "src": "logo-dura-supreme",
+    "alt": "Dura Supreme",
+    "localFile": "logo-dura-supreme.png",
+    "sectionPosition": 1,
+    "type": "img",
+    "status": "downloaded",
+    "title": "Dura Supreme",
+    "description": "Dura Supreme logo (dark on transparent)",
+    "brand": "Dura Supreme",
+    "approved": true,
+    "uploadStatus": "uploaded",
+    "assetId": 85526,
+    "assetIdentifier": "5xpdy-X3Rj-9HkshVjxrpw",
+    "publicUrl": "https://aia-verticals.sitecoresandbox.cloud/api/public/content/85526-logo-dura-supreme?v=18c26aae",
+    "thumbnailUrl": "https://aia-verticals.sitecoresandbox.cloud/api/gateway/85526/thumbnail",
+    "width": 348,
+    "height": 148,
+    "imageFieldXml": "<Image src=\"https://aia-verticals.sitecoresandbox.cloud/api/public/content/85526-logo-dura-supreme?v=18c26aae\" dam-id=\"5xpdy-X3Rj-9HkshVjxrpw\" width=\"348\" height=\"148\" alt=\"Dura Supreme\" dam-content-type=\"Image\" thumbnailsrc=\"https://aia-verticals.sitecoresandbox.cloud/api/gateway/85526/thumbnail\" />"
+  }
+]

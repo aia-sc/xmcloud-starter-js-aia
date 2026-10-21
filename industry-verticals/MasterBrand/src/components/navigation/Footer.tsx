@@ -11,6 +11,8 @@ import {
   RichText,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
+import { usePathname } from 'next/navigation';
+import { cabinetsHeaderLogo } from 'lib/cabinet-brand-logos';
 
 interface Fields {
   Image1: ImageField;
@@ -40,6 +42,13 @@ export type FooterProps = {
 };
 
 export const Default = (props: FooterProps): JSX.Element => {
+  const pathname = usePathname() || '';
+  const copyright = props.fields?.Copyright?.value || '';
+  // Footer Blue partial / Our Cabinet Brands page — always use Blue chrome.
+  if (/our-cabinet-brands/i.test(pathname) || /Cabinets LLC/i.test(copyright)) {
+    return <MasterBrandBlue {...props} />;
+  }
+
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
 
@@ -293,6 +302,100 @@ export const MasterBrand = (props: FooterProps): JSX.Element => {
               {socialIcon(item.label)}
             </a>
           ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const blueFooterColumns = [
+  {
+    title: 'Our Brands',
+    links: [
+      { href: '/Our-Cabinet-Brands', label: 'Cabinet Brands' },
+      { href: 'https://www.aristokraft.com/', label: 'Aristokraft' },
+      { href: 'https://www.diamondcabinets.com/', label: 'Diamond' },
+      { href: 'https://www.omegacabinetry.com/', label: 'Omega' },
+    ],
+  },
+  {
+    title: 'Why MasterBrand',
+    links: [
+      { href: 'https://www.masterbrandcabinets.com/why-masterbrand', label: 'Quality' },
+      { href: 'https://www.masterbrand.com/sustainability/default.aspx', label: 'Sustainability' },
+      { href: 'https://www.masterbrandcabinets.com/why-masterbrand', label: 'Innovation' },
+    ],
+  },
+  {
+    title: 'For Pros',
+    links: [
+      { href: 'https://www.masterbrandcabinets.com/dealer-locator', label: 'Dealer Locator' },
+      { href: 'https://www.masterbrandcabinets.com/', label: 'Dealer Portal' },
+    ],
+  },
+  {
+    title: 'About Us',
+    links: [
+      { href: 'https://www.masterbrand.com/about-us/default.aspx', label: 'Leadership' },
+      { href: 'https://www.masterbrand.com/news/default.aspx', label: 'News' },
+      { href: 'https://www.masterbrand.com/careers/default.aspx', label: 'Careers' },
+    ],
+  },
+  {
+    title: 'For Consumers',
+    links: [
+      { href: 'https://www.masterbrandcabinets.com/dealer-locator', label: 'Where to Buy' },
+      { href: 'https://www.masterbrandcabinets.com/', label: 'Warranty' },
+    ],
+  },
+];
+
+/* MasterBrand Blue — family-of-brands band + multi-column consumer footer */
+export const MasterBrandBlue = (props: FooterProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+  // Prefer sharp white cabinets logo (Content Hub) over any blurry IR wordmark.
+  const logoField = cabinetsHeaderLogo;
+
+  return (
+    <div className={`component footer mb-footer-blue ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="mb-footer-blue__band" aria-hidden="false">
+        <span className="mb-footer-blue__band-rule" />
+        <span className="mb-footer-blue__band-label">Our Family of Brands</span>
+        <span className="mb-footer-blue__band-rule" />
+      </div>
+      <div className="mb-footer-blue__main">
+        <div className="mb-footer-blue__brand">
+          <a href="/" className="mb-footer-blue__logo" aria-label="MasterBrand">
+            <NextImage field={logoField} width={274} height={32} />
+          </a>
+          <div className="mb-footer-blue__socials">
+            {footerSocials.map((item) => (
+              <a key={item.label} href={item.href} aria-label={item.label} target="_blank" rel="noreferrer">
+                {socialIcon(item.label)}
+              </a>
+            ))}
+          </div>
+          <div className="mb-footer-blue__address">
+            <RichText field={props.fields?.Text1} />
+          </div>
+        </div>
+        {blueFooterColumns.map((column) => (
+          <div key={column.title} className="mb-footer-blue__col">
+            <div className="mb-footer-blue__heading">{column.title}</div>
+            <ul>
+              {column.links.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="mb-footer-blue__bar">
+        <div className="mb-footer-blue__copyright">
+          <Text field={props.fields?.Copyright} />
         </div>
       </div>
     </div>

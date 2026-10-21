@@ -182,3 +182,29 @@ export const MasterBrand = (props: HeadingCtaProps): JSX.Element => {
     </div>
   );
 };
+
+/* Brand Portfolio — dark left-aligned intro copy under the hero */
+export const BrandPortfolio = (props: HeadingCtaProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  return (
+    <div
+      className={`component heading-cta mb-heading mb-heading--portfolio ${sxaStyles}`}
+      id={id ? id : undefined}
+    >
+      <div className="mb-heading__portfolio-inner">
+        <h2 className="mb-heading__title">
+          <Text field={props.fields?.Heading} />
+        </h2>
+        {(isPageEditing || props.fields?.Text?.value) && (
+          <p className="mb-heading__text">
+            <Text field={props.fields?.Text} />
+          </p>
+        )}
+      </div>
+    </div>
+  );
+};

@@ -63,6 +63,27 @@
     color: #fff;
     margin: 0 0 1.5rem;
   }
+
+  &--portfolio {
+    min-height: 500px;
+    max-height: 560px;
+
+    .mb-hero__overlay {
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .mb-hero__title {
+      font-family: var(--brand-heading-font);
+      font-weight: 500;
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      letter-spacing: 0.01em;
+      margin: 0;
+    }
+
+    .mb-hero__content {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .mb-btn-ghost {
@@ -273,6 +294,182 @@
     color: #fff;
     margin: 0 0 0.75rem;
   }
+
+  &__rule {
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    background: #4f758b;
+    margin-top: 0.35rem;
+  }
+
+  &--brand {
+    min-height: 393px;
+    aspect-ratio: 658 / 823;
+    border-radius: 0 !important;
+    overflow: hidden;
+    background: #e9e9e9;
+
+    .mb-overlay-card__media {
+      border-radius: 0 !important;
+
+      img,
+      span,
+      picture {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 0 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    .mb-overlay-card__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 1.35rem 1.35rem 1.5rem;
+      transform: none;
+      transition: none;
+    }
+
+    .mb-overlay-card__title {
+      font-family: var(--brand-body-font);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin: 0;
+      order: 1;
+    }
+
+    .mb-overlay-card__rule {
+      order: 2;
+      margin-top: 0.4rem;
+      margin-bottom: 0;
+      transition: margin 0.35s ease;
+    }
+
+    .mb-overlay-card__details {
+      order: 3;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(0.75rem);
+      transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.35s ease, margin 0.35s ease;
+      margin-top: 0;
+    }
+
+    .mb-overlay-card__body {
+      margin: 0 0 0.85rem;
+      color: #fff;
+      font-family: var(--brand-body-font);
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .mb-overlay-card__learn {
+      display: inline-block;
+      color: #fff;
+      font-family: var(--brand-body-font);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .mb-overlay-card__gradient {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.35) 45%,
+        rgba(0, 0, 0, 0.05) 75%,
+        transparent 100%
+      );
+      opacity: 0.35;
+      transition: opacity 0.35s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .mb-overlay-card__gradient {
+        opacity: 1;
+      }
+
+      .mb-overlay-card__rule {
+        margin-bottom: 0.85rem;
+      }
+
+      .mb-overlay-card__details {
+        max-height: 14rem;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      img,
+      span,
+      picture {
+        transform: none !important;
+      }
+    }
+  }
+}
+
+.editing-mode .mb-overlay-card--brand {
+  .mb-overlay-card__gradient {
+    opacity: 1;
+  }
+
+  .mb-overlay-card__rule {
+    margin-bottom: 0.85rem;
+  }
+
+  .mb-overlay-card__details {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mb-brand-grid-wrap {
+  background: #ffffff !important;
+  padding: 1.5rem 0 3.5rem !important;
+  margin: 0 !important;
+
+  // Kill default Financial four-column hover zoom / roundness.
+  a:hover img {
+    transform: none !important;
+  }
+
+  img {
+    border-radius: 0 !important;
+    transition: none !important;
+    height: 100% !important;
+  }
+}
+
+.mb-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: stretch;
+
+  > * {
+    min-width: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 575px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .mb-promo {
@@ -369,6 +566,37 @@
     color: var(--brand-fg, #212529);
     margin: 0;
     white-space: nowrap;
+  }
+
+  &--portfolio {
+    text-align: left;
+    background: #ffffff;
+    color: #212529;
+    padding: 3.5rem 0 1.25rem;
+    margin: 0;
+
+    .mb-heading__portfolio-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .mb-heading__title {
+      color: #212529;
+      font-family: var(--brand-body-font);
+      font-weight: 600;
+      font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+      white-space: normal;
+      margin: 0 0 1.25rem;
+    }
+
+    .mb-heading__text {
+      color: #5a6570;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 100%;
+      margin: 0;
+    }
   }
 }
 
@@ -633,9 +861,13 @@
       line-height: 1;
       letter-spacing: 0.01em;
       text-decoration: none !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
 
-      &:hover {
+      &:hover,
+      &.is-active {
         color: #4f758b !important;
+        border-bottom-color: #4f758b;
       }
     }
   }
@@ -867,5 +1099,414 @@
     align-items: center;
     justify-content: flex-end;
     gap: 1.5rem;
+  }
+}
+
+// ── MasterBrand Blue (cabinets consumer chrome) ──
+
+.mb-header-blue {
+  background: transparent !important;
+  padding: 0 !important;
+  width: 100%;
+  font-family: var(--brand-body-font);
+
+  &__utility {
+    // Live site utility bar: rgb(61, 57, 53)
+    background: #3d3935;
+    color: #fff;
+  }
+
+  &__utility-inner {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0.55rem 24px;
+
+    a {
+      color: #fff !important;
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-decoration: none !important;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  &__main {
+    // Live site primary nav: rgb(79, 117, 139)
+    background: #4f758b;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 16px 24px;
+  }
+
+  &__logo {
+    display: block;
+    line-height: 0;
+
+    img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      // Cabinets logo asset is already white — do not invert
+      filter: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1.35rem;
+    margin-left: auto;
+
+    a {
+      color: #fff !important;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      text-decoration: none !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.15rem;
+
+      &:hover,
+      &.is-active {
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    &__nav {
+      margin-left: 0;
+      gap: 0.85rem 1.1rem;
+    }
+  }
+}
+
+.mb-footer-blue {
+  background: #f0f0f0 !important;
+  color: #3a3a3a;
+  font-family: var(--brand-body-font);
+  padding: 0 !important;
+
+  &__band {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background: #3c322c;
+    color: #fff;
+    padding: 1.1rem 24px;
+  }
+
+  &__band-rule {
+    display: block;
+    width: min(18vw, 140px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  &__band-label {
+    font-family: var(--brand-heading-font);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: minmax(160px, 220px) repeat(5, minmax(0, 1fr));
+    gap: 1.75rem 1.25rem;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 2.25rem 24px 2rem;
+  }
+
+  &__logo {
+    display: block;
+    line-height: 0;
+    margin-bottom: 0.85rem;
+
+    img {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      // White CH wordmark → dark on light footer
+      filter: brightness(0);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #4f758b;
+      color: #fff !important;
+      text-decoration: none !important;
+
+      &:hover {
+        background: #3d5f73;
+      }
+    }
+  }
+
+  &__address {
+    color: #555;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__heading {
+    font-family: var(--brand-heading-font);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 0.75rem;
+  }
+
+  &__col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li + li {
+      margin-top: 0.45rem;
+    }
+
+    a {
+      color: #555 !important;
+      font-size: 0.8125rem;
+      text-decoration: none !important;
+
+      &:hover {
+        color: #163a5a !important;
+      }
+    }
+  }
+
+  &__bar {
+    border-top: 1px solid #ddd;
+    background: #fff;
+    padding: 0.85rem 24px;
+    text-align: center;
+  }
+
+  &__copyright {
+    color: #6b6b6b;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 991px) {
+    &__main {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.mb-hero--cabinets {
+  min-height: 220px;
+  max-height: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #3d3935;
+  padding: 2.75rem 24px 2.5rem !important;
+
+  .mb-hero__media {
+    opacity: 1;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .mb-hero__overlay {
+    background: rgba(40, 36, 32, 0.35);
+  }
+
+  .mb-hero__content--left {
+    text-align: left;
+    max-width: 720px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mb-hero__title {
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 600;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+
+  .mb-hero__subtitle {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1rem;
+    line-height: 1.55;
+    max-width: 40rem;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.mb-cabinet-grid-wrap {
+  background: #fff !important;
+  padding: 2rem 0 3.5rem !important;
+  margin: 0 !important;
+
+  a:hover img {
+    transform: none !important;
+  }
+
+  img {
+    border-radius: 0 !important;
+    transition: none !important;
+  }
+}
+
+.mb-cabinet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.mb-cabinet-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(20, 40, 60, 0.1);
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+  min-width: 0;
+
+  &__media {
+    aspect-ratio: 514 / 396;
+    overflow: hidden;
+    background: #e8eef3;
+
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem 1.25rem 1.25rem;
+    min-height: 7.5rem;
+  }
+
+  &__copy {
+    min-width: 0;
+    flex: 1;
+  }
+
+  &__logo {
+    margin: 0 0 0.55rem;
+    line-height: 0;
+    max-width: 160px;
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 160px;
+      height: 40px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    &--invert img {
+      // White logos (e.g. Dura Supreme) → black on light card
+      filter: brightness(0);
+    }
+  }
+
+  &__title-edit {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    color: #888;
+  }
+
+  &__title {
+    font-family: var(--brand-heading-font);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f1f1f;
+    margin: 0 0 0.45rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: #555;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  &__cta {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #4f758b;
+    color: #fff;
+  }
+
+  &:hover &__cta {
+    background: #3d5f73;
   }
 }
